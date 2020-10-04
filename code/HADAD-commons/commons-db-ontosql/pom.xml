@@ -1,0 +1,161 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>fr.inria.cedar.ontosql</groupId>
+<artifactId>ontosql-db</artifactId>
+<version>1.0.1-SNAPSHOT</version>
+<packaging>jar</packaging>
+<name>ontosql-db</name>
+<description>Provides users convenient ways to connect to a variety of SQL and non-SQL data stores and manipulate data</description>
+<inceptionYear>2014</inceptionYear>
+<organization>
+    <name>Inria - team CEDAR</name>
+    <url>https://team.inria.fr/cedar/</url>
+</organization>
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+</properties>
+<dependencies>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>1.10.8</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>18.0</version>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.33</version>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.2</version>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>com.sleepycat</groupId>
+        <artifactId>je</artifactId>
+        <version>5.0.73</version>
+        <optional>true</optional>
+    </dependency>
+   <!-- JARS INCLUDED IN THE BUILD PATH -->
+   <!--  <dependency>
+        <groupId>com.ibm</groupId>
+        <artifactId>db2jcc4</artifactId>
+        <version>4.17.29</version>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>com.openlinksw</groupId>
+        <artifactId>virtjdbc4</artifactId>
+        <version>1.0</version>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>com.franz.agraph</groupId>
+        <artifactId>agraph-client</artifactId>
+        <version>5.1</version>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.openrdf.sesame</groupId>
+        <artifactId>sesame-core</artifactId>
+        <version>2.7.11</version>
+        <optional>true</optional>
+    </dependency> -->
+   		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>db2jcc4</artifactId>
+			<version>4.17.29</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/db2jcc4-4.17.29.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.openlinksw</groupId>
+			<artifactId>virtjdbc4</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/virtjdbc4-1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.franz.agraph</groupId>
+			<artifactId>agraph-client</artifactId>
+			<version>5.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/agraph-client-5.1.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.openrdf.sesame</groupId>
+			<artifactId>sesame-core</artifactId>
+			<version>2.7.11</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/sesame-core-2.7.11.jar</systemPath>
+		</dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-client</artifactId>
+        <version>1.2.1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.hive</groupId>
+        <artifactId>hive-jdbc</artifactId>
+        <version>1.1.1</version>
+        <optional>false</optional>
+    </dependency>
+</dependencies>
+<build>
+    <finalName>ontosql-db</finalName>
+    <plugins>
+        <!-- Download source code in Eclipse, best practice -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-eclipse-plugin</artifactId>
+            <version>2.9</version>
+            <configuration>
+                <downloadSources>true</downloadSources>
+                <downloadJavadocs>false</downloadJavadocs>
+            </configuration>
+        </plugin>
+        <!-- Set a compiler level -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.2</version>
+            <configuration>
+                <source>${jdk.version}</source>
+                <target>${jdk.version}</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+<distributionManagement>
+    <repository>
+        <id>cedarcommons-private-release</id>
+        <name>CEDAR-commons MVN release repo</name>
+        <url>http://maven.inria.fr/artifactory/cedarcommons-private-release</url>
+    </repository>
+    <snapshotRepository>
+        <id>cedarcommons-private-snapshot</id>
+        <name>CEDAR-commons MVN snapshot repo</name>
+        <url>http://maven.inria.fr/artifactory/cedarcommons-private-snapshot</url>
+    </snapshotRepository>    
+</distributionManagement>
+</project>

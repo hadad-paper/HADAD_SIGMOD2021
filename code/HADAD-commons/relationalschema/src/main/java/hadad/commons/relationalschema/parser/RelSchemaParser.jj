@@ -1,0 +1,198 @@
+/**
+ * Schemas parser 
+ * 
+ *  Ioana Ileana
+ */
+ 
+options {
+  STATIC = false;
+}
+
+PARSER_BEGIN(RelSchemaParser)
+package hadad.commons.relationalschema.parser;
+
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+import hadad.commons.relationalschema.RelationalSchema;
+import hadad.commons.relationalschema.Relation;
+import hadad.commons.relationalschema.AccessPattern;
+
+/**
+ * RelSchemaParser parses an input from a stream or a reader, and produces a 
+ * list of schemas 
+ */
+public class RelSchemaParser {
+
+        /** The result of the last parsing of an input. */
+        private ArrayList<RelationalSchema> parsed;
+
+        /** The schema being parsed. */
+        private RelationalSchema schema;
+        
+        /** The relation being parsed. */
+        private Relation relation;
+        
+        /** The access pattern being parsed. */
+        private Set<AccessPattern> accPats = new HashSet<AccessPattern>();
+
+         /** The list of relations being parsed. */
+        private ArrayList<Relation > relations;
+        
+        /** The name of the relation being parsed. */
+        private String relationName;
+
+        /** The arity of the relation being parsed. */
+        private int relationArity;
+
+
+        /**
+		 * Parses the input.
+		 * 
+		 * @return the schemas
+		 * @throws ParseException
+		 *             the parse exception
+		 */
+        public ArrayList<RelationalSchema> parse() throws ParseException {
+                SchemasList();
+                return parsed;
+        }
+}
+
+PARSER_END(RelSchemaParser)
+
+
+
+/* WHITE SPACES */
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+/* COMMENTS (THEY START WITH '//') */
+SPECIAL_TOKEN :
+{
+  <COMMENT: "#" (~["\n","\r"])* ("\n"|"\r"|"\r\n")? >
+}
+
+/* RESERVED WORDS AND SYMBOLS */
+TOKEN :
+{
+  <EOS: ";">
+| <LPAREN: "(">
+| <RPAREN: ")">
+| <COMMA: ",">
+| <LBR: "[">
+| <RBR: "]">
+| <PIPE: "|">
+}
+
+/* PATTERN_NAME */
+TOKEN :
+{
+  < PATTERN_NAME: ( ["i","o"] )+ >
+}
+
+
+/* RELATION_NAME */
+TOKEN :
+{
+  < RELATION_NAME: ( ["a"-"z","A"-"Z"] )+ ( ["a"-"z","A"-"Z","_","0"-"9"] )* >
+}
+
+/* RELATION_ARITY */
+TOKEN :
+{
+ < RELATION_ARITY: ( ["1"-"9"] )+ ( ["0"-"9"] )* >
+}
+
+
+
+/***********
+ * GRAMMAR *
+ ***********/
+
+/* Top level production */
+/* QueryList ::= (Query ";")* */
+void SchemasList() :
+{
+  this.parsed = new ArrayList<RelationalSchema>();
+}
+{
+  ( Schema() <EOS> 
+      { 
+        parsed.add(this.schema);
+      }
+  )*
+  <EOF>
+}
+
+void Schema() :
+{
+	this.relations = new ArrayList<Relation>();
+}
+
+{
+	Relation() ( <COMMA> Relation() )*
+	{
+ 	 	this.schema = new RelationalSchema(this.relations);
+	}
+}
+
+void Relation() :
+{
+}
+{
+	RelationName() (<LBR> AccessPatterns() <RBR>)? <LPAREN> RelationArity() <RPAREN>
+	{
+ 	 	this.relation = new Relation(this.relationName, this.relationArity);
+ 	 	this.relation.addAll(this.accPats);
+ 	 	this.relations.add(this.relation);
+ 	 	this.accPats = new HashSet<AccessPattern>();
+	}
+}
+
+void AccessPatterns() :
+{
+}
+{
+	AccessPattern() (<PIPE> AccessPattern())*
+	{
+	}
+}
+
+void AccessPattern() :
+{
+	Token t;
+}
+{
+	t=<PATTERN_NAME>
+	{
+		AccessPattern newPat = new AccessPattern(t.image);
+		this.accPats.add(newPat);
+	}
+}
+void RelationName() :
+{
+  Token t;
+}
+{
+  t=<RELATION_NAME>
+  {
+    this.relationName = t.image;
+  }
+}
+
+void RelationArity() :
+{
+  Token t;
+}
+{
+  t=<RELATION_ARITY>
+  {
+    this.relationArity = Integer.valueOf(t.image);
+  }
+}

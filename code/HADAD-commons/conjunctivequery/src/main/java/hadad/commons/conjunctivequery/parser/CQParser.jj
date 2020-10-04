@@ -1,0 +1,344 @@
+/**
+ * This is the grammar specification that generates the ConjunctiveQuery parser through JavaCC
+ */
+ 
+options {
+  STATIC = false;
+}
+
+PARSER_BEGIN(CQParser)
+package hadad.commons.conjunctivequery.parser;
+
+
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+
+import hadad.commons.conjunctivequery.Term;
+import hadad.commons.conjunctivequery.StringConstant;
+import hadad.commons.conjunctivequery.IntegerConstant;
+import hadad.commons.conjunctivequery.Variable;
+import hadad.commons.conjunctivequery.ConjunctiveQuery;
+import hadad.commons.conjunctivequery.Atom;
+
+
+/**
+ * CQParser parses an input from a stream or a reader, and produced a
+ * map containing query name strings as keys and Conjunctive queries as values.
+ * 
+ * The language syntax allows to specify a name for a query. When no name is
+ * given the parser generates a unique one, which is used as a key to the map
+ * the parser produces.
+ * 
+ * Even if a query is named in a definition, the name is not actually part of
+ * the query.
+ * 
+ * @creator Julien LEBLAY
+ * @modified Stamatis ZAMPETAKIS
+ * @modified  
+ *
+ * It is based on the RDF conjunctive query parser. 
+ */
+public class CQParser {
+
+        /** The logger. */
+        private static Logger log = Logger.getLogger(CQParser.class);
+
+        /** The sequence used to assign unique name to unname queries. */
+        private int queryNameSeq = 0;
+
+        /** The result of the last parsing of an input. */
+        private Map<String, ConjunctiveQuery> parsed;
+
+        /** The query being parsed. */
+        private ConjunctiveQuery query;
+
+        /** The query name of the query being parsed. */
+        private String queryName;
+
+        /** The head of the query being parsed. */
+        private List<Term> head;
+
+        /** The set of body atoms for the query being parsed. */
+        private List<Atom> body;
+
+        /** The atom being parsed. */
+        private Atom atom;
+
+        /** A map with variable name as keys (String) and actual variables as values. */
+        private Map<String, Term> variables;
+
+        /** The terms of the atom being parsed. */
+        private List<Term> terms;
+
+        /** The predicate of the triple pattern being parsed. */
+        private String predicate;
+
+        /** Number of queries parsed so far. */
+        int queriesNo = 0;
+ 
+        /**
+		 * The main method.
+		 * 
+		 * @param args
+		 *            the arguments
+		 * @throws ParseException
+		 *             the parse exception
+		 */
+        public static void main(String args[]) throws ParseException {
+                try {
+                        if (args.length == 1) {
+                                System.out.println("Searching for queries in file " + args[0]);
+                        } else {
+                                System.out.println("You should provide the name of a file with queries as input...");
+                                System.exit(-1);
+                        }
+
+                        CQParser parser = new CQParser(new FileReader(args[0]));
+
+                        // parsing the queries of the file
+                        System.out.println("Parsing the queries of the file...");
+                        parser.QueryList();
+            for (String n : parser.parsed.keySet()) {
+                System.out.println(n +parser.parsed.get(n) + '\u005cn');
+            }
+
+                        System.out.println("\u005cn*** Parsing of queries completed successfully! ***\u005cn");
+                } catch (ParseException pe) {
+                        System.err.println("Problem occurred while parsing: " + pe.getMessage());
+                } catch (java.io.FileNotFoundException fe) {
+                        System.err.println("File " + args[0] + " could not be found...");
+                }
+        }
+
+        /**
+		 * Parses the input.
+		 * 
+		 * @return the map
+		 * @throws ParseException
+		 *             the parse exception
+		 */
+        public Map<String, ConjunctiveQuery> parse() throws ParseException {
+                QueryList();
+                return parsed;
+        }
+
+        /**
+		 * Returns a fresh query name.
+		 * 
+		 * @return the string
+		 * @throws ParseException
+		 *             the parse exception
+		 */
+        public String freshQueryName() throws ParseException {
+                return "AutoQueryName" + (queryNameSeq++);
+        }
+
+}
+
+PARSER_END(CQParser)
+
+/* WHITE SPACES */
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+/* COMMENTS (THEY START WITH '//') */
+SPECIAL_TOKEN :
+{
+  <COMMENT: "#" (~["\n","\r"])* ("\n"|"\r"|"\r\n")? >
+}
+
+/* RESERVED WORDS AND SYMBOLS */
+TOKEN :
+{
+  <EOQ: ";">
+| <LANGLE: "<">
+| <RANGLE: ">">
+| <RULE_SEP: ":-">
+| <LPAREN: "(">
+| <RPAREN: ")">
+| <COMMA: ",">
+| <QUOTE: "\"">
+| <LBRACE: "{">
+| <RBRACE: "}">
+}
+
+/* QUERY_AND_PREDICATE_AND_VARIABLE_NAME */
+TOKEN :
+{
+  < QUERY_AND_PREDICATE_AND_VARIABLE_NAME: ( ["a"-"z","A"-"Z"] )+ ( ["a"-"z","A"-"Z","_","0"-"9"] )* >
+}
+
+/* STRING_CONSTANT */
+TOKEN :
+{
+ < STRING_CONSTANT: <QUOTE> ( ["a"-"z","A"-"Z","_","0"-"9",":","/",".","?","#","-","@","&","=","!","%"," ","(",")","[","]","{","}","<",">","~",","] )* <QUOTE> >
+}
+
+/* INTEGER_CONSTANT */
+TOKEN :
+{
+ < INTEGER_CONSTANT: "0" | ( ["1"-"9"] )+ ( ["0"-"9"] )* >
+}
+
+/*******************************
+ * CONJUNCTIVE QUERIES GRAMMAR *
+ *******************************/
+
+/* Top level production */
+/* QueryList ::= (Query ";")* */
+void QueryList() :
+{
+  int queriesNo = 0;
+  this.parsed = new LinkedHashMap<String, ConjunctiveQuery>();
+}
+{
+  ( Query() <EOQ> 
+      { 
+        queriesNo++;
+        parsed.put(queryName, query);
+      }
+  )*
+  <EOF>
+      {
+        log.info("ConjunctiveQueryParser: " + queriesNo + " queries were found...");
+      }
+}
+
+/* Query ::= QueryName ":=" QueryHead ":-" QueryBody */
+void Query() :
+{
+	this.head = new ArrayList<Term>();
+	this.body = new ArrayList<Atom>();
+	this.variables = new HashMap<String, Term>();
+	this.queryName = freshQueryName();
+	
+	//initialize the counter of triples for the current query
+	//NameGenerator.setTriplePatCount((short) 0);
+}
+{
+  ( QueryName())? QueryHead() <RULE_SEP> QueryBody() {
+    List<Term> h = new ArrayList<Term>();
+    for (Term term: this.head) {		if (term instanceof Variable) {
+		  	Term v = this.variables.get(((Variable) term).getName());
+		  	if (v == null) {
+		  		throw new ParseException("Variable " + ((Variable) term).getName() + " does not appear in the query body.");		  	}
+			h.add(v);		} else {			h.add(term);
+		}
+    }
+    this.query = new ConjunctiveQuery(this.queryName, h, this.body);
+  }
+}
+
+/* QueryHead ::= "<" ( HeadTermList )? ">" */
+void QueryHead() :
+{
+	this.head = new ArrayList<Term>();
+}
+{
+  <LANGLE> ( HeadTermList() )? <RANGLE>
+}
+
+/* QueryName ::= identifier */
+void QueryName() :
+{
+  Token t;
+}
+{
+  t=<QUERY_AND_PREDICATE_AND_VARIABLE_NAME>
+  {
+    queryName = t.image;
+  }
+}
+
+/* HeadTermList ::= term ("," term)* */
+void HeadTermList() :
+{}
+{
+  HeadTerm() ( <COMMA> HeadTerm() )*
+  {	
+  }
+}
+
+/* HeadTerm ::= <QUERY_AND_PREDICATE_AND_VARIABLE_NAME> | <STRING_CONSTANT> | <INTEGER_CONSTANT>  */
+void HeadTerm() :
+{
+  Token t;
+}
+{
+  t=<QUERY_AND_PREDICATE_AND_VARIABLE_NAME>   		{this.head.add(new Variable(t.image));} |
+  t=<STRING_CONSTANT>   {this.head.add(new StringConstant(t.image.substring(1,t.image.length()-1)));} |
+  t=<INTEGER_CONSTANT>  {this.head.add(new IntegerConstant(t.image));}
+}
+
+/* QueryBody ::= Atom() ("," Atom())* */
+void QueryBody() :
+{
+  	this.body = new ArrayList<Atom>();
+}
+{
+  Atom()
+  {
+  	this.body.add(this.atom);
+  	this.atom = null;
+  } 
+  (<COMMA> Atom()
+  {
+  	this.body.add(this.atom);
+  	this.atom = null;
+  }
+  )*
+}
+
+/* Atom ::= Predicate()  "(" TermList() ")" */
+void Atom() :
+{
+	this.terms = new ArrayList<Term>();
+}
+{
+	AtomPredicate() <LPAREN> AtomTermsList() <RPAREN>
+	{ 	 	this.atom = new Atom(this.predicate, this.terms);
+	}
+}
+
+void AtomPredicate() :
+{
+  Token t;
+}
+{
+  t=<QUERY_AND_PREDICATE_AND_VARIABLE_NAME>
+  {
+    predicate = t.image;
+  }
+}
+
+/* AtomTerms ::= "(" TermList() ")" */
+void AtomTermsList() :
+{}
+{
+  AtomTerm() ( <COMMA> AtomTerm() )*
+  {
+	
+  }
+}
+
+/* AtomTerm ::= <QUERY_AND_PREDICATE_AND_VARIABLE_NAME> | <STRING_CONSTANT> | <INTEGER_CONSTANT> */
+void AtomTerm() :
+{
+  Token t;
+}
+{
+  t=<QUERY_AND_PREDICATE_AND_VARIABLE_NAME>  		{this.terms.add(new Variable(t.image)); this.variables.put(t.image, new Variable(t.image));} |
+  t=<STRING_CONSTANT>   {this.terms.add(new StringConstant(t.image.substring(1,t.image.length()-1)));} |
+  t=<INTEGER_CONSTANT>  {this.terms.add(new IntegerConstant(t.image));}		
+}

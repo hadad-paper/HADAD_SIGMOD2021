@@ -1,0 +1,39 @@
+Q001<$X> :-
+	triple($X, <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, <http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#Document>);
+
+Q002<$Y> :-
+	triple($Y, <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, <http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#Document>);
+
+Q003<$X> :-
+	triple($X, <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, <http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#Article>);
+
+Q004<$X> :-
+	triple(<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#Document>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, $X);
+
+Q005<$X> :-
+	triple($X, <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, <http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#Book>),
+	triple($X, <http://purl.org/dc/elements/1.1/publisher>, "Springer");
+	
+Q006<$X> :-
+	triple($X, <http://purl.org/dc/elements/1.1/publisher>, "Springer"),
+	triple($X, <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, <http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#Book>);
+	
+Q007<$Y> :-
+	triple($Y, <http://purl.org/dc/elements/1.1/publisher>, "Springer"),
+	triple($Y, <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>, <http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#Book>);
+
+Q008<$X> :- 
+	triple($X,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#isbn>,$FV_1),
+	triple($X,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#address>,$V);
+
+Q009<$X> :- 
+	triple($X,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#address>,$FV_2),
+	triple($X,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#isbn>,$Y);
+
+Q010<$X> :- 
+	triple($FV_5,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#cite>,$X),
+	triple($X,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#cite>,$U);
+
+Q011<$X> :- 
+	triple($FV_23,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#cite>,$X),
+	triple($X,<http://sw.deri.org/~aharth/2004/07/dblp/dblp.owl#cite>,$U);

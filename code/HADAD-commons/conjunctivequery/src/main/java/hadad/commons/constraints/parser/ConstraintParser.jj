@@ -1,0 +1,280 @@
+/**
+ * Constraint parser 
+ */
+ 
+options {
+  STATIC = false;
+}
+
+PARSER_BEGIN(ConstraintParser)
+package hadad.commons.constraints.parser;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import hadad.commons.conjunctivequery.Term;
+import hadad.commons.conjunctivequery.StringConstant;
+import hadad.commons.conjunctivequery.IntegerConstant;
+import hadad.commons.conjunctivequery.Variable;
+import hadad.commons.constraints.Constraint;
+import hadad.commons.conjunctivequery.Atom;
+import hadad.commons.constraints.Equality;
+import hadad.commons.constraints.Egd;
+import hadad.commons.constraints.Tgd;
+import hadad.commons.constraints.False;
+
+/**
+ * ConstraintParser parses an input from a stream or a reader, and produces a 
+ * list of constraints (TGDs and EGDs)
+ */
+public class ConstraintParser {
+
+        /** The result of the last parsing of an input. */
+        private ArrayList<Constraint> parsed;
+
+        /** The constraint being parsed. */
+        private Constraint constraint;
+
+        /** The premise of the constraint being parsed. */
+        private List<Atom> premise;
+
+        /** The conclusion of the tgd being parsed. */
+        private List<Atom> tgdconclusion;
+        
+        /** The conclusion of the egd being parsed. */
+        private List<Equality> egdconclusion;
+
+		 /** The type of the constraint */
+        private boolean isEgd;
+
+        private boolean isFalse;
+        
+        /** The relational atom being parsed. */
+        private Atom atom;
+        
+        /** The equality being parsed. */
+        private Equality eq;
+
+        /** The terms of the atom or equality being parsed. */
+        private List<Term> terms;
+
+        /** The relation name of the relational atom being parsed. */
+        private String predicate;
+
+
+        /**
+		 * Parses the input.
+		 * 
+		 * @return the constraints
+		 * @throws ParseException
+		 *             the parse exception
+		 */
+        public ArrayList<Constraint> parse() throws ParseException {
+                ConstraintList();
+                return parsed;
+        }
+
+}
+
+PARSER_END(ConstraintParser)
+
+
+
+/* WHITE SPACES */
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+/* COMMENTS (THEY START WITH '//') */
+SPECIAL_TOKEN :
+{
+  <COMMENT: "#" (~["\n","\r"])* ("\n"|"\r"|"\r\n")? >
+}
+
+TOKEN :
+{
+ < FALSE: "false" >
+}
+
+/* INTEGER_CONSTANT */
+TOKEN :
+{
+ < TRUE: "true" >
+}
+
+
+/* RESERVED WORDS AND SYMBOLS */
+TOKEN :
+{
+  <EOC: ";">
+| <PREM_SEP: "->">
+| <LPAREN: "(">
+| <RPAREN: ")">
+| <COMMA: ",">
+| <QUOTE: "\"">
+| <EQ: "=">
+}
+
+
+
+/* RELATION_AND_VARIABLE_NAME */
+TOKEN :
+{
+  < RELATION_AND_VARIABLE_NAME: ( ["a"-"z","A"-"Z"] )+ ( ["a"-"z","A"-"Z","_","0"-"9"] )* >
+}
+
+/* STRING_CONSTANT */
+TOKEN :
+{
+ < STRING_CONSTANT: <QUOTE> ( ["a"-"z","A"-"Z","_","0"-"9",":","/",".","?","#","-","@","&","=","!","%"," ","(",")","[","]","{","}","<",">","~",","] )* <QUOTE> >
+}
+
+/* INTEGER_CONSTANT */
+TOKEN :
+{
+ < INTEGER_CONSTANT: ( "0" | ["1"-"9"] )+ ( ["0"-"9"] )* >
+}
+
+/***********
+ * GRAMMAR *
+ ***********/
+
+/* Top level production */
+/* QueryList ::= (Query ";")* */
+void ConstraintList() :
+{
+  this.parsed = new ArrayList<Constraint>();
+}
+{
+  ( Constraint() <EOC> 
+      { 
+        parsed.add(constraint);
+      }
+  )*
+  <EOF>
+}
+
+void Constraint() :
+{
+	this.premise = new ArrayList<Atom>();
+	this.isEgd = false;
+	this.isFalse = true;
+}
+{
+    
+    Premise() <PREM_SEP> (  < FALSE > |  LOOKAHEAD(4) TgdConclusion() | EgdConclusion() )
+    {
+        if(this.isFalse)
+        	this.constraint = new False(this.premise);
+		else if (this.isEgd)
+  			this.constraint = new Egd(this.premise, this.egdconclusion);
+		else
+			this.constraint = new Tgd(this.premise, this.tgdconclusion);
+    }
+}
+
+void Premise() :
+{
+	this.premise = new ArrayList<Atom>();
+}
+{
+	(	  <TRUE>
+	|
+	 
+	(	Atom()
+ 	{
+ 	  	this.premise.add(this.atom);
+  		this.atom = null;
+    } 	(<COMMA> Atom()
+ 	{
+ 		this.premise.add(this.atom);
+  		this.atom = null;   	}	
+ 	)*
+	)
+ 	)?
+}
+
+
+void TgdConclusion() :
+{
+	this.tgdconclusion = new ArrayList<Atom>();
+	this.isEgd = false;
+	this.isFalse = false;}
+{
+ 	Atom()
+ 	{
+ 	  	this.tgdconclusion.add(this.atom);
+    }
+ 	(<COMMA> Atom()
+ 	{
+ 		this.tgdconclusion.add(this.atom);
+ 	}
+ 	)*
+}
+
+void Atom() :
+{
+	this.terms = new ArrayList<Term>();
+}
+{
+	AtomPredicate() <LPAREN> Term() ( <COMMA> Term() )* <RPAREN>
+	{
+ 	 	this.atom = new Atom(this.predicate, this.terms);
+	}
+	
+}
+
+void AtomPredicate():
+{
+  Token t;
+}
+{
+  t=<RELATION_AND_VARIABLE_NAME>
+  {
+    this.predicate = t.image;
+  }
+}
+
+void Term() :
+{
+  Token t;
+}
+{
+  t=<RELATION_AND_VARIABLE_NAME> {this.terms.add(new Variable(t.image));} |
+  t=<STRING_CONSTANT>   {this.terms.add(new StringConstant(t.image.substring(1,t.image.length()-1)));} |
+  t=<INTEGER_CONSTANT>  {this.terms.add(new IntegerConstant(t.image));}		
+}
+
+
+void EgdConclusion() :
+{
+	this.egdconclusion = new ArrayList<Equality>();
+	this.isEgd = true;
+	this.isFalse = false;
+}
+{
+ 	Equality()
+ 	{
+ 	  	this.egdconclusion.add(this.eq);
+    }
+ 	(<COMMA> Equality()
+ 	{
+ 		this.egdconclusion.add(this.eq);
+ 	}
+ 	)*
+}
+
+void Equality() :
+{
+  this.terms = new ArrayList<Term>();}
+{
+	Term() <EQ> Term()
+	{
+ 	 	this.eq = new Equality(this.terms.get(0), this.terms.get(1));
+	}
+}
+
