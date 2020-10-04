@@ -1,0 +1,1 @@
+RW0<r> :- trace(idr5,r),name(idr5,"A");

@@ -1,0 +1,1 @@
+RW0<idr3> :- multi(idr2,idD,idr3),multi(idB,idC,SK_0),multi(idA,SK_0,idr2),size(idA,"6","1"),size(idB,"1","6"),size(idC,"6","1"),size(idD,"1","6"),name(idA,"A"),name(idB,"B"),name(idC,"C"),name(idD,"D");

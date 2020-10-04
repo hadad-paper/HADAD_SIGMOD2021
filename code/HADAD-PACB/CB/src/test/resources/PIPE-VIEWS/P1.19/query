@@ -1,0 +1,4 @@
+Q<d>:-
+name(idC,"C"),
+tr(idC,idr1),
+in(idr1,d);

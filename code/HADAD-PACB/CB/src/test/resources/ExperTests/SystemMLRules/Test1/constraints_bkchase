@@ -1,0 +1,46 @@
+name(id1,n1),name(id2,n1)->id2=id1;
+tr(id1,idt1),tr(id1,idt2)->idt2=idt1;
+in(id1,idt1),in(id1,idt2)->idt2=idt1;
+ins(id1,idt1),ins(id1,idt2)->idt2=idt1;
+tr(id1,idr1),tr(idr1,idr3)->idr3=id1;
+in(id1,idr1),in(idr1,idr3)->idr3=id1;
+multi(idA,idB,idr1),multi(idA,idB,idr2)->idr2=idr1;
+multi_s(idA,idB,idr1),multi_s(idA,idB,idr2)->idr2=idr1;
+det(idA,d1),det(idA,d2)->d2=d1;
+trace(idA,id1),trace(idA,id2)->id2=id1;
+add(idA,idB,idr1),add(idA,idB,idr2)->idr2=idr1;
+sum(idA,r1),sum(idA,r2)->r2=r1;
+div(idA,idB,r1),div(idA,idB,r2)->r1=r2;
+one(I1),one(I2)->I2=I1;
+zero(I1),zero(I2)->I2=I1;
+
+colSums(idA,idr1),colSums(idA,idr2)->idr2=idr1;
+
+name(idM,"M"),size(idM,"1","6")->zero(idM),size(idM,"1","6");
+#name(idA,n)-> one(I),div(idA,I,idA);
+name(idA,n)-> div(idA,"1",idA);
+name(idA,n)-> div("1",idA,idA);
+
+name(idA,n)-> one(I),multi_s(idA,I,idA);
+
+#name(idA,n),zero(I)->multi(idA,I,I);
+
+
+
+add(idA,idB,idr1)-> one(I),div(idr1,I,idr1);
+name(idA,n),size(idA,"1",j)->colSums(idA,idA);
+size(idX,j,"1"),sum(idX,idr1)->colSums(idX,idr1),size(idX,j,"1");
+zero(idA)->tr(idA,idA);
+
+
+
+#UnnecessaryAggregates
+name(idA,n),sum(idA,r)->rowSums(idA,idR),sum(idR,r);
+add(idA,idB,idr1),sum(idr1,r)->rowSums(idr1,idR),sum(idR,r);
+add(idA,idB,idr1),sum(idr1,r)->colSums(idr1,idR),sum(idR,r);
+
+#pushdownUnaryAggTransposeOp
+colSums(idA,idr3),tr(idr3,idr2)->rowSums(idA,idr1),tr(idr1,idr2);
+add(idA,idB,idr1)->add(idB,idA,idr1);
+tr(idB,idr2),multi_s(idA,idr2,idr3),sum(idr3,r)->multi(idA,idB, idr1), trace(idr1,r);
+one(I),size(I,i,j),add(I,idY,idr3),multi_s(idr3,idX,idr2)->size(idY,i,j),add(idX,idY,idr1),multi_s(idr1,idX,idr2);

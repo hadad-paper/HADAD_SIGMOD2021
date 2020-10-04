@@ -1,0 +1,14 @@
+v: for $p in //person return $p/name, $p//city
+q: //person/name/text()
+r: Navig (v, self::name/text ())
+
+Note that this view does not return a valid XML document tree, but rather a
+forest (list of trees). v therefore is assumed to hold the set of roots
+of these trees. See example xpath5 for a variation in which the view
+returns a single tree, and it contains the root thereof.
+
+Also note something very important: even though the view mixes (unions sets of)
+name and city nodes in its output, 
+they can be isolated via the right tag test. 
+We should allow this kind of disambiguable view. Note that it compiles
+to bkchase constraints differently from views with homogeneous output.

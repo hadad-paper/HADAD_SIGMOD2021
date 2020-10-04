@@ -1,0 +1,10 @@
+#trace(inv(t(A))*X)
+Q<d>:-
+name(idA,"A"),
+name(idX,"X"),
+in(idA,idI),
+tr(idI,idT),
+multi(idT,idX,idr1),
+trace(idr1,d);
+
+

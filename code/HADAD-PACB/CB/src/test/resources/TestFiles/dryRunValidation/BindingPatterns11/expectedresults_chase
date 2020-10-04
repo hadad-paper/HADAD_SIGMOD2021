@@ -1,0 +1,14 @@
+U<x1> :- 
+V1(x1,"P1",x2,SK_0),
+V1(x1,"P2",x3,SK_0),
+Hio(x1,SK_0),
+Hio("P1",SK_1),
+Hio(x2,SK_2),
+Hio("P2",SK_3),
+Hio(x3,SK_4),
+Ro(SK_0),
+Ro(SK_1),
+Ro(SK_2),
+Ro(SK_3),
+Ro(SK_4),
+C("P1"),C("P2");

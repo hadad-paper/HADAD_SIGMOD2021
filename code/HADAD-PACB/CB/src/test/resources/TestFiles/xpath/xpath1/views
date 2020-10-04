@@ -1,0 +1,11 @@
+# do not put view here, as it needs to be translated to constraints differently than
+# standard view definitions are translated.
+#
+# just to illustrate the view, though, here goes:
+#
+#v<p'> :- root (r), 
+#         child (r, s), tag (s, "site"),
+#	 desc (s, t),
+#	 child (t, p), tag (p, "person"),
+#	 copy (p, p');
+#

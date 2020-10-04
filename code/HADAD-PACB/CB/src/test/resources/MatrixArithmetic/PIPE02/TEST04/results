@@ -1,0 +1,8 @@
+RW0<idr2> :- constructMatrixValue(i,j,v,idr1),V(i,j,v),constructName(idr1,"A"),name(idr1,"A"),rowFilter(idr1,"3","11",idr1),tr(idr1,idr2);
+RW1<idr2> :- cell(idr1,i,"3","11"),constructMatrixValue(i,j,v,idr1),V(i,j,v),constructName(idr1,"A"),name(idr1,"A"),tr(idr1,idr2);
+RW2<idr2> :- constructMatrixValueT(i,j,v,idr1),V(i,j,v),constructName(idr1,"A"),name(idr1,"A"),rowFilter(idr1,"3","11",idr1),tr(idr1,idr2);
+RW3<idr2> :- constructMatrixValueT(i,j,v,idr1),cell(idr1,i,"3","11"),V(i,j,v),constructName(idr1,"A"),name(idr1,"A"),tr(idr1,idr2);
+RW4<idr2> :- constructMatrixValue(i,SK_0,SK_1,idr1),V(i,SK_0,SK_1),constructName(idr1,"A"),name(idr1,"A"),rowFilter(idr1,"3","11",idr1),tr(idr1,idr2);
+RW5<idr2> :- cell(idr1,i,"3","11"),constructMatrixValue(i,SK_0,SK_1,idr1),V(i,SK_0,SK_1),constructName(idr1,"A"),name(idr1,"A"),tr(idr1,idr2);
+RW6<idr2> :- constructMatrixValueT(i,SK_0,SK_1,idr1),V(i,SK_0,SK_1),constructName(idr1,"A"),name(idr1,"A"),rowFilter(idr1,"3","11",idr1),tr(idr1,idr2);
+RW7<idr2> :- constructMatrixValueT(i,SK_0,SK_1,idr1),cell(idr1,i,"3","11"),V(i,SK_0,SK_1),constructName(idr1,"A"),name(idr1,"A"),tr(idr1,idr2);

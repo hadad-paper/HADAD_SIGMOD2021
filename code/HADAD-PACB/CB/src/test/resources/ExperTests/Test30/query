@@ -1,0 +1,11 @@
+#det((((M+N)-1)T)*D) 
+#det(A-1-1-1)
+Q<idr3>:-
+name(idM,"M"),
+name(idN,"N"),
+name(idD,"D"),
+add(idM,idN,idr1),
+in(idr1,idrI),
+tr(idrI,idrT),
+multi(idrT,idD,idr2),
+trace(idr2,idr3);

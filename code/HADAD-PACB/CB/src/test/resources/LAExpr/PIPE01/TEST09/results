@@ -1,0 +1,2 @@
+RW0<idr1> :- in(idX,idT),trace(idT,idr1),size(idX,"8","8"),name(idX,"X");
+RW1<idr1> :- trace(idT,idr1),name(idT,"V");

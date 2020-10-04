@@ -1,0 +1,4 @@
+#Q: det(XT)
+Q<idr1>:-
+name(idX,"X"),
+trace(idX,idr1);

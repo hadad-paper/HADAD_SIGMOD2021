@@ -1,0 +1,8 @@
+q<t1> :- root  (r), 
+         child (r,  si), tag (si, "site"), 
+       	 child (si, p),  tag (p, "person"),
+       	 child (p,  a),  tag (a, "address"),
+       	 child (a,  s), tag (s, "street"),
+       	 text  (s,  t),
+         eq (t, t1);
+

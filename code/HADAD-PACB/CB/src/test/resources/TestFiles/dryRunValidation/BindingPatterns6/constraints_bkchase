@@ -1,0 +1,11 @@
+T(s,p,o) -> H(s,d);
+H(s,d) -> R(d);
+
+# extractability constraints for access pattern modeling:
+V(s,p,o,d),D(d) -> D(s);
+V(s,p,o,d),D(d) -> D(p);
+V(s,p,o,d),D(d) -> D(o);
+Hio(s,d),D(s) -> D(d);
+Ro(y) -> D(y);
+C(x) -> D(x);
+

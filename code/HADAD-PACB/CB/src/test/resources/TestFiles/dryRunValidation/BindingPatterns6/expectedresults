@@ -1,0 +1,2 @@
+RW0<p> :- V("S1",p,o,SK_0),C("S1"),Ro(SK_0);
+RW1<p> :- V("S1",p,o,SK_0),C("S1"),Hio("S1",SK_0);

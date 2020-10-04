@@ -1,0 +1,8 @@
+#Q: ((X1X2)X3)T
+Q<idr6>:-
+name(idM,"M"),
+name(idN,"N"),
+add(idM,idN,idr3),
+tr(idr3,idr4),
+exp(idr4,idr6);
+

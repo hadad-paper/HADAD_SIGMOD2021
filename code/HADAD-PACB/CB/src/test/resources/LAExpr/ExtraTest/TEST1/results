@@ -1,0 +1,17 @@
+RW0<idr2> :- add(idA,idB,idr1),trace(idT,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idr1,idT);
+RW1<idr2> :- add(SK_0,SK_1,idT),trace(idT,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,SK_0),tr(idB,SK_1);
+RW2<idr2> :- add(idA,idB,idr1),add(idB,idA,idr1),add(SK_1,SK_0,idT),trace(idT,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,SK_0),tr(idB,SK_1);
+RW3<idr2> :- add(idA,idB,idr1),add(SK_1,SK_0,idT),add_s(SK_3,SK_2,idr2),trace(SK_0,SK_2),trace(SK_1,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idr1,idT);
+RW4<idr2> :- add(SK_0,SK_1,idT),add(idB,idA,idr1),add_s(SK_3,SK_2,idr2),trace(SK_0,SK_2),trace(SK_1,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idr1,idT),tr(idA,SK_0),tr(idB,SK_1);
+RW5<idr2> :- add(SK_0,SK_1,idT),add(SK_1,SK_0,idT),add_s(SK_3,SK_2,idr2),trace(SK_0,SK_2),trace(SK_1,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,SK_0),tr(idB,SK_1);
+RW6<idr2> :- add(idA,idB,idr1),add(idB,idA,idr1),add_s(SK_3,SK_2,idr2),trace(SK_0,SK_2),trace(SK_1,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,SK_0),tr(idB,SK_1);
+RW7<idr2> :- add(idA,idB,idr1),add(SK_0,SK_1,idT),add_s(SK_2,SK_3,idr2),trace(SK_0,SK_2),trace(SK_1,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idr1,idT);
+RW8<idr2> :- add_s(SK_2,SK_3,idr2),trace(SK_0,SK_2),trace(SK_1,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,SK_0),tr(idB,SK_1);
+RW9<idr2> :- add(idA,idB,idr1),add(SK_1,SK_0,idT),add_s(SK_3,SK_2,idr2),trace(idA,SK_2),trace(idB,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idr1,idT),tr(idA,SK_0),tr(idB,SK_1);
+RW10<idr2> :- add(SK_0,SK_1,idT),add(idB,idA,idr1),trace(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idr1,idT),tr(idA,SK_0),tr(idB,SK_1);
+RW11<idr2> :- add(SK_0,SK_1,idT),add(idB,idA,idr1),add_s(SK_3,SK_2,idr2),trace(idA,SK_2),trace(idB,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idr1,idT),tr(idA,SK_0),tr(idB,SK_1);
+RW12<idr2> :- add(SK_0,SK_1,idT),add(idB,idA,idr1),add(SK_1,SK_0,idT),trace(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,SK_0),tr(idB,SK_1);
+RW13<idr2> :- add(idA,idB,idr1),trace(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW14<idr2> :- add(idA,idB,idr1),add(idB,idA,idr1),add_s(SK_3,SK_2,idr2),trace(idA,SK_2),trace(idB,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW15<idr2> :- add(SK_0,SK_1,idT),add(SK_1,SK_0,idT),add_s(SK_3,SK_2,idr2),trace(idA,SK_2),trace(idB,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,SK_0),tr(idB,SK_1);
+RW16<idr2> :- add_s(SK_2,SK_3,idr2),trace(idA,SK_2),trace(idB,SK_3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");

@@ -1,0 +1,5 @@
+T(s,p,o) -> H(s,d);
+T(s,p,o) -> H(p,d);
+T(s,p,o) -> H(o,d);
+
+H(s,d) -> R(d);

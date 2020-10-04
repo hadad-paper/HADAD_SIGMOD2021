@@ -1,0 +1,2 @@
+#integrity constraints:
+R(x,y)-> S(y);

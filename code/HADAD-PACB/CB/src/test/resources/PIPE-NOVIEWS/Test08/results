@@ -1,0 +1,2 @@
+RW0<t> :- trace(idr1,t),size(idD,"10000","10000"),name(idD,"D"),multi_s("2",idD,idr1);
+RW1<t> :- trace(idD,SK_8499),size(idD,"10000","10000"),name(idD,"D"),multi_s("2",SK_8499,t);

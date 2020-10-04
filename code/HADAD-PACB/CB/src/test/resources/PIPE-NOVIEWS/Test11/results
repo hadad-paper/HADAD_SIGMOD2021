@@ -1,0 +1,4 @@
+RW0<t> :- add(idr1,idr2,t),size(idA,"1000000","100"),name(idA,"A"),multi_s("2",idA,idr1),multi_s("3",idA,idr2);
+RW1<t> :- add(idr2,idr1,t),size(idA,"1000000","100"),name(idA,"A"),multi_s("2",idA,idr1),multi_s("3",idA,idr2);
+RW2<t> :- multi(SK_498,idA,t),add_s("2","3",SK_498),size(idA,"1000000","100"),name(idA,"A");
+RW3<t> :- multi(SK_498,idA,t),add_s("3","2",SK_498),size(idA,"1000000","100"),name(idA,"A");

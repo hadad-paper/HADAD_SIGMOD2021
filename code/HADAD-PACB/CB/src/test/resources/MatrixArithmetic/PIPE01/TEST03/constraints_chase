@@ -1,0 +1,12 @@
+#---------------EGDS-------------------------#
+name(id1,n1),name(id2,n1)->id2=id1;
+cell(idA,i,j,v1),cell(idA,i,j,v2)->v1=v2;
+rev(idX,idr1),rev(idx,idr2)->idr2=idr1;
+tr(idX,idr1),tr(idX,idr2)->idr2=idr1;
+RowType(idA,o1),RowType(idA,o2)->o2=o1;
+div(idA,idB,idr1),div(idA,idB,idr2)->idr2=idr1;
+add(idA,idB,idr1),add(idA,idB,idr2)->idr2=idr1;
+
+
+name(idA,"X"),size(idA,"8","8"),tr(idA,idr1),cell(idr1,k,z,v)->cell(idA,k,z,v);
+name(idA,"X"),cell(idA,k,z,v),size(idA,"8","8")->tr(idA,idr1),cell(idr1,k,z,v);

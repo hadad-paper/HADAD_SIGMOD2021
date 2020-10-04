@@ -1,0 +1,15 @@
+RW0<idr6> :- add(idM,idN,idr3),det(idr4,idr6),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N"),tr(idr3,idr4);
+RW1<idr6> :- add(idN,idM,idr3),det(idr4,idr6),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N"),tr(idr3,idr4);
+RW2<idr6> :- add(SK_0,SK_1,idr4),det(idr4,idr6),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N"),tr(idM,SK_0),tr(idN,SK_1);
+RW3<idr6> :- add(SK_1,SK_0,idr4),det(idr4,idr6),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N"),tr(idM,SK_0),tr(idN,SK_1);
+RW4<idr6> :- det(idr4,idr6),name(idr4,"V");
+RW5<idr6> :- add(idM,idN,idr3),det(idr3,idr6),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N");
+RW6<idr6> :- add(idN,idM,idr3),det(idr3,idr6),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N");
+RW7<idr6> :- add(idM,idN,idr3),det(idr3,idr6),name(idM,"M"),name(idN,"N"),name(idr4,"V");
+RW8<idr6> :- add(idN,idM,idr3),det(idr3,idr6),name(idM,"M"),name(idN,"N"),name(idr4,"V");
+RW9<idr6> :- add(idM,idN,idr3),det(idr3,idr6),name(idr4,"V"),tr(idr3,idr4);
+RW10<idr6> :- add(idM,idN,idr3),add(SK_0,SK_1,idr4),det(idr3,idr6),name(idr4,"V"),tr(idM,SK_0),tr(idN,SK_1);
+RW11<idr6> :- add(idM,idN,idr3),add(SK_1,SK_0,idr4),det(idr3,idr6),name(idr4,"V"),tr(idM,SK_0),tr(idN,SK_1);
+RW12<idr6> :- add(idN,idM,idr3),det(idr3,idr6),name(idr4,"V"),tr(idr3,idr4);
+RW13<idr6> :- add(idN,idM,idr3),add(SK_1,SK_0,idr4),det(idr3,idr6),name(idr4,"V"),tr(idM,SK_0),tr(idN,SK_1);
+RW14<idr6> :- add(SK_0,SK_1,idr4),add(idN,idM,idr3),det(idr3,idr6),name(idr4,"V"),tr(idM,SK_0),tr(idN,SK_1);

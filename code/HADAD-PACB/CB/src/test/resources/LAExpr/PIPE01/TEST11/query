@@ -1,0 +1,6 @@
+#Q: det(XT)
+Q<idr1>:-
+name(idX,"X"),
+size(idX,"8","8"),
+tr(idX,idT),
+exp(idT,idr1);

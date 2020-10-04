@@ -1,0 +1,13 @@
+Q<idr3>:-
+name(idD,"D"),
+size(idD,"10000","10000"),
+name(idC,"C"),
+size(idC,"10000","10000"),
+name(idE,"E"),
+size(idE,"10000","10000"),
+det(idC,d1),
+det(idD,d2),
+det(idE,d3),
+multi_s(d1,d2,idr1),
+multi_s(idr1,d1,idr2),
+multi_s(idr2,d3,idr3);

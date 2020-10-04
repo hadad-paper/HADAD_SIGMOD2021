@@ -1,0 +1,6 @@
+# src + tgt + aux here:
+root (1), child (2), tag (2), desc (2), copy (2), eq (2), eq_v (2),    
+v (1), child_v (2), tag_v (2), desc_v (2);
+
+# tgt here:
+v (1), child_v (2), tag_v (2), desc_v (2), eq_v (2);

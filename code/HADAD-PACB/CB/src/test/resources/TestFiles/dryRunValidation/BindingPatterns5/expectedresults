@@ -1,0 +1,1 @@
+RW0<x,y,z,u> :- R_onnn(x),R_ionn(x,y),R_inon(x,z),R_inno(x,u);

@@ -1,0 +1,2 @@
+RW0<s> :- rowSums(idA,idr2),sum(idr2,s),size(idA,"10000","10000"),name(idA,"A");
+RW1<s> :- sum(idA,s),size(idA,"10000","10000"),name(idA,"A");

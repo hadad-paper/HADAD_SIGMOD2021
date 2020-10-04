@@ -1,0 +1,13 @@
+#Q: (((NT+MT))-1)*D*Z)
+Q<idr5> :- 
+name(idM,"M"),
+name(idN,"N"),
+name(idZ,"Z"),
+name(idD,"D"),
+tr(idM,idMI),
+tr(idN,idNI),
+add(idNI,idMI,idr2),
+in(idr2,idr3),
+multi(idr3,idD,idr4),
+multi(idr4,idZ,idr5);
+

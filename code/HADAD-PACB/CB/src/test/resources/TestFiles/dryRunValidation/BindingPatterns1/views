@@ -1,0 +1,3 @@
+R_oi<x,y> :- R(x,y);
+S_oi<y,z> :- S(y,z);
+T_o<z>    :- T(z);

@@ -1,0 +1,5 @@
+#Source schema
+T(3), V2(3), V1(3);
+
+#Target schema
+V1(3), V2(3);									

@@ -1,0 +1,5 @@
+#Q:(XT)-1
+Q<idr1>:-
+name(idX,"X"),
+in(idX,idT),
+tr(idT,idr1);

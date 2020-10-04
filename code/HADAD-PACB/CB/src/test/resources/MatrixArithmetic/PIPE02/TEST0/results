@@ -1,0 +1,2 @@
+RW0<idr4> :- constructMatrixValue(i,j,v,idr1),T(j,d),matrixFilter(idr1,"5",idr1),V1(i,j,v),constructName(idr1,"A"),name(idr1,"A"),tr(idr1,idr4);
+RW1<idr4> :- constructMatrixValue(i,j,v,idr1),T(j,d),V1(i,j,v),eq(v,"5"),constructName(idr1,"A"),name(idr1,"A"),tr(idr1,idr4);

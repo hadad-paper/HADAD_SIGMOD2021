@@ -1,0 +1,10 @@
+#inv(t(Z)+t(X))
+Q<idr4>:-
+name(idZ,"Z"),
+name(idX,"X"),
+tr(idZ,idr1),
+tr(idX,idr2),
+add(idr1,idr2,idr3),
+in(idr3,idr4);
+
+

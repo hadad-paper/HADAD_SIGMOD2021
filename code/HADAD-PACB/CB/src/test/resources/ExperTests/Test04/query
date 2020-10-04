@@ -1,0 +1,11 @@
+Q<idr5>:-
+name(idX,"X"),
+name(idH,"H"),
+name(idW,"W"),
+tr(idH,idHT),
+multi(idX,idHT,idr1),
+multi(idW,idH,idr2),
+multi(idr2,idHT,idr3),
+div(idr1,idr3,idr4),
+multie(idW,idr4,idr5);
+

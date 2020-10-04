@@ -1,0 +1,5 @@
+RW0<d> :- exp(idrT,d),add(idD,idC,idr1),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C"),tr(idr1,idT);
+RW1<d> :- exp(idrT,d),add(idC,idD,idr1),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C"),tr(idr1,idT);
+RW2<d> :- exp(idrT,d),add(SK_3698,SK_3699,idT),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C"),tr(idD,SK_3698),tr(idC,SK_3699);
+RW3<d> :- exp(idrT,d),add(SK_3699,SK_3698,idT),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C"),tr(idD,SK_3698),tr(idC,SK_3699);
+RW4<d> :- exp(idrT,d),name(idT,"V");

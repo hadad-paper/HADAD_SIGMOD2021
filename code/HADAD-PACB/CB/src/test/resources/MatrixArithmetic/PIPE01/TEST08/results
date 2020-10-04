@@ -1,0 +1,6 @@
+RW0<v> :- cell(id21,"3","4",v),add(idA,idB,idr1),name(idA,"A"),name(idB,"B"),tr(idr1,id21);
+RW1<v> :- cell(id21,"3","4",v),add(SK_2,SK_3,id21),name(idA,"A"),name(idB,"B"),tr(idA,SK_2),tr(idB,SK_3);
+RW2<v> :- cell(idr1,"4","3",v),add(idA,idB,idr1),name(idA,"A"),name(idB,"B");
+RW3<v> :- cell(SK_2,"3","4",SK_12),cell(SK_3,"3","4",SK_13),add_s(SK_12,SK_13,v),add(idA,idB,idr1),add(SK_2,SK_3,id21),name(idA,"A"),name(idB,"B"),tr(idr1,id21);
+RW4<v> :- cell(SK_2,"3","4",SK_12),cell(SK_3,"3","4",SK_13),add_s(SK_12,SK_13,v),name(idA,"A"),name(idB,"B"),tr(idA,SK_2),tr(idB,SK_3);
+RW5<v> :- cell(idA,"4","3",SK_14),cell(idB,"4","3",SK_15),add_s(SK_14,SK_15,v),name(idA,"A"),name(idB,"B");

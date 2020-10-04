@@ -1,0 +1,3 @@
+RW0<idr1> :- det(idT,idr1),size(idX,"6","6"),name(idX,"X"),tr(idX,idT);
+RW1<idr1> :- det(idX,idr1),size(idX,"6","6"),name(idX,"X");
+RW2<idr1> :- size(idr1,"6","6"),name(idr1,"V");

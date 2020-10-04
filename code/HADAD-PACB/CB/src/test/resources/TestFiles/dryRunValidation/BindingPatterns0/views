@@ -1,0 +1,3 @@
+# for each access pattern on a given relation, introduce a view:
+R_oi<x,y> :- R(x,y);
+S_o<y> :- S(y); 

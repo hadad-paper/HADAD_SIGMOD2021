@@ -1,0 +1,6 @@
+q<t1>  :- root (r),
+     	  desc (r, x),
+	  child (x, p), tag (p, "person"),
+	  child (p, n), tag (n, "name"),
+	  text (n, t),
+	  eq (t, t1);

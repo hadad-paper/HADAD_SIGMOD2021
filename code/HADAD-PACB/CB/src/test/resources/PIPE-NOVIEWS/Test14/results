@@ -1,0 +1,2 @@
+RW0<d> :- trace(idr1,d),size(idD,"10000","10000"),name(idD,"D"),tr(idD,idr1);
+RW1<d> :- trace(idD,d),size(idD,"10000","10000"),name(idD,"D");

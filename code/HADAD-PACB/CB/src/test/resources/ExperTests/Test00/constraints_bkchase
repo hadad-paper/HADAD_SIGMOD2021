@@ -1,0 +1,2 @@
+V(X,D)->T(X,D),E(D,Z);
+T(D,X)->R(X,Y),S(Y,D);

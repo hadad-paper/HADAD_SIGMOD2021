@@ -1,0 +1,22 @@
+Simple test for the following view and query:
+
+v: <streets>
+      for $p in doc("input")/site/person,
+          $a in $p/address
+      return $a/street
+   </streets>
+
+q: /site/person/address/street/number/text()
+
+
+
+A bit more interesting than example xpath2, since the
+construction of the <streets> element requires more navigation into the view
+v. This view contains a single entry, namely the root of the document.
+
+r: Navig (v, ./streets/street/number/text ())
+
+As opposed to xpath2, 
+this version returns a rewriting in terms of the materialized v 
+and compensating navigation into it, which is closer to a plan
+than the rewriting in terms of the virtual view v_create.

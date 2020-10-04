@@ -1,0 +1,9 @@
+#Q<B,D>:- 
+#R1(A,B,C),S1(A,D,E),S2(A,F,G);
+#Q<idT>:-
+#name(idA,"A"),name(idB,"B"),
+#multi(idA,idB,idr1),tr(idr1,idT);
+#Q<A,B,C> :- R(A,B), S(B,C), T(C,D);
+
+
+Q<B,D,G>:-R1(A,B,C),S1(A,D,E),S2(A,F,G);

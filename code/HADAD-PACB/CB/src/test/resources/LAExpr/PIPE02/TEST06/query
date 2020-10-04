@@ -1,0 +1,14 @@
+#Q: det(XT)
+Q<idr5>:-
+name(idX1,"X1"),
+name(idX2,"X2"),
+name(idX3,"X3"),
+
+tr(idX1,idr1),
+tr(idX2,idr2),
+tr(idX3,idr3),
+
+multi(idX3,idX2,idr4),
+multi(idr4,idX1,idr5);
+
+

@@ -1,0 +1,9 @@
+#Q: ((X1X2)X3)T
+Q<idr6>:-
+name(idX1,"X1"),
+name(idX2,"X2"),
+name(idX3,"X3"),
+multi(idX1,idX2,idr4),
+multi(idr4,idX3,idr5),
+tr(idr5,idr6);
+

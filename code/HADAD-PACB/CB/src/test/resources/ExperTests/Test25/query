@@ -1,0 +1,9 @@
+#det((A+B)C)-1)
+Q<idr5>:-
+name(idA,"A"),
+name(idB,"B"),
+name(idC,"C"),
+add(idA,idB,idr1),
+multi(idr1,idC,idr3),
+in(idr3,idr4),
+det(idr4,idr5);

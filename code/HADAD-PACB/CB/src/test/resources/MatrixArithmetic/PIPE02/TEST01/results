@@ -1,0 +1,2 @@
+RW0<idr2> :- constructMatrixValue(i,j,v,idr1),V(i,j,v),constructName(idr1,"A"),name(idr1,"A"),rowFilter(idr1,"3","11",idr1),tr(idr1,idr2);
+RW1<idr2> :- cell(idr1,i,"3","11"),constructMatrixValue(i,j,v,idr1),V(i,j,v),constructName(idr1,"A"),name(idr1,"A"),tr(idr1,idr2);

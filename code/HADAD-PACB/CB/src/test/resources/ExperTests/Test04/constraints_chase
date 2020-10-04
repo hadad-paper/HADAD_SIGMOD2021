@@ -1,0 +1,14 @@
+#EGDs
+name(id1,n1),name(id2,n1)->id2=id1;
+multi(idA,idB,idr1),multi(idA,idB,idr2)->idr2=idr1;
+tr(id1,idt1),tr(id1,idt2)->idt2=idt1;
+in(id1,idt1),in(id1,idt2)->idt2=idt1;
+diag(id1,idd1),diag(id1,idd2)->idd2=idd1;
+div(id1,id2,idr1),div(id1,id2,idr2)->idr2=idr1;
+multie(id1,id2,idr1),multie(id1,id2,idr2)->idr2=idr1;
+
+
+#TGD
+tr(idA,idT),in(idT,idr1)->in(idA,idr2),tr(idr2,idr1);
+multi(idA,idB,idr1),in(idr1,idI)-> in(idA,idAI),in(idB,idBI),multi(idBI,idAI,idI);
+multi(idA,idB,idr1),multi(idr1,idC,idr2)->multi(idB,idC,idr3),multi(idA,idr3,idr2);

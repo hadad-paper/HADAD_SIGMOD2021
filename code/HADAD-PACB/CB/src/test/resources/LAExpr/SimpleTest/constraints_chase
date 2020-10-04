@@ -1,0 +1,7 @@
+#person(id1,g1,a1,n1),person(id1,g2,a2,n2)->n2=n1,a2=a1,g2=g1;
+
+person(id,g,a,n)->V1(id,g);
+
+#person(id,g,a,n)->V2(id,a);
+
+#person(id,g,a,n)->V3(id,n);

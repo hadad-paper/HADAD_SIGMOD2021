@@ -1,0 +1,5 @@
+person(id1,g1,a1,n1,s1),person(id1,g2,a2,n2,s2)->n2=n1,a2=a1,g2=g1,s2=s1;
+
+V1(id,g)->person(id,g,"a",n,s);
+
+V2(id,s)->person(id,g,a,"n",s);

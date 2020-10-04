@@ -1,0 +1,21 @@
+
+# Grex schema constraints
+eq(x,y)->eq(y,x);
+child(x,y)->desc(x,y);
+desc(x,y),desc(y,z)->desc(x,z);
+
+# Views constraints
+child(p,c),copy_V(p,p1)->child_V(p1,c1),copy_V(c,c1);
+tag(x,t),copy_V(x,x1)->tag_V(x1,t);
+desc(x,u),child(u,y),copy_V(x,x1)->desc_V(x1,u1),child_V(u1,y1),copy_V(u,u1),copy_V(y,y1);
+copy_V(x,x1),eq(x,y)->eq_V(x1,y);
+text(x,y),copy_V(x,x1)->text_V(x1,y1),copy_V(y,y1);
+
+# V_0 constraint for extract
+root(x_0),child(x_0,x_1),tag(x_1,"site"),desc(x_1,x_2),child(x_2,y_0),tag(y_0,"person")->V_0_extr(y_0);
+
+# V_0 constraint relating extract with create
+V_0_extr(y_0)->copy_V(y_0,y_0_c),V_0_create(y_0_c),V_0_sk0(y_0_c,y_0);
+
+# V_0 constraint connecting create to XML constructed by view
+V_0_create(y_0_c)->V(y_0_c);

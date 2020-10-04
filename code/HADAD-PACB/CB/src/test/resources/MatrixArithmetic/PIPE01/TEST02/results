@@ -1,0 +1,1 @@
+RW0<v> :- cell(idR,"2","3",v),rev(idX,idR),size(idX,"3","5"),name(idX,"X");

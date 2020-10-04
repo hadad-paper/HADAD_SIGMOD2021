@@ -1,0 +1,6 @@
+#Q: XT+X-1
+Q<idr1>:-
+name(idX,"X"),
+tr(idX,idT),
+in(idX,idI),
+add(idT,idI,idr1);

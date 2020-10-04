@@ -1,0 +1,6 @@
+#Q: (XT)T
+Q<idr1>:-
+name(idX,"X"),
+size(idX,"6","6"),
+tr(idX,idT),
+tr(idT,idr1);

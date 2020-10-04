@@ -1,0 +1,3 @@
+RW0<idr2> :- multi(idA,idB,idr1),multi(idr1,idA,idr2),name(idA,"A"),name(idB,"B");
+RW1<idr2> :- multi(idB,idA,SK_0),multi(idA,SK_0,idr2),name(idA,"A"),name(idB,"B");
+RW2<idr2> :- multi(idA,SK_0,idr2),name(idA,"A"),name(SK_0,"V");

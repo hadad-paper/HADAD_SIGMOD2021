@@ -1,0 +1,9 @@
+RW0<s> :- rowSums(idr1,r),sum(r,s),multi(t2,t1,idr1),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N"),tr(idM,t1),tr(idN,t2);
+RW1<s> :- rowSums(idr1,r),sum(r,s),multi(idM,idN,SK_2394),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N"),tr(SK_2394,idr1);
+RW2<s> :- colSums(SK_2394,SK_2395),sum(r,s),multi(t2,t1,idr1),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N"),tr(idM,t1),tr(idN,t2),tr(SK_2394,idr1),tr(SK_2395,r);
+RW3<s> :- colSums(SK_2394,SK_2395),sum(r,s),multi(idM,idN,SK_2394),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N"),tr(SK_2395,r);
+RW4<s> :- colSums(SK_2394,SK_2395),rowSums(idr1,r),sum(SK_2395,s),multi(t2,t1,idr1),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N"),tr(idM,t1),tr(idN,t2),tr(SK_2395,r);
+RW5<s> :- colSums(SK_2394,SK_2395),sum(SK_2395,s),multi(t2,t1,idr1),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N"),tr(idM,t1),tr(idN,t2),tr(SK_2394,idr1);
+RW6<s> :- colSums(SK_2394,SK_2395),sum(SK_2395,s),multi(idM,idN,SK_2394),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N");
+RW7<s> :- sum(SK_2394,s),multi(idM,idN,SK_2394),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N");
+RW8<s> :- colSums(idM,SK_2396),rowSums(idN,SK_2398),sum(SK_2399,s),size(idM,"10000","10000"),size(idN,"10000","10000"),name(idM,"M"),name(idN,"N"),multi_s(SK_2397,SK_2398,SK_2399),tr(SK_2396,SK_2397);

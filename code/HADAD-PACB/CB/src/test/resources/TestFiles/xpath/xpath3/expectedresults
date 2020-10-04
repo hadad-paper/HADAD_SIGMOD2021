@@ -1,0 +1,1 @@
+RW0<t1> :- child_v(SK_1,SK_2),child_v(SK_2,SK_0),v(SK_1),eq_v(SK_3,t1),tag_v(SK_2,"streets"),tag_v(SK_0,"street"),text_v(SK_0,SK_3);

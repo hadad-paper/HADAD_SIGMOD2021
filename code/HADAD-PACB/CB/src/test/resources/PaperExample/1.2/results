@@ -1,0 +1,4 @@
+RW0<t> :- add(idr1,idN,idr2),in(idM,idr1),name(idM,"M"),name(idN,"N"),tr(idr2,t);
+RW1<t> :- add(idN,idr1,idr2),in(idM,idr1),name(idM,"M"),name(idN,"N"),tr(idr2,t);
+RW2<t> :- add(SK_192,SK_193,t),in(idM,idr1),name(idM,"M"),name(idN,"N"),tr(idr1,SK_192),tr(idN,SK_193);
+RW3<t> :- add(SK_193,SK_192,t),in(idM,idr1),name(idM,"M"),name(idN,"N"),tr(idr1,SK_192),tr(idN,SK_193);

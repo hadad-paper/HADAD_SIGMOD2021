@@ -1,0 +1,10 @@
+Q<idr3>:-
+name(idX,"X"),
+size(idX,"6","1"),
+name(idY,"Y"),
+size(idY,"6","1"),
+tr(idX,idT),
+multi(idT,idX,idr1),
+in(idr1,idI),
+multi(idT,idY,idr2),
+multi(idI,idr2,idr3);

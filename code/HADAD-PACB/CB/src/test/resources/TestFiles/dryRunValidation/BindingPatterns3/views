@@ -1,0 +1,6 @@
+# each binding pattern is modeled by a view:
+
+R_nno<z>     :- R(x,y,z);
+R_noi<y,z>   :- R(x,y,z);
+R_oii<x,y,z> :- R(x,y,z);
+

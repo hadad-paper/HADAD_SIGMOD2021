@@ -1,0 +1,2 @@
+RW0<c> :- colSums(idr1,c),multi(idB,idB,idr1),size(idB,"10000","10000"),name(idB,"A");
+RW1<c> :- colSums(idB,SK_0),multi(SK_0,idB,c),size(idB,"10000","10000"),name(idB,"A");

@@ -1,0 +1,6 @@
+RW0<x1> :- Ro(SK_0), V1(x1,"P1",x2,SK_0), Ro(SK_1), V1(x2,"P2",x3,SK_1) ,C("P1"),C("P2");
+RW1<x1> :- Ro(SK_0), V1(x1,"P1",x2,SK_0), Ro(SK_2), V2(x2,"P2",x3,SK_2),C("P1"),C("P2");
+RW2<x1> :- Ro(SK_1), V2(x1,"P1",x2,SK_1), V1(x2,"P2",x3,SK_1),C("P1"),C("P2");
+RW3<x1> :- Ro(SK_1), V2(x1,"P1",x2,SK_1), Ro(SK_2), V2(x2,"P2",x3,SK_2),C("P1"),C("P2");
+RW4<x1> :- Ro(SK_0), V1(x1,"P1",x2,SK_0), Hio(x2,SK_1), V1(x2,"P2",x3,SK_1),C("P1"),C("P2");
+RW5<x1> :- Ro(SK_2), V2(x2,"P2",x3,SK_2), Hio(x2,SK_1), V2(x1,"P1",x2,SK_1),C("P1"),C("P2");

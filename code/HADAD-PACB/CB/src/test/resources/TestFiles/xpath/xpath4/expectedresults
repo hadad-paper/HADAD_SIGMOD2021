@@ -1,0 +1,1 @@
+RW0<t1> :- v(SK_0),eq_v(SK_1,t1),tag_v(SK_0,"name"),text_v(SK_0,SK_1);

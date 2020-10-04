@@ -1,0 +1,4 @@
+RW0<idr2> :- add(idA,idB,idr1),trace(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW1<idr2> :- add(idB,idA,idr1),trace(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW2<idr2> :- add_s(SK_116,SK_117,idr2),trace(idA,SK_116),trace(idB,SK_117),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW3<idr2> :- add_s(SK_117,SK_116,idr2),trace(idA,SK_116),trace(idB,SK_117),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");

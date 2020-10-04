@@ -1,0 +1,9 @@
+#Q: det(XT)
+Q<idr2>:-
+name(idM,"M"),
+size(idM,"6","6"),
+name(idN,"N"),
+size(idN,"6","6"),
+tr(idM,idT),
+multi(idT,idN,idr1),
+trace(idr1,idr2);

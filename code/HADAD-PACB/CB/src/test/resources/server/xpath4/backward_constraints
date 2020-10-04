@@ -1,0 +1,54 @@
+
+# Grex schema constraints
+eq(x,y)->eq(y,x);
+tag(x,t),tag(x,t1)->t=t1;
+child(x,y)->desc(x,y);
+desc(x,y),desc(y,z)->desc(x,z);
+
+# Views constraints
+child_V(p1,c1),copy_V(p,p1)->child(p,c),copy_V(c,c1);
+attr_V(p1,a),copy_V(p,p1)->attr(p,a);
+tag_V(x1,t),copy_V(x,x1)->tag(x,t);
+desc_V(x1,u1),child_V(u1,y1),copy_V(x,x1)->desc(x,u),child(u,y),copy_V(u,u1),copy_V(y,y1);
+text_V(x1,y1),copy_V(x,x1)->text(x,y),copy_V(y,y1);
+copy_V(x,x1),eq_V(x1,y)->eq(x,y);
+tag_V(x,t),tag_V(x,t1)->t=t1;
+
+# V_0 constraints for skolem functions
+V_0_sk0(z_0,y_0),V_0_sk0(z_0_p,y_0)->z_0=z_0_p;
+V_0_sk0(z_0,y_0),V_0_sk0(z_0,y_0_p)->y_0=y_0_p;
+
+# V_0 constraints connecting create to XML constructed by view
+V(z_1),child_V(z_1,z_0),tag_V(z_0,"person")->V_0_create(z_0);
+
+# V_0 constraint relating extract with create
+V_0_create(z_0)->V_0_extr(y_0),V_0_sk0(z_0,y_0);
+
+# V_0 constraint for extract
+V_0_extr(y_0)->root(x_0),desc(x_0,x_1),child(x_1,y_0),tag(y_0,"person");
+
+# V_0_0 constraints for skolem functions
+V_0_0_sk0(y_1_c,y_0,y_1),V_0_0_sk0(y_1_c_p,y_0,y_1)->y_1_c=y_1_c_p;
+V_0_0_sk0(y_1_c,y_0,y_1),V_0_0_sk0(y_1_c,y_0_p,y_1_p)->y_0=y_0_p,y_1=y_1_p;
+
+# V_0_0 constraints connecting create to XML constructed by view
+V_0_sk0(z_0,y_0),V_0_create(z_0),child_V(z_0,y_1_c),tag_V(y_1_c,"name")->V_0_0_create(y_1_c),V_0_0_sk0(y_1_c,y_0,y_1);
+
+# V_0_0 constraint relating extract with create
+V_0_0_create(y_1_c)->copy_V(y_1,y_1_c),V_0_0_extr(y_0,y_1),V_0_0_sk0(y_1_c,y_0,y_1);
+
+# V_0_0 constraint for extract
+V_0_0_extr(y_0,y_1)->V_0_extr(y_0),child(y_0,y_1),tag(y_1,"name");
+
+# V_0_1 constraints for skolem functions
+V_0_1_sk0(y_2_c,y_0,y_2),V_0_1_sk0(y_2_c_p,y_0,y_2)->y_2_c=y_2_c_p;
+V_0_1_sk0(y_2_c,y_0,y_2),V_0_1_sk0(y_2_c,y_0_p,y_2_p)->y_0=y_0_p,y_2=y_2_p;
+
+# V_0_1 constraints connecting create to XML constructed by view
+V_0_sk0(z_0,y_0),V_0_create(z_0),child_V(z_0,y_2_c),tag_V(y_2_c,"city")->V_0_1_create(y_2_c),V_0_1_sk0(y_2_c,y_0,y_2);
+
+# V_0_1 constraint relating extract with create
+V_0_1_create(y_2_c)->copy_V(y_2,y_2_c),V_0_1_extr(y_0,y_2),V_0_1_sk0(y_2_c,y_0,y_2);
+
+# V_0_1 constraint for extract
+V_0_1_extr(y_0,y_2)->V_0_extr(y_0),desc(y_0,x_4),child(x_4,y_2),tag(y_2,"city");

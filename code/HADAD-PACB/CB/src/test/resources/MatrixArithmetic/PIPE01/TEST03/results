@@ -1,0 +1,2 @@
+RW0<v> :- cell(idr1,"2","3",v),size(idA,"8","8"),name(idA,"X"),tr(idA,idr1);
+RW1<v> :- cell(idA,"2","3",v),size(idA,"8","8"),name(idA,"X");

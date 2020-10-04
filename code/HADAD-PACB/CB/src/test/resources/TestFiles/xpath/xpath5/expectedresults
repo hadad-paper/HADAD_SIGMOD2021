@@ -1,0 +1,1 @@
+RW0<t1> :- child_v(VAR_6,VAR_7),child_v(VAR_7,SK_0),v(VAR_6),eq_v(SK_1,t1),tag_v(VAR_7,"results"),tag_v(SK_0,"name"),text_v(SK_0,SK_1);

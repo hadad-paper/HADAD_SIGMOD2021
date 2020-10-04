@@ -1,0 +1,12 @@
+#Q: det((M*N)-1)+Z)
+Q<idr4>:-
+name(idM,"M"),
+size(idM,"8","8"),
+name(idN,"N"),
+size(idN,"8","8"),
+name(idZ,"Z"),
+size(idZ,"8","8"),
+multi(idM,idN,idr1),
+in(idr1,idr2),
+add(idr2,idZ,idr3),
+det(idr3,idr4);

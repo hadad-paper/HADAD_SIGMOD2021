@@ -1,0 +1,7 @@
+q<t1> :- root_aj_88 (r), 
+         child_aj (r,  si, "site", "o"), 
+       	 child_aj (si, p, "person", "o"),
+       	 child_aj (p,  a, "address", "o"),
+       	 child_aj (a,  s, "street", "o"),
+       	 child_aj (s,  t, "text", "o"),
+       	 eq_aj (t, t1);

@@ -1,0 +1,5 @@
+RW0<idr2> :- multi(idT,idN,idr1),det(idr1,idr2),size(idM,"8","8"),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),tr(idM,idT);
+RW1<idr2> :- multi(idT,idN,idr1),det(idr1,idr2),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),name(SK_0,"V1"),tr(idM,idT);
+RW2<idr2> :- det(idT,SK_0),det(idN,SK_1),size(idM,"8","8"),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),multi_s(SK_0,SK_1,idr2),tr(idM,idT);
+RW3<idr2> :- det(idN,SK_1),det(idM,SK_0),size(idM,"8","8"),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),multi_s(SK_0,SK_1,idr2);
+RW4<idr2> :- det(idN,SK_1),size(idN,"8","8"),name(idN,"N"),name(SK_0,"V1"),multi_s(SK_0,SK_1,idr2);

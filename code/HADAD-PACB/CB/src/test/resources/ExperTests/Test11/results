@@ -1,0 +1,5 @@
+RW0<d> :- det(ZI,SK_0),det(idM,SK_1),name(idM,"M"),name(ZI,"V"),multi_s(SK_0,SK_1,d); 
+RW1<d> :- in(idZ,ZI),det(ZI,SK_0),det(idM,SK_1),name(idZ,"Z"),name(idM,"M"),multi_s(SK_0,SK_1,d); 
+RW2<d> :- ins(SK_2,SK_0),det(idM,SK_1),det(idZ,SK_2),name(idZ,"Z"),name(idM,"M"),multi_s(SK_0,SK_1,d); 
+RW3<d> :- in(idZ,ZI),multi(ZI,idM,idr1),det(idr1,d),name(idZ,"Z"),name(idM,"M"); 
+RW4<d> :- multi(ZI,idM,idr1),det(idr1,d),name(idM,"M"),name(ZI,"V");

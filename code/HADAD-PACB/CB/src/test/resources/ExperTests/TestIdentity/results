@@ -1,0 +1,1 @@
+RW0<idr3> :- multi(idr3,idr2,idr3),identity(idr2,"I"),name(idr3,"Z");

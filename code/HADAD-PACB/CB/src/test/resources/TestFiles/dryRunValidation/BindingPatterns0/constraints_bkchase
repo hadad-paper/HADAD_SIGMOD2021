@@ -1,0 +1,7 @@
+# integrity constraints:
+R(x,y) -> S(y);
+
+# extractability constraints for access pattern modeling:
+S_o(y) -> D(y);
+R_oi(x,y), D(y) -> D(x);
+

@@ -1,0 +1,8 @@
+#det(X%*%Z*%M)
+Q<d>:-
+name(idX,"X"),
+name(idZ,"Z"),
+name(idM,"M"),
+multi(idX,idZ,idr1),
+multi(idr1,idM,idr2),
+det(idr2,d);

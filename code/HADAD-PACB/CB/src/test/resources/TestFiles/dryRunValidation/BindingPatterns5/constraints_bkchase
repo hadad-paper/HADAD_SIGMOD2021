@@ -1,0 +1,13 @@
+# integrity constraints
+#
+# key:
+R(x,y1,z1,u1), R(x,y2,z2,u2) -> y1=y2, z1=z2, u1=u2;
+
+
+# bp constraints
+#
+R_onnn(x) -> D(x);
+R_ionn(x,y), D(x) -> D(y);
+R_inon(x,z), D(x) -> D(z);
+R_inno(x,u), D(x) -> D(u);
+

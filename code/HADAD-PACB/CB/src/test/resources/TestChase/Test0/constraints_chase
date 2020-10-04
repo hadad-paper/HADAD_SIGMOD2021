@@ -1,0 +1,12 @@
+#E(r1,r2,x),E(r1,r2,y)->y=x;
+
+#R(r1,r2,r3),S(r3,s2),T(s2,t2),W(t2,w2),E(r1,r2,e3),Z(e3,z2)->V(z2);
+#R(r1,r2,r3)->E(r1,r2,d),X(d,l);
+
+
+#R(x,r2,s1),E(y,r2,s2)->x=y;
+#R(r1,r2,r3),S(r3,s2),T(s2,t2),W(t2,w2),E(r1,r2,e3),Z(e3,z2)->V(z2);
+
+
+W(t2,x),E(t2,y,e3)->x=y;
+R(r1,r2,r3),S(r3,s2),T(s2,t2),W(t2,w2),E(t2,w2,e3),Z(e3,z2)->V(z2);

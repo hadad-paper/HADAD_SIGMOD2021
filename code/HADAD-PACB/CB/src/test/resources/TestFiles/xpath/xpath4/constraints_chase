@@ -1,0 +1,48 @@
+###################
+# semantics of copy 
+###################
+
+# structure preservation
+child (p, c), copy (p, p1) -> child_v (p1, c1), copy (c, c1);
+tag (x, t), copy (x, x1) -> tag_v (x1, t);
+desc (x, y), copy (x, x1) -> desc_v (x1, y1), copy (y, y1);
+text (x, y), copy (x, x1) -> text_v (x1, y1), copy (y, y1);
+
+copy (x,x1), eq (x, y) -> eq_v (x1, y);
+
+
+
+########
+# view
+########
+
+
+# extract
+root  (r),
+desc  (r, x), 
+child (x, p), tag (p, "person")
+->
+v_extr_1 (p);
+
+v_extr_1 (p), child (p, n), tag (n, "name")  
+-> 
+v_extr_1_1 (p, n);
+
+v_extr_1 (p), desc (p, x), child (x, c), tag (c, "city")  
+-> 
+v_extr_1_2 (p, c);
+
+
+# create new nodes
+v_extr_1_1 (p, n) -> copy (n, n1), v_create_1_1 (n1);
+v_extr_1_2 (p, c) -> copy (c, c1), v_create_1_2 (c1);
+
+
+# install these new nodes in materialized view
+v_create_1_1 (n) -> v (n);
+v_create_1_2 (c) -> v (c);
+
+
+
+
+

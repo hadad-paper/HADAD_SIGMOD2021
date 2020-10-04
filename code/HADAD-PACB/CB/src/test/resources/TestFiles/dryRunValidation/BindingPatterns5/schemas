@@ -1,0 +1,12 @@
+# binding pattern notation:
+# i - stands for input
+# o - stands for output
+# n - neither (this position is not accessible via this binding pattern,
+#              it is projected out)
+
+
+# src + target + aux
+R(4), R_onnn(1), R_ionn(2), R_inon(2), R_inno(2), D(1);
+
+# target
+R_onnn(1), R_ionn(2), R_inon(2), R_inno(2);

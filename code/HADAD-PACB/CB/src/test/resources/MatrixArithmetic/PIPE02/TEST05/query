@@ -1,0 +1,14 @@
+Q<idr2>:-
+amazon(A),
+child_pj(A,i,"reviewerID","o"),
+child_pj(A,j,"productID","o"),
+child_pj(A,t,"reviewTime","o"),
+child_pj(A,text,"reviewText","o"),
+child_pj(A,v,"overall","o"),
+val_pj(text,"fanacy"),
+constructMatrixValue(i,j,v,idA),
+constructName (idA,"A"),
+name(idA,"A"),
+matrixFilterGT(idA,"5",idr3),
+name(idX,"X"),
+add(idr3,idX,idr2);

@@ -1,0 +1,9 @@
+#important
+#det(A-1-1-1)
+Q<r>:-
+name(idA,"A"),
+in(idA,idr3),
+in(idr3,idT),
+in(idT,idr4),
+in(idr4,idr5),
+trace(idr5,r);

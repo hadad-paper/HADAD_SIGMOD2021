@@ -1,0 +1,1 @@
+U<p> :- V1("S1",p,"O1",SK_0),Hio("S1",SK_0),Ro(SK_0),V2("S1",p,"O1",SK_2),Hio("O1",SK_2),Ro(SK_2),Hio(p,SK_1),Ro(SK_1),C("S1"),C("O1");

@@ -1,0 +1,2 @@
+RW0<v> :- cell(idX,"2","3",v),name(idX,"X");
+RW1<v> :- rev(idX,SK_0),cell(SK_0,"2","3",v),name(idX,"X");

@@ -1,0 +1,10 @@
+#N-1 (M-1)T
+Q<idr2> :- 
+name(idM,"matrix-20000-100-1.0.csv"),
+size(idM,"20000","100"),
+name(idN,"matrix-100-20000-1.0.csv"),
+size(idN,"100","20000"),
+tr(idM,idMI),
+tr(idN,idNI),
+#in(idMI,I),
+multi(idNI,idMI,idr2);

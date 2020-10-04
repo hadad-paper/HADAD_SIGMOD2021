@@ -1,0 +1,10 @@
+#N-1 (M-1)T
+Q<idr2> :- 
+name(idM,"M"),
+size(idM,"8","8"),
+name(idN,"N"),
+size(idN,"8","8"),
+tr(idM,idMI),
+in(idMI,idr1),
+tr(idN,idNI),
+multi(idNI,idr1,idr2);

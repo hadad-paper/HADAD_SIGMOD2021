@@ -1,0 +1,13 @@
+Simple test for the following view and query:
+
+v: for $p in doc("input")/site/person,
+       $s in $p/address/street
+    return $s/text();
+
+q: /site/person/address/street/text()
+
+
+
+On purpose, rewriting is done in terms of v_create, because this is what was expected in problematic_testXAM2.
+
+I will add as example xpath3 a version that returns a rewriting in terms of v and compensating navigation into it, as agreed with Francesca.

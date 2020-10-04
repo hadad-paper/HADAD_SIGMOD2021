@@ -1,0 +1,23 @@
+Author(aID, name) -> Sk_awb (aID, abwelID);
+Sk_awb (aID, abwelID) -> Author(aID, name);
+
+Author(aID, name) -> Sk_bks(aID, bkselID);
+Sk_bks(aID, bkselID) -> Author(aID, name);
+
+Author(aID, name) -> Sk_n(aID, nelID);
+Sk_n(aID, nelID) -> Author(aID, name);
+											
+Author(aID, name), Book(bID, title), Author2Book(aID, bID) -> Sk_bk (aID, bID, bkelID);
+Sk_bk (aID, bID, bkelID) -> Author(aID, name), Book(bID, title), Author2Book(aID, bID);
+
+Sk_awb (aID, abwelID1), Sk_awb (aID, abwelID2) -> abwelID1 = abwelID2;
+Sk_awb (aID1, abwelID), Sk_awb (aID2, abwelID) -> aID1 = aID2;
+
+Sk_bks(aID, bkselID1), Sk_bks(aID, bkselID2) -> bkselID1 = bkselID2;
+Sk_bks(aID1, bkselID), Sk_bks(aID2, bkselID) -> aID1 = aID2;
+
+Sk_n(aID, nelID1), Sk_n(aID, nelID2) -> nelID1 = nelID2;
+Sk_n(aID1, nelID), Sk_n(aID2, nelID) -> aID1 = aID2;
+
+Sk_bk (aID, bID, bkelID1), Sk_bk (aID, bID, bkelID2) -> bkelID1 = bkelID2;
+Sk_bk (aID1, bID1, bkelID), Sk_bk (aID2, bID2, bkelID) ->  aID1 = aID2, bID1 = bID2;

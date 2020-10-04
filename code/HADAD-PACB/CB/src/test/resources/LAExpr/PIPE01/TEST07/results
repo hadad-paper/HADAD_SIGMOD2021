@@ -1,0 +1,5 @@
+RW0<idr2> :- ins(idr1,idr2),det(idX,idr1),name(idX,"X");
+RW1<idr2> :- ins(idr1,idr2),name(idr1,"V2");
+RW2<idr2> :- in(idX,SK_0),det(idX,idr1),det(SK_0,idr2),name(idr1,"V2");
+RW3<idr2> :- in(idX,SK_0),det(SK_0,idr2),name(idX,"X");
+RW4<idr2> :- det(SK_0,idr2),name(SK_0,"V1");

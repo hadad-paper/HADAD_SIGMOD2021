@@ -1,0 +1,29 @@
+# this is meant to check correct handling of constants
+# as (trivially) extractable values.
+
+# the intended query is
+# Q(x) :- R(x,"13");
+#
+
+# There is a subtlety here: we cannot know in advance which
+# constants the query will mention, so if we resort to 
+# such constraints as 
+#
+# -> D("13")
+#
+# which are needed to state that constants are extractable (already
+# extracted),
+# these constraints would have to be generated at runtime, i.e.
+# when the query arrives. This is in stark contrast to all other 
+# constraints, which are generated off-line at schema declaration time.
+
+# The "constant" relation solves this problem. We just need to introduce
+# appropriate "constant" atoms into the query translation. 
+# The corresponding integrity constraints can now be generated once and for 
+# all. They include one inclusion constraint stating that all values 
+# appearing in a "constant" atom are extractable:
+#
+# constant(c) -> D(c);
+#
+
+Q<x> :- R(x,"13"), constant("13"), D(x);

@@ -1,0 +1,6 @@
+
+
+v: /site//person
+q: /site//person//city
+
+r: Navig (v, .//city) 

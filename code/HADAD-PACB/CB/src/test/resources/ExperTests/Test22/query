@@ -1,0 +1,8 @@
+#(((M+N)-1)T)*D*Z
+Q<idr6>:-
+name(idA,"A"),
+name(idB,"B"),
+name(idC,"C"),
+multi(idA,idB,idr4),
+multi(idr4,idC,idr5),
+det(idr5,idr6);

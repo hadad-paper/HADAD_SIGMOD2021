@@ -1,0 +1,5 @@
+FOR Q1
+RW0<t1> :- tag_V(SK_0,"person"),tag_V(SK_1,"name"),child_V(SK_0,SK_1),eq_V(SK_2,t1),V(SK_0),text_V(SK_1,SK_2);
+
+FOR Q2
+RW0<t1> :- tag_V(SK_0,"person"),tag_V(SK_1,"city"),child_V(SK_0,SK_1),eq_V(SK_2,t1),V(SK_0),text_V(SK_1,SK_2);

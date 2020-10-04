@@ -1,0 +1,13 @@
+#EGDs
+name(id1,n1),name(id2,n1)->id2=id1;
+size(idA,n1,n2),size(idA,n3,n4)->n3=n1,n4=n2;
+multi(idA,idB,idr1),multi(idA,idB,idr2)->idr2=idr1;
+trace(id1,idr1),trace(id2,idr2)->idr2=idr1;
+sum(id1,idr1),sum(id1,idr2)->idr2=idr1;
+tr(id1,idr1),tr(id1,idr2)->idr2=idr1;
+in(id1,idr1),in(id1,idr2)->idr2=idr1;
+multi_e(id1,id2,idr1),multi_e(id1,id2,idr2)->idr2=idr1;
+
+
+
+AL(idA,idB,idr2)->tr(idB,idr1),multi_e(idA,idr1,idr3),sum(idr3,idr2);

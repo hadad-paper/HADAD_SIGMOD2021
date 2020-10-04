@@ -1,0 +1,4 @@
+R_onnn<x>   :- R(x,y,z,u);
+R_ionn<x,y> :- R(x,y,z,u);
+R_inon<x,z> :- R(x,y,z,u);
+R_inno<x,u> :- R(x,y,z,u);

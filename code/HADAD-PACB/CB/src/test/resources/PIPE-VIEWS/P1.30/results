@@ -1,0 +1,10 @@
+RW0<d> :- multi_e(idr1,idr2,d),multi(idN,idM,idr1),multi(idr1,t,idr2),size(idM,"50000","100"),size(idN,"100","50000"),size(idR,"100","100"),name(idM,"M"),name(idN,"N"),name(idR,"R"),tr(idR,t);
+RW1<d> :- multi_e(idr2,idr1,d),multi(idN,idM,idr1),multi(idr1,t,idr2),size(idM,"50000","100"),size(idN,"100","50000"),size(idR,"100","100"),name(idM,"M"),name(idN,"N"),name(idR,"R"),tr(idR,t);
+RW2<d> :- multi_e(idr1,idr2,d),multi(idr1,t,idr2),size(idR,"100","100"),name(idR,"R"),name(idr1,"V"),tr(idR,t);
+RW3<d> :- multi_e(idr2,idr1,d),multi(idr1,t,idr2),size(idR,"100","100"),name(idR,"R"),name(idr1,"V"),tr(idR,t);
+RW4<d> :- multi_e(idr1,idr2,d),multi(idN,idM,idr1),multi(idM,t,SK_99),multi(idN,SK_99,idr2),size(idM,"50000","100"),size(idN,"100","50000"),size(idR,"100","100"),name(idM,"M"),name(idN,"N"),name(idR,"R"),tr(idR,t);
+RW5<d> :- multi_e(idr2,idr1,d),multi(idN,idM,idr1),multi(idM,t,SK_99),multi(idN,SK_99,idr2),size(idM,"50000","100"),size(idN,"100","50000"),size(idR,"100","100"),name(idM,"M"),name(idN,"N"),name(idR,"R"),tr(idR,t);
+RW6<d> :- multi_e(idr1,idr2,d),multi(idN,idM,idr1),multi(idM,t,SK_99),multi(idN,SK_99,idr2),size(idR,"100","100"),name(idR,"R"),name(idr1,"V"),tr(idR,t);
+RW7<d> :- multi_e(idr1,idr2,d),multi(idM,t,SK_99),multi(idN,SK_99,idr2),size(idR,"100","100"),name(idM,"M"),name(idN,"N"),name(idR,"R"),name(idr1,"V"),tr(idR,t);
+RW8<d> :- multi_e(idr2,idr1,d),multi(idN,idM,idr1),multi(idM,t,SK_99),multi(idN,SK_99,idr2),size(idR,"100","100"),name(idR,"R"),name(idr1,"V"),tr(idR,t);
+RW9<d> :- multi_e(idr2,idr1,d),multi(idM,t,SK_99),multi(idN,SK_99,idr2),size(idR,"100","100"),name(idM,"M"),name(idN,"N"),name(idR,"R"),name(idr1,"V"),tr(idR,t);

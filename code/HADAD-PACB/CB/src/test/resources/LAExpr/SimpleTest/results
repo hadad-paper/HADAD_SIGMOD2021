@@ -1,0 +1,6 @@
+RW0<idr4> :- add(idr2,idZ,idr3),in(idr1,idr2),multi(idM,idN,idr1),det(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW1<idr4> :- add(idZ,idr2,idr3),in(idr1,idr2),multi(idM,idN,idr1),det(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW2<idr4> :- add(idr2,idZ,idr3),in(idM,SK_0),in(idN,SK_1),multi(SK_1,SK_0,idr2),det(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW3<idr4> :- add(idZ,idr2,idr3),in(idM,SK_0),in(idN,SK_1),multi(SK_1,SK_0,idr2),det(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW4<idr4> :- add(idr2,idZ,idr3),det(idr3,idr4),size(idZ,"8","8"),size(idr2,"8","8"),name(idZ,"Z"),name(idr2,"V");
+RW5<idr4> :- add(idZ,idr2,idr3),det(idr3,idr4),size(idZ,"8","8"),size(idr2,"8","8"),name(idZ,"Z"),name(idr2,"V");

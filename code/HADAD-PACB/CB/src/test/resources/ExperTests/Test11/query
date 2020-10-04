@@ -1,0 +1,7 @@
+#det(inv(Z)*M)
+Q<d>:-
+name(idZ,"Z"),
+name(idM,"M"),
+in(idZ,ZI),
+multi(ZI,idM,idr1),
+det(idr1,d);

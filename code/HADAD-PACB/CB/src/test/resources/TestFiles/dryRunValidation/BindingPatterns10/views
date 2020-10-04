@@ -1,0 +1,8 @@
+Hio<x,y> :- H(x,y);
+#V1 models hash partitioning on the subject
+V1<s,p,o,d>   :- T(s,p,o),H(s,d);
+Ro<y> :- R(y);
+
+
+
+

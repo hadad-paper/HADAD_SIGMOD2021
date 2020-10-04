@@ -1,0 +1,1 @@
+RW0<idr2> :- multi(idA,idB,idr1),trace(idr1,idr2),size(idA,"5","4"),size(idB,"4","5"),name(idA,"X"),name(idB,"H");

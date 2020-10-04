@@ -1,0 +1,20 @@
+V = 
+for $p in document(X)/site//person, $ssn in $p//ssn/text()
+	return 	<person [id={$ssn}]>
+				{for $f in $p/name/first return $f},
+				{for $l in $p/name/last return $l},
+				<addresses>
+					{for $a in $p//address, $s in $a@state, $c in $a/city/text()
+					 where $s = "CA" and $c = "SanDiego"
+					 return <SDAddress>
+					 			<zip>{for $z in $a/zip/text() return $z}</zip>,
+					 			<street>
+					 				<name>{for $st in $a/street/text() return $st}</name>,
+					 				<number>{for $n in $a/number/text() return $n}</number>
+					 			</street>
+					 		</SDAddress>}
+				</addresses>,
+				<hobbies>
+					{for $h in $p//hobbie return $h}
+				</hobbies>
+			</person>

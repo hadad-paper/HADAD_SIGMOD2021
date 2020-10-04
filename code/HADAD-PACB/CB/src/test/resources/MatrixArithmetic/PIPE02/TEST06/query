@@ -1,0 +1,18 @@
+Q<t>:-
+amazon(A),
+child_pj(A,i,"reviewerID","o"),
+child_pj(A,j,"productID","o"),
+child_pj(A,text,"reviewText","o"),
+val_pj(text,"fanacy"),
+child_pj(A,vo,"vote","o"),
+child_pj(A,v,"overall","o"),
+constructMatrixValue(i,j,v,idX),
+constructName (idX,"X"),
+name(idU,"U"),
+name(idV1,"V1"),
+name(idX1,"X"),
+matrixFilterGT(idX1,"4",idr3),
+tr(idV1,idVT),
+multi(idU,idVT,idr1),
+add(idr1,idr3,idr2),
+multi(idr2,idV1,t);

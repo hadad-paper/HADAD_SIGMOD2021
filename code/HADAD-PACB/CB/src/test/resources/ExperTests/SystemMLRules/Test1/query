@@ -1,0 +1,5 @@
+#Don't add one size or zero
+Q<idr1>:-
+name(idM,"M"),
+size(idM,"1","6"),
+colSums(idM,idr1);

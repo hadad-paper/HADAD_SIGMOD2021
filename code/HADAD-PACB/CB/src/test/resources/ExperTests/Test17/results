@@ -1,0 +1,3 @@
+RW0<idr4> :- add(idr1,idr2,idr3),in(idr3,idr4),name(idZ,"Z"),name(idX,"X"),tr(idZ,idr1),tr(idX,idr2);
+RW1<idr4> :- add(idr2,idr1,idr3),in(idr3,idr4),name(idZ,"Z"),name(idX,"X"),tr(idZ,idr1),tr(idX,idr2);
+RW2<idr4> :- in(idr3,idr4),name(idr3,"V");

@@ -1,0 +1,4 @@
+RW0<idr2> :- add(idA,idB,idr1),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),multi_s("2",idr1,idr2);
+RW1<idr2> :- add(idB,idA,idr1),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),multi_s("2",idr1,idr2);
+RW2<idr2> :- add(SK_0,SK_1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),multi_s("2",idA,SK_0),multi_s("2",idB,SK_1);
+RW3<idr2> :- add(SK_1,SK_0,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),multi_s("2",idA,SK_0),multi_s("2",idB,SK_1);

@@ -1,0 +1,12 @@
+#Q:(X3)-1(X2-1X1-1)
+Q<idr5>:- 
+name(idX1,"X1"),
+name(idX2,"X2"),
+name(idX3,"X3"),
+tr(idX3,idr1),
+tr(idX2,idr2),
+tr(idX1,idr3),
+multi(idr2,idr3,idr4),
+multi(idr1,idr4,idr5);
+
+

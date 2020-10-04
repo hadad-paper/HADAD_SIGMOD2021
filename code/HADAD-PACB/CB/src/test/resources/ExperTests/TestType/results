@@ -1,0 +1,2 @@
+RW0<idr1> :- add(idM,idN,idr1),type(idM,"S"),name(idM,"Z"),name(idN,"N");
+RW1<idr1> :- add(idN,idM,idr1),type(idM,"S"),name(idM,"Z"),name(idN,"N");

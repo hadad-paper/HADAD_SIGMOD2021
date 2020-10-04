@@ -1,0 +1,2 @@
+RW0<d> :- rowSums(idr1,d),size(idA,"1000000","100"),name(idA,"A"),tr(idA,idr1);
+RW1<d> :- colSums(idA,SK_99),size(idA,"1000000","100"),name(idA,"A"),tr(SK_99,d);

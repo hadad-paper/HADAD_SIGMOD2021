@@ -1,0 +1,4 @@
+RW0<c> :- add(idA,idB,idr1),sum(idr1,c),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW1<c> :- add(idB,idA,idr1),sum(idr1,c),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW2<c> :- sum(idA,SK_0),sum(idB,SK_1),add_s(SK_0,SK_1,c),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");
+RW3<c> :- sum(idA,SK_0),sum(idB,SK_1),add_s(SK_1,SK_0,c),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");

@@ -1,0 +1,14 @@
+#BUggy
+#PIPE5:(((X.((M+N))T))*D)
+Q<idr7>:-
+name(idM,"M"),
+name(idN,"N"),
+name(idD,"D"),
+name(idX,"X"),
+name(idZ,"Z"),
+add(idM,idN,idr1),
+tr(idr1,idr3),
+hd(idX,idr3,idr4),
+multi(idD,idr4,idr5),
+in(idr5,idI),
+add(idI,idZ,idr7);

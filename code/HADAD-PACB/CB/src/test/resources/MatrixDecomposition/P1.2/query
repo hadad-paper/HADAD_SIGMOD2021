@@ -1,0 +1,5 @@
+Q<idr2>:-
+name(idM,"M"),
+name(idN,"N"),
+add(idN,idM,idr2);
+

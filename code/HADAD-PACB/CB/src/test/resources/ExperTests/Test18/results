@@ -1,0 +1,14 @@
+RW0<idr4> :- add(idM,idN,idr1),multi(idD,idr3,idr4),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW1<idr4> :- add(idN,idM,idr1),multi(idD,idr3,idr4),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW2<idr4> :- add(SK_0,SK_1,idr3),multi(idD,idr3,idr4),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_0),tr(idN,SK_1);
+RW3<idr4> :- add(SK_1,SK_0,idr3),multi(idD,idr3,idr4),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_0),tr(idN,SK_1);
+RW4<idr4> :- add(idM,idN,idr1),add(SK_0,SK_1,idr3),add(SK_2,SK_3,idr4),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW5<idr4> :- add(idM,idN,idr1),add(SK_2,SK_3,idr4),add(SK_1,SK_0,idr3),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW6<idr4> :- add(idM,idN,idr1),add(SK_0,SK_1,idr3),add(SK_3,SK_2,idr4),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW7<idr4> :- add(idM,idN,idr1),add(SK_1,SK_0,idr3),add(SK_3,SK_2,idr4),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW8<idr4> :- add(SK_0,SK_1,idr3),add(SK_2,SK_3,idr4),add(idN,idM,idr1),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW9<idr4> :- add(SK_2,SK_3,idr4),add(idN,idM,idr1),add(SK_1,SK_0,idr3),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW10<idr4> :- add(SK_0,SK_1,idr3),add(idN,idM,idr1),add(SK_3,SK_2,idr4),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW11<idr4> :- add(idN,idM,idr1),add(SK_1,SK_0,idr3),add(SK_3,SK_2,idr4),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,idr3);
+RW12<idr4> :- add(SK_2,SK_3,idr4),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_0),tr(idN,SK_1);
+RW13<idr4> :- add(SK_3,SK_2,idr4),multi(idD,SK_0,SK_2),multi(idD,SK_1,SK_3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_0),tr(idN,SK_1);

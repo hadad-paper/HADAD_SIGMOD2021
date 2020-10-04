@@ -1,0 +1,1 @@
+U<x> :- S_noi(SK_0,SK_1),R_i(x),S_oii(x,SK_0,SK_1),S_nno(SK_1);

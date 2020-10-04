@@ -1,0 +1,7 @@
+name(id1,n1),name(id2,n1)->id2=id1;
+cell(idA,i,j,v1),cell(idA,i,j,v2)->v2=v1;
+rev(idX,idr1),rev(idx,idr2)->idr2=idr1;
+tr(idX,idr1),tr(idx,idr2)->idr2=idr1;
+
+
+name(idX,"X"),rev(idX,idR),cell(idR,"2",k,v)->cell(idX,"2",k,v);

@@ -1,0 +1,8 @@
+RW0<d> :- add(idr1,idr2,r),rowSums(r,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(idA,idr1),tr(idB,idr2);
+RW1<d> :- add(idr2,idr1,r),rowSums(r,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(idA,idr1),tr(idB,idr2);
+RW2<d> :- add(idr1,idr2,r),colSums(SK_6898,SK_6899),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(idA,idr1),tr(idB,idr2),tr(SK_6898,r),tr(SK_6899,d);
+RW3<d> :- add(idr2,idr1,r),colSums(SK_6898,SK_6899),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(idA,idr1),tr(idB,idr2),tr(SK_6898,r),tr(SK_6899,d);
+RW4<d> :- add(idA,idB,SK_6898),rowSums(r,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(SK_6898,r);
+RW5<d> :- add(idB,idA,SK_6898),rowSums(r,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(SK_6898,r);
+RW6<d> :- add(idA,idB,SK_6898),colSums(SK_6898,SK_6899),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(SK_6899,d);
+RW7<d> :- add(idB,idA,SK_6898),colSums(SK_6898,SK_6899),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(SK_6899,d);

@@ -1,0 +1,51 @@
+name(id1,n1),name(id2,n1)->id2=id1;
+tr(id1,idt1),tr(id1,idt2)->idt2=idt1;
+in(id1,idt1),in(id1,idt2)->idt2=idt1;
+ins(id1,idt1),ins(id1,idt2)->idt1=idt2;
+tr(id1,idr1),tr(idr1,idr3)->idr3=id1;
+in(id1,idr1),in(idr1,idr3)->idr3=id1;
+multi(idA,idB,idr1),multi(idA,idB,idr2)->idr1=idr2;
+multi_s(idA,idB,idr1),multi_s(idA,idB,idr2)->idr2=idr1;
+det(idA,d1),det(idA,d2)->d2=d1;
+trace(idA,id1),trace(idA,id2)->id2=id1;
+add(idA,idB,idr1),add(idA,idB,idr2)->idr1=idr2;
+#identity(idA,idr1,n),identity(idA,idr2,n)->idr2=idr1;
+identity(idA1,n),identity(idA2,n)->idA2=idA1;
+size(idA,i1,j1),size(idA,i2,j2)->j2=j1,i2=i1;
+
+identity(idr2,"I"),multi(idr4,idr2,idr3)->identityPrune(idr4,idr3);
+
+#name(id1,n)->tr(id1,idr1),tr(idr1,id1);
+#name(id1,n)->in(id1,idr1),in(idr1,id1);
+in(idA,idr1),tr(idr1,idr3)->tr(idA,idr2),in(idr2,idr3);
+#tr(idA,idr2),in(idr2,idr3)->in(idA,idr1),tr(idr1,idr3);
+#name(idA,"Z") -> identity(idA,idr1,"I");
+
+
+multi(idA,idB,idr1),tr(idr1,idr2)->tr(idA,idAT),tr(idB,idBT),multi(idBT,idAT,idr2);
+multi(idA,idB,idr1),in(idr1,idr2)->in(idA,idAT),in(idB,idBT),multi(idBT,idAT,idr2);
+add(idA,idB,idr1),tr(idr1,idT)->tr(idA,idAT),tr(idB,idBT),add(idAT,idBT,idT);
+
+#tr(idA,idAT),tr(idB,idBT),multi(idBT,idAT,idr2)->multi(idA,idB,idr1),tr(idr1,idr2);
+#in(idA,idAT),in(idB,idBT),multi(idBT,idAT,idr2)->multi(idA,idB,idr1),in(idr1,idr2);
+
+
+multi(idA,idB,idr1),multi(idr1,idC,idr2)-> multi(idB,idC,idr3),multi(idA,idr3,idr2);
+add(idA,idB,idr1)->add(idB,idA,idr1);
+multi(idA,idB,idr1),det(idr1,d)-> det(idA,dA),det(idB,dB),multi_s(dA,dB,d);
+in(idA,idI),det(idI,d)->det(idA,d1),ins(d1,d);
+tr(idA,idT),trace(idT,v)->trace(idA,v);
+multi(idA,idB,idr1),trace(idr1,idr2)-> multi(idB,idA,idr3),trace(idr3,idr2);
+
+
+#name(idZ,"Z"),in(idZ,idr1),multi(idZ,idr1,idr2)->identity(idZ,idr2,"I");
+name(idZ,"Z"),in(idZ,idr1),multi(idZ,idr1,idr2)->identity(idr2,"I");
+
+
+
+#name(idM,"M"),
+#name(idN,"N"),
+#tr(idN,idNT),
+#tr(idM,idMT),
+#add(idMT,idNT,idr1),
+#in(idr1,idI)->name(idI,"V");

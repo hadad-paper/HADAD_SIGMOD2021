@@ -1,0 +1,27 @@
+# In this example, to execute the query we need to exploit a *key*
+# constraint to "fuse" correctly the extracted tuple fragments obtained from distinct
+# binding patterns. 
+#
+# The intended query
+#
+# Q<x,y,z,u> :- R(x,y,z,u);
+#
+# is not executable as such, 
+# because R only supports bps to extract 
+# -- the key (this is the first column) extractable via bp "onnn", 
+# -- as well as each non-key attribute independently (ionn, inon, inno).
+# 
+# The key constraint is crucial in allowing us to fuse together the independently
+# extracted non-key attributes into a single tuple
+# that is guaranteed to appear in R (note that there is no bp
+# allowing us to explicitly check membership of this fused tuple in R).
+# 
+# [Easy experiment: check that if we comment out the key constraint, no
+#  executable rewriting is found. This proves that rewriting algorithms that
+#  do not handle egds will fail on this example.]
+#
+# Remark: this constellation of binding patterns corresponds to the column-stored
+#         form of relation R.
+#
+
+Q<x,y,z,u> :- R(x,y,z,u), D(x), D(y), D(z), D(u);

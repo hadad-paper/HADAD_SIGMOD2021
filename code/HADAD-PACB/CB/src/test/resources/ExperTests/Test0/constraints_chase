@@ -1,0 +1,13 @@
+#Forward Constraints
+#EGDs
+#R1(k,a11,a12,f1),R1(k,a21,a22,f2)->a11=a21,a12=a22,f1=f2;
+#R2(k,a11,a12,f1),R2(k,a21,a22,f2)->a11=a21,a12=a22,f1=f2;
+
+
+#TGDs
+R1(k,a1,a2,f),S1_1(a1,b1),S1_2(a2,b2),T1_1(b1,c1),T1_2(b2,c2)->V1_1(k,b1,b2);
+S1_1(a,b)->T1_1(b,c);
+S1_2(a,b)->T1_2(b,c);
+R2(k,a1,a2,f),S2_1(a1,b1),S2_2(a2,b2),T2_1(b1,c1),T2_2(b2,c2)->V2_1(k,b1,b2);
+S2_1(a,b)->T2_1(b,c);
+S2_2(a,b)->T2_2(b,c);

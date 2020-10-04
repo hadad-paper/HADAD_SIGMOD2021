@@ -1,0 +1,13 @@
+Q<idr4>:-
+R(i,j,v),
+S(i,x,z),
+constructMatrixValue(i,j,v,idA),
+constructMatrixValue(i,x,z,idB),
+constructName (idA,"A"),
+constructName (idB,"B"),
+name(idA,"A"),
+name(idB,"B"),
+matrixFilter(idA,"5",idr1),
+matrixFilter(idB,"6",idr2),
+add(idr1,idr2,idr3),
+tr(idr3,idr4);

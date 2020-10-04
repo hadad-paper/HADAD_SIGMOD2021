@@ -1,0 +1,1 @@
+RW0<idr1> :- size(idX,"8","9"),name(idX,"X"),exp(idT,idr1),tr(idX,idT);

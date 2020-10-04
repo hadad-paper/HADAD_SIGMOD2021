@@ -1,0 +1,8 @@
+Q<s>:-
+name(idM,"M"),
+size(idM,"10000","10000"),
+name(idN,"N"),
+size(idN,"10000","10000"),
+multi(idM,idN,idr1),
+sum(idr1,s);
+

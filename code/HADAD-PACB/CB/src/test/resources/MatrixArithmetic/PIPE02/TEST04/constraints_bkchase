@@ -1,0 +1,28 @@
+name(id1,n1),name(id2,n1)->id2=id1;
+cell(idA,i,j,v1),cell(idA,i,j,v2)->v2=v1;
+tr(idX,idr1),tr(idx,idr2)->idr2=idr1;
+constructMatrixValue(i,j,v1,id1),constructMatrixValue(i,j,v2,id1)->v1=v2;
+rowFilter(idA,c,f,idr1),rowFilter(idA,c,f,idr2)->idr2=idr1;
+constructName (idA1,n1),name(idA2,n1)-> idA2=idA1;
+matrixFilter(idA,v,idr1),matrixFilter(idA,v,idr2)->idr2=idr1;
+
+R(i,j,v1),R(i,j,v2)->v2=v1;
+S(i,j,v1),S(i,j,v2)->v2=v1;
+V(i,j,v)-> R(i,j,v),S(i,x,z);
+constructMatrixValue(i,j,v,idA),constructName(idA,n),name(idA,n)->cell(idA,i,j,v);
+#cell(idA,i,c,f),cell(idA,i,k,d),constructMatrixValue(i,k,d,idr1)->rowFilter(idA,c,f,idr1);
+
+
+
+#rowFilter(idA,c,f,idr1),constructMatrixValueT(i,k,v,idr1)->constructMatrixValue(i,j,d,idr1),constructMatrixValue(i,k,v,idr1);
+
+
+#cell(idA,i,j,z),cell(idr1,i,j,z),constructMatrixValue(i,j,z,idr1),eq(z,x)->matrixFilter(idA,x,idr1);
+#cell(idA,i,c,f),cell(idr1,i,j,v),constructMatrixValue(i,j,v,idr1)->rowFilter(idA,c,f,idr1);
+#cell(idA,i,c,f),cell(idr1,i,c,f),cell(idr1,i,j,v),cell(idA,i,j,v),constructMatrixValue(i,j,v,idr1)->rowFilter(idA,c,f,idr1);
+#cell(idA,i,c,f),cell(idr1,i,c,f),cell(idr1,i,j,v)->rowFilter(idA,c,f,idr1);
+#cell(idA,i,j,v),cell(idA,i,c,f),cell(idr1,i,c,f),constructMatrixValue(i,j,v,idr1)->rowFilter(idA,c,f,idr1);
+#cell(idA,i,c,f),cell(idr1,i,c,f),cell(idA,i,j,z),cell(idr1,i,j,z),constructMatrixValue(i,j,z,idr1)->rowFilter(idA,c,f,idr1);
+#cell(idA,i,j,v),rowFilter(idA,c,f,idr1)->cell(idA,i,c,f),cell(idr1,i,c,f),cell(idr1,i,j,v),constructMatrixValue(i,j,v,idr1);
+#cell(idA,i,c,f),cell(idr1,i,c,f),constructMatrixValue(i,c,f,idr1)->rowFilter(idA,c,f,idr1);
+#cell(idA,i,c,f),constructMatrixValue(i,j,v,idr1)->rowFilter(idA,c,f,idr1),cell(idA,i,j,v);

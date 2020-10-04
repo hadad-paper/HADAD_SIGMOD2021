@@ -1,0 +1,1 @@
+RW0<c1> :- desc_V(SK_0,SK_1),tag_V(SK_2,"city"),child_V(SK_1,SK_2),eq_V(SK_2,c1),V(SK_0);

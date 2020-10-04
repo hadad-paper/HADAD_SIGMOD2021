@@ -1,0 +1,5 @@
+# the constraints modeling extractability:
+
+R_nno(z) -> D(z);
+R_noi(y,z),D(z) -> D(y);
+R_oii(x,y,z),D(y),D(z) -> D(x);

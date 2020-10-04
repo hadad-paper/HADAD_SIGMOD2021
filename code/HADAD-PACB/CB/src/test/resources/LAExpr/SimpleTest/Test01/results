@@ -1,0 +1,2 @@
+RW0<g,s> :- V1(id,g);
+RW1<g,s> :- V2(id,s);

@@ -1,0 +1,7 @@
+RW0<d> :- multi(idZ,idM,idr1),trace(idr2,d),name(idZ,"Z"),name(idM,"M"),tr(idr1,idr2);  #trace((ZM)T)
+RW1<d> :- multi(SK_1,SK_0,idr2),trace(idr2,d),name(idZ,"Z"),name(idM,"M"),tr(idZ,SK_0),tr(idM,SK_1); #trace(MTZT) 
+RW2<d> :- multi(idZ,idM,idr1),trace(idr1,d),name(idZ,"Z"),name(idM,"M"); #trace(ZM)
+RW3<d> :- multi(SK_0,SK_1,SK_2),trace(SK_2,d),name(idZ,"Z"),name(idM,"M"),tr(idZ,SK_0),tr(idM,SK_1); #trace(ZTMT) 
+RW4<d> :- multi(idM,idZ,SK_3),trace(SK_3,d),name(idZ,"Z"),name(idM,"M"); #trace(MZ)
+RW4<d> :- trace(idr2,d),name(idr1,"V1"),tr(idr1,idr2); trace(V1)
+RW5<d> :- trace(idr2,d),name(idr1,"V2"),tr(idr1,idr2); trace(V2)

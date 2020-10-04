@@ -1,0 +1,22 @@
+#---------------EGDS-------------------------#
+name(id1,n1),name(id2,n1)->id2=id1;
+tr(id1,idt1),tr(id1,idt2)->idt2=idt1;
+in(id1,idt1),in(id1,idt2)->idt2=idt1;
+ins(id1,idt1),ins(id1,idt2)->idt1=idt2;
+tr(id1,idr1),tr(idr1,idr3)->id1=idr3;
+in(id1,idr1),in(idr1,idr3)->idr3=id1;
+multi(idA,idB,idr1),multi(idA,idB,idr2)->idr2=idr1;
+multi_s(idA,idB,idr1),multi_s(idA,idB,idr2)->idr2=idr1;
+det(idA,d1),det(idA,d2)->d2=d1;
+trace(idA,id1),trace(idA,id2)->id2=id1;
+add(idA,idB,idr1),add(idA,idB,idr2)->idr1=idr2;
+size(idA,i1,j1),size(idA,i2,j2)->j2=j1,i2=i1;
+add_s(idA,idB,idr1),add_s(idA,idB,idr2)->idr1=idr2;
+sum(id1,idt1),sum(id1,idt2)->idt2=idt1;
+rowSums(idA,id1),rowSums(idA,id2)->id2=id1;
+colSums(idA,id1),colSums(idA,id2)->id2=id1;
+
+add(idA,idB,idr1)->add(idB,idA,idr1);
+tr(idA,idr1),rowSums(idr1,idr2)-> colSums(idA,idr3),tr(idr3,idr2);
+tr(idA,idr1),tr(idB,idr2),add(idr1,idr2,a1)->add(idA,idB,idr3),tr(idr3,a1);
+

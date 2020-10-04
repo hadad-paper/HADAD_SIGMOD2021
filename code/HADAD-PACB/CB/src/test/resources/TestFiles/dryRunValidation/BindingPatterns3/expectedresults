@@ -1,0 +1,1 @@
+U<x> :- R_oii(x,y,z),R_noi(y,z),R_nno(z);

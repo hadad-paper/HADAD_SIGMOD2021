@@ -1,0 +1,12 @@
+RW0<idr4> :- add(idr2,idZ,idr3),in(idr1,idr2),multi(idM,idN,idr1),trace(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW1<idr4> :- add(idZ,idr2,idr3),in(idr1,idr2),multi(idM,idN,idr1),trace(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW2<idr4> :- add(idr2,idZ,idr3),in(idM,SK_0),in(idN,SK_1),multi(SK_1,SK_0,idr2),trace(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW3<idr4> :- add(idZ,idr2,idr3),in(idM,SK_0),in(idN,SK_1),multi(SK_1,SK_0,idr2),trace(idr3,idr4),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW4<idr4> :- add(idr2,idZ,idr3),trace(idr3,idr4),size(idZ,"8","8"),size(idr2,"8","8"),name(idZ,"Z"),name(idr2,"V");
+RW5<idr4> :- add(idZ,idr2,idr3),trace(idr3,idr4),size(idZ,"8","8"),size(idr2,"8","8"),name(idZ,"Z"),name(idr2,"V");
+RW6<idr4> :- in(idr1,idr2),multi(idM,idN,idr1),add_s(SK_3,SK_2,idr4),trace(idr2,SK_2),trace(idZ,SK_3),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW7<idr4> :- in(idM,SK_0),in(idN,SK_1),multi(SK_1,SK_0,idr2),add_s(SK_3,SK_2,idr4),trace(idr2,SK_2),trace(idZ,SK_3),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW8<idr4> :- add_s(SK_3,SK_2,idr4),trace(idr2,SK_2),trace(idZ,SK_3),size(idZ,"8","8"),size(idr2,"8","8"),name(idZ,"Z"),name(idr2,"V");
+RW9<idr4> :- in(idr1,idr2),multi(idM,idN,idr1),add_s(SK_2,SK_3,idr4),trace(idr2,SK_2),trace(idZ,SK_3),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW10<idr4> :- in(idM,SK_0),in(idN,SK_1),multi(SK_1,SK_0,idr2),add_s(SK_2,SK_3,idr4),trace(idr2,SK_2),trace(idZ,SK_3),size(idM,"8","8"),size(idN,"8","8"),size(idZ,"8","8"),name(idM,"M"),name(idN,"N"),name(idZ,"Z");
+RW11<idr4> :- add_s(SK_2,SK_3,idr4),trace(idr2,SK_2),trace(idZ,SK_3),size(idZ,"8","8"),size(idr2,"8","8"),name(idZ,"Z"),name(idr2,"V");

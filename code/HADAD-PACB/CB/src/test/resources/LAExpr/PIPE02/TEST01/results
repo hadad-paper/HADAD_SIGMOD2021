@@ -1,0 +1,12 @@
+RW0<idr2> :- in(idr1,idr2),multi(idT,idN,idr1),size(idM,"8","8"),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),tr(idM,idT);
+RW1<idr2> :- in(idr1,idr2),multi(idT,idN,idr1),size(idN,"8","8"),size(SK_0,"8","8"),name(idM,"M"),name(idN,"N"),name(SK_0,"V2"),tr(idM,idT);
+RW2<idr2> :- in(idr1,idr2),multi(idT,idN,idr1),size(idM,"8","8"),size(SK_1,"8","8"),name(idM,"M"),name(idN,"N"),name(SK_1,"V1"),tr(idM,idT);
+RW3<idr2> :- in(idr1,idr2),multi(idT,idN,idr1),size(SK_1,"8","8"),size(SK_0,"8","8"),name(idM,"M"),name(idN,"N"),name(SK_1,"V1"),name(SK_0,"V2"),tr(idM,idT);
+RW4<idr2> :- in(idT,SK_0),in(idN,SK_1),multi(SK_1,SK_0,idr2),size(idM,"8","8"),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),tr(idM,idT);
+RW5<idr2> :- in(idN,SK_1),in(idM,SK_2),multi(SK_1,SK_0,idr2),size(idM,"8","8"),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),tr(SK_2,SK_0);
+RW6<idr2> :- in(idN,SK_1),multi(SK_1,SK_0,idr2),size(idM,"8","8"),size(idN,"8","8"),name(idM,"M"),name(idN,"N"),name(SK_0,"V2");
+RW7<idr2> :- in(idN,SK_1),multi(SK_1,SK_0,idr2),size(idN,"8","8"),size(SK_0,"8","8"),name(idN,"N"),name(SK_0,"V2");
+RW8<idr2> :- in(idT,SK_0),multi(SK_1,SK_0,idr2),size(idM,"8","8"),size(SK_1,"8","8"),name(idM,"M"),name(SK_1,"V1"),tr(idM,idT);
+RW9<idr2> :- in(idM,SK_2),multi(SK_1,SK_0,idr2),size(idM,"8","8"),size(SK_1,"8","8"),name(idM,"M"),name(SK_1,"V1"),tr(SK_2,SK_0);
+RW10<idr2> :- multi(SK_1,SK_0,idr2),size(idM,"8","8"),size(SK_1,"8","8"),name(idM,"M"),name(SK_1,"V1"),name(SK_0,"V2");
+RW11<idr2> :- multi(SK_1,SK_0,idr2),size(SK_1,"8","8"),size(SK_0,"8","8"),name(SK_1,"V1"),name(SK_0,"V2");

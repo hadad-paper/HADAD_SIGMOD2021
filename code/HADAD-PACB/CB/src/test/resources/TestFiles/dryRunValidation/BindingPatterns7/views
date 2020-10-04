@@ -1,0 +1,7 @@
+Hio<x,y> :- H(x,y);
+V<s,p,o,d>   :- T(s,p,o),H(s,d);
+Ro<y> :- R(y);
+
+
+
+

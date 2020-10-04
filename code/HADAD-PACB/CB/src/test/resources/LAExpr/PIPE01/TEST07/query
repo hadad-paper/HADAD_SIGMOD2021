@@ -1,0 +1,4 @@
+Q<idr2>:-
+name(idX,"X"),
+det(idX,idr1),
+ins(idr1,idr2);

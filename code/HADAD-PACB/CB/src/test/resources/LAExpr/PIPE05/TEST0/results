@@ -1,0 +1,4 @@
+RW0<idr3> :- in(idM,idMI),in(idN,idNI),multi(idNI,idMI,idr2),trace(idr2,idr3),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N");
+RW1<idr3> :- in(idM,idMI),in(idN,idNI),multi(idMI,idNI,idr2),trace(idr2,idr3),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N");
+RW2<idr3> :- in(SK_0,idr2),multi(idM,idN,SK_0),trace(idr2,idr3),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N");
+RW3<idr3> :- in(SK_1,idr2),multi(idN,idM,SK_1),trace(idr2,idr3),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N");

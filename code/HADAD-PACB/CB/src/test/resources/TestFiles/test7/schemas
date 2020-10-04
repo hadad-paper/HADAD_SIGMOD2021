@@ -1,0 +1,6 @@
+root(1), child(2), tag(2), attr(2), val(3), 
+OextrB(1), OextrBvt(2), IextrBA(2), IextrBAvn(3), 
+OcreateB(2), OcreateBvt(3), IcreateBA(3), IcreateBAvn(4),
+Sk_bwa (2),Sk_auts (2), Sk_aut (3);
+
+OcreateB(2), OcreateBvt(3), IcreateBA(3), IcreateBAvn(4);	

@@ -1,0 +1,22 @@
+OextrB<b> :-root(rID), child(rID, awb),
+			tag(awb, "authorWithBooks"),
+			child(awb, bs), tag(bs,"books"),
+			child(bs, b), tag(b, "book");
+			
+IextrBvt<b, tVal>:-	root(rID), child(rID, awb),
+					tag(awb, "authorWithBooks"),
+					child(awb, bs), tag(bs, "books"),
+					child(bs, b), tag(b, "book"), 
+					attr(b,"title"),
+					val(b, "title", tVal);
+					
+IextrBA<b, awb>:-root(rID), child(rID, awb),
+			tag(awb, "authorWithBooks"),
+			child(awb, bs), tag(bs,"books"),
+			child(bs, b), tag(b, "book");
+				 
+IextrBAvn<b, awb, nVal>:- root(rID), child(rID, awb),
+			tag(awb, "authorWithBooks"),
+			attr(awb, "name"), val(awb, "name", nVal),
+			child(awb, bs), tag(bs,"books"),
+			child(bs, b), tag(b, "book");

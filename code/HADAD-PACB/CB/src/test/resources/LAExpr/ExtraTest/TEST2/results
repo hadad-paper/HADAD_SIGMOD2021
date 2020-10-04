@@ -1,0 +1,1 @@
+RW0<idr3> :- add(idA,idB,idr3),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B");

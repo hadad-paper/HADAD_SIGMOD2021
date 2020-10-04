@@ -1,0 +1,7 @@
+RW0<d> :- add(idI,idX,idr1),in(idZ,idI),name(idX,"X"),name(idZ,"Z"),tr(idr1,d);
+RW1<d> :- add(idX,idI,idr1),in(idZ,idI),name(idX,"X"),name(idZ,"Z"),tr(idr1,d);
+RW2<d> :- add(SK_0,SK_1,d),in(idZ,idI),name(idX,"X"),name(idZ,"Z"),tr(idI,SK_0),tr(idX,SK_1);
+RW3<d> :- add(SK_1,SK_0,d),in(idZ,idI),name(idX,"X"),name(idZ,"Z"),tr(idI,SK_0),tr(idX,SK_1);
+RW4<d> :- add(SK_0,SK_1,d),in(SK_2,SK_0),name(idX,"X"),name(idZ,"Z"),tr(idX,SK_1),tr(idZ,SK_2);
+RW5<d> :- add(SK_1,SK_0,d),in(SK_2,SK_0),name(idX,"X"),name(idZ,"Z"),tr(idX,SK_1),tr(idZ,SK_2);
+RW6<d> :- name(d,"V");

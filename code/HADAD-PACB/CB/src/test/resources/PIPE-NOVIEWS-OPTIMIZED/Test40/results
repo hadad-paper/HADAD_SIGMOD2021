@@ -1,0 +1,5 @@
+RW0<i> :- in(idM,t),size(idM,"10000","10000"),name(idM,"M"),tr(t,i);
+RW1<i> :- in(SK_3499,i),size(idM,"10000","10000"),name(idM,"M"),tr(idM,SK_3499);
+RW2<i> :- in(SK_3499,i),name(idM,"M"),name(t,"V"),tr(idM,SK_3499);
+RW3<i> :- name(t,"V"),tr(t,i);
+RW4<i> :- in(idM,t),in(SK_3499,i),name(t,"V"),tr(idM,SK_3499);

@@ -1,0 +1,14 @@
+#Q: trace (N-1M-1)+trace(Z)
+Q<idr3> :- 
+name(idM,"M"),
+size(idM,"6","6"),
+name(idN,"N"),
+size(idN,"6","6"),
+#name(idZ,"Z"),
+#size(idZ,"6","6"),
+in(idM,idMI),
+in(idN,idNI),
+multi(idNI,idMI,idr2),
+trace(idr2,idr3);
+#trace(idZ,idZT),
+#add_s(idr3,idZT,idr4);

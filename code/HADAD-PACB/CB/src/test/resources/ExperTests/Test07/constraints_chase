@@ -1,0 +1,28 @@
+
+# Grex schema constraints
+eq_aj(x,y),eq_aj(y,z)->eq_aj(x,z);
+child_aj(u,x,v,w),child_aj(u,y,v,w)->x=y;
+root_aj_88(x),root_aj_88(y)->x=y;
+
+# V view constraints
+child_aj(p,c,t,d),copy_aj_V(p,p1)->child_aj_V(p1,c1,t,d),copy_aj_V(c,c1);
+copy_aj_V(x,x1),eq_aj(x,y)->eq_aj_V(x1,y);
+copy_aj_V(x,x1),eq(x,y)->eq_V(x1,y);
+
+# V_0 constraint for extract
+root_aj_88(b_0),child_aj(b_0,c_1,"site","o"),child_aj(c_1,c_2,"person","o"),child_aj(c_2,c_3,"address","o"),child_aj(c_3,b_1,"street","o")->V_0_extr_aj(b_0,b_1);
+
+# V_0 constraint relating extract with create
+V_0_extr_aj(b_0,b_1)->V_0_create_aj(d_0,d_1),V_0_sk_aj0(d_0,b_0,b_1),V_0_sk_aj1(d_1,b_0,b_1);
+
+# V_0 constraint connecting create to JSON constructed by view
+V_0_create_aj(d_0,d_1)->V(d_0),child_aj_V(d_0,d_1,"street","o");
+
+# V_0_0 constraint for extract
+V_0_extr_aj(b_0,b_1),child_aj(b_1,b_2,"text","o")->V_0_0_extr_aj(b_0,b_1,b_2);
+
+# V_0_0 constraint relating extract with create
+V_0_0_extr_aj(b_0,b_1,b_2)->copy_aj_V(b_2,b_2_c),V_0_0_create_aj(b_2_c),V_0_0_sk_aj0(b_2_c,b_0,b_1,b_2);
+
+# V_0_0 constraint connecting create to JSON constructed by view
+V_0_create_aj(d_0,d_1),V_0_0_create_aj(b_2_c),V_0_sk_aj1(d_1,b_0,b_1),V_0_0_sk_aj0(b_2_c,b_0,b_1,b_2)->child_aj_V(d_1,b_2_c,a_5,"a");

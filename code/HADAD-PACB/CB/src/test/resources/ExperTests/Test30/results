@@ -1,0 +1,12 @@
+RW0<idr3> :- add(idM,idN,idr1),in(idr1,idrI),multi(idrT,idD,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idrI,idrT);
+RW1<idr3> :- add(idM,idN,idr1),in(idr1,idrI),multi(idD,idrT,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idrI,idrT);
+RW2<idr3> :- add(idN,idM,idr1),in(idr1,idrI),multi(idrT,idD,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idrI,idrT);
+RW3<idr3> :- add(idN,idM,idr1),in(idr1,idrI),multi(idD,idrT,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idrI,idrT);
+RW4<idr3> :- add(idM,idN,idr1),in(SK_0,idrT),multi(idrT,idD,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,SK_0);
+RW5<idr3> :- add(idM,idN,idr1),in(SK_0,idrT),multi(idD,idrT,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,SK_0);
+RW6<idr3> :- add(idN,idM,idr1),in(SK_0,idrT),multi(idrT,idD,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,SK_0);
+RW7<idr3> :- add(idN,idM,idr1),in(SK_0,idrT),multi(idD,idrT,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idr1,SK_0);
+RW8<idr3> :- add(SK_1,SK_2,SK_0),in(SK_0,idrT),multi(idrT,idD,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_1),tr(idN,SK_2);
+RW9<idr3> :- add(SK_1,SK_2,SK_0),in(SK_0,idrT),multi(idD,idrT,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_1),tr(idN,SK_2);
+RW10<idr3> :- add(SK_2,SK_1,SK_0),in(SK_0,idrT),multi(idrT,idD,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_1),tr(idN,SK_2);
+RW11<idr3> :- add(SK_2,SK_1,SK_0),in(SK_0,idrT),multi(idD,idrT,idr2),trace(idr2,idr3),name(idM,"M"),name(idN,"N"),name(idD,"D"),tr(idM,SK_1),tr(idN,SK_2);

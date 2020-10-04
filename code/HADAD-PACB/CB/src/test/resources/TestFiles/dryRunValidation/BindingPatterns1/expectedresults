@@ -1,0 +1,1 @@
+U<x> :- R_oi(x,y),T_o(SK_0),S_oi(y,SK_0);

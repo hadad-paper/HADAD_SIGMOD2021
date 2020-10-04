@@ -1,0 +1,1 @@
+U<x> :- D(e1,x),RES(x),A(x,e1),B(e1,x),C(e1,x);

@@ -1,0 +1,9 @@
+sQ<d>:-
+name(idA,"A"),
+size(idA,"1000000","100"),
+name(idB,"B"),
+size(idB,"1000000","100"),
+tr(idA,idr1),
+tr(idB,idr2),
+add(idr1,idr2,r),
+rowSums(r,d);

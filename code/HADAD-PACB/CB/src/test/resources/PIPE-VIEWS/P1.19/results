@@ -1,0 +1,4 @@
+RW0<d> :- in(idr1,d),name(idC,"C"),tr(idC,idr1);
+RW1<d> :- in(idC,SK_198),name(idC,"C"),tr(SK_198,d);
+RW2<d> :- name(SK_198,"V1"),tr(SK_198,d);
+RW3<d> :- name(SK_199,"V2");

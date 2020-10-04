@@ -1,0 +1,10 @@
+# integrity constraints
+#
+R(x,y) -> S(y,z);
+S(y,z) -> T(z);
+
+# extractability constraints (to model binding patterns)
+#
+T_o(z) -> D(z);
+S_oi(y,z), D(z) -> D(y);
+R_oi(x,y), D(y) -> D(x);

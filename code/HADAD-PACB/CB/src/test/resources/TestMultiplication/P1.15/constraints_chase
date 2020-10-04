@@ -1,0 +1,13 @@
+#---------------EGDS-------------------------#
+name(id1,n1),name(id2,n1)->id2=id1;
+multi(idA,idB,idr1),multi(idA,idB,idr2)->idr2=idr1;
+
+
+
+#--------------MULTI----------------------#
+multi(idA,idB,idr1),multi(idr1,idC,idr2)-> multi(idB,idC,idr3),multi(idA,idr3,idr2);
+multi(idB,idC,idr3),multi(idA,idr3,idr2)->multi(idA,idB,idr1),multi(idr1,idC,idr2);
+
+
+
+

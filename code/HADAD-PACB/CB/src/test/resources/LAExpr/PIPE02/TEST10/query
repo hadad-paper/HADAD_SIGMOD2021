@@ -1,0 +1,10 @@
+#Q: ((X1X2)X3)T
+Q<idr6>:-
+name(idM,"M"),
+name(idN,"N"),
+size(idM,"6","6"),
+size(idN,"6","6"),
+add(idM,idN,idr3),
+tr(idr3,idr4),
+det(idr4,idr6);
+

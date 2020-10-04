@@ -1,0 +1,7 @@
+#trace((Z%*%M)T)
+Q<d>:-
+name(idZ,"Z"),
+name(idM,"M"),
+multi(idZ,idM,idr1),
+tr(idr1,idr2),
+trace(idr2,d);

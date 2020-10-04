@@ -1,0 +1,15 @@
+name(id1,n1),name(id2,n1)->id2=id1;
+tr(id1,idt1),tr(id1,idt2)->idt2=idt1;
+in(id1,idt1),in(id1,idt2)->idt2=idt1;
+ins(id1,idt1),ins(id1,idt2)->idt2=idt1;
+tr(id1,idr1),tr(idr1,idr3)->id1=idr3;
+in(id1,idr1),in(idr1,idr3)->idr3=id1;
+multi(idA,idB,idr1),multi(idA,idB,idr2)->idr2=idr1;
+multi_s(idA,idB,idr1),multi_s(idA,idB,idr2)->idr2=idr1;
+det(idA,d1),det(idA,d2)->d2=d1;
+trace(idA,id1),trace(idA,id2)->id2=id1;
+add(idA,idB,idr1),add(idA,idB,idr2)->idr1=idr2;
+identity(idA1,n),identity(idA2,n)->idA2=idA1;
+
+identity(idr2,"I"),multi(idZ,idr2,idr1)->idZ=idr1;
+identity(idr2,"I")->name(idZ,"Z"),in(idZ,idr1),multi(idZ,idr1,idr2);

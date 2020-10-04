@@ -1,0 +1,8 @@
+RW0<d> :- in(idD,idr1),in(idC,idr2),multi(idr2,idr1,idr3),add_s(t1,t2,d),trace(idE,t1),trace(idr3,t2),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");
+RW1<d> :- in(idD,idr1),in(idC,idr2),multi(idr2,idr1,idr3),add_s(t2,t1,d),trace(idE,t1),trace(idr3,t2),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");
+RW2<d> :- add(idE,idr3,SK_1698),in(idD,idr1),in(idC,idr2),multi(idr2,idr1,idr3),trace(SK_1698,d),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");
+RW3<d> :- add(idr3,idE,SK_1698),in(idD,idr1),in(idC,idr2),multi(idr2,idr1,idr3),trace(SK_1698,d),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");
+RW4<d> :- in(SK_1697,idr3),multi(idD,idC,SK_1697),add_s(t1,t2,d),trace(idE,t1),trace(idr3,t2),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");
+RW5<d> :- in(SK_1697,idr3),multi(idD,idC,SK_1697),add_s(t2,t1,d),trace(idE,t1),trace(idr3,t2),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");
+RW6<d> :- add(idE,idr3,SK_1698),in(SK_1697,idr3),multi(idD,idC,SK_1697),trace(SK_1698,d),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");
+RW7<d> :- add(idr3,idE,SK_1698),in(SK_1697,idr3),multi(idD,idC,SK_1697),trace(SK_1698,d),size(idD,"10000","10000"),size(idC,"10000","10000"),size(idE,"10000","10000"),name(idD,"D"),name(idC,"C"),name(idE,"E");

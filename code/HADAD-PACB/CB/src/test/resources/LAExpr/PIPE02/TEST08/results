@@ -1,0 +1,12 @@
+RW0<idr6> :- multi(idX1,idX2,idr4),multi(idr4,idX3,idr5),trace(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");
+RW1<idr6> :- multi(idX1,idX2,idr4),multi(idX3,idr4,idr5),trace(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");
+RW2<idr6> :- multi(idr4,idX3,idr5),trace(idr5,idr6),name(idX3,"X3"),name(idr4,"V2");
+RW3<idr6> :- multi(idX3,idr4,idr5),trace(idr5,idr6),name(idX3,"X3"),name(idr4,"V2");
+RW4<idr6> :- multi(idX1,idX2,idr4),multi(idX2,idX3,SK_0),multi(idX1,SK_0,idr5),trace(idr5,idr6),name(idX3,"X3"),name(idr4,"V2");
+RW5<idr6> :- multi(idX1,idX2,idr4),multi(idX2,idX3,SK_0),multi(SK_0,idX1,idr5),trace(idr5,idr6),name(idX3,"X3"),name(idr4,"V2");
+RW6<idr6> :- multi(idX1,idX2,idr4),multi(idX3,idX1,SK_1),multi(idX2,SK_1,idr5),trace(idr5,idr6),name(idX3,"X3"),name(idr4,"V2");
+RW7<idr6> :- multi(idX1,idX2,idr4),multi(idX3,idX1,SK_1),multi(SK_1,idX2,idr5),trace(idr5,idr6),name(idX3,"X3"),name(idr4,"V2");
+RW8<idr6> :- multi(idX2,idX3,SK_0),multi(idX1,SK_0,idr5),trace(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");
+RW9<idr6> :- multi(idX2,idX3,SK_0),multi(SK_0,idX1,idr5),trace(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");
+RW10<idr6> :- multi(idX3,idX1,SK_1),multi(idX2,SK_1,idr5),trace(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");
+RW11<idr6> :- multi(idX3,idX1,SK_1),multi(SK_1,idX2,idr5),trace(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");

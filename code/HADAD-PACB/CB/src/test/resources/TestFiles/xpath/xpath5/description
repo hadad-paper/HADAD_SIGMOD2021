@@ -1,0 +1,4 @@
+v: <result>{for $p in //person return $p/name, $p//city}</result>
+q: //person/name/text()
+r: Navig (v, ./result/name/text ())
+

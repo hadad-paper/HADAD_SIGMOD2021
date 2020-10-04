@@ -1,0 +1,2 @@
+RW0<idr2> :- multi(idNI,idMI,idr2),size(idM,"20000","100"),size(idN,"100","20000"),name(idM,"matrix-20000-100-1.0.csv"),name(idN,"matrix-100-20000-1.0.csv"),tr(idM,idMI),tr(idN,idNI);
+RW1<idr2> :- multi(idM,idN,SK_20),size(idM,"20000","100"),size(idN,"100","20000"),name(idM,"matrix-20000-100-1.0.csv"),name(idN,"matrix-100-20000-1.0.csv"),tr(SK_20,idr2);

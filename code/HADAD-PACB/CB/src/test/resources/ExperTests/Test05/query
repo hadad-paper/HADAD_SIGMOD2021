@@ -1,0 +1,8 @@
+Q<idr2>:-
+name(idA,"X"),
+size(idA,"5","4"),
+name(idB,"H"),
+size(idB,"4","5"),
+multi(idA,idB,idr1),
+trace(idr1,idr2);
+

@@ -1,0 +1,1 @@
+RW0<idr2> :- size(idN,"5","6"),size(idr2,"5","6"),name(idr2,"M"),name(idN,"N");

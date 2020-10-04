@@ -1,0 +1,7 @@
+#Q: (XT)T
+Q<d>:-
+name(idA,"A"),
+name(idB,"B"),
+multi(idA,idB,idr1),
+multi(idr1,idA,idr2),
+det(idr2,d);

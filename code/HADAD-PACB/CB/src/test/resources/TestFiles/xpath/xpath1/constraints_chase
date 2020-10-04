@@ -1,0 +1,22 @@
+###################
+# semantics of copy 
+###################
+
+# structural preservation
+child (p, c), copy (p, p1) -> child_v (p1, c1), copy (c, c1);
+tag (x, t), copy (x, x1) -> tag_v (x1, t);
+desc (x, y), copy (x, x1) -> desc_v (x1, y1), copy (y, y1);
+
+
+copy (x,y), eq (x, z) -> eq_v (y, z);
+
+###########
+# the view
+##########
+
+root (r), 
+child (r, s), tag (s, "site"),
+desc (s, t),
+child (t, p), tag (p, "person")
+->
+copy (p, p1), v (p1);

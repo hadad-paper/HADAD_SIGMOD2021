@@ -1,0 +1,8 @@
+#Q: (XT)T
+Q<idr2>:-
+name(idA,"A"),
+size(idA,"10000","10000"),
+name(idB,"B"),
+size(idB,"10000","10000"),
+add(idA,idB,idr1),
+multi_s("2",idr1,idr2);

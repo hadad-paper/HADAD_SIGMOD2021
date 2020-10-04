@@ -1,0 +1,13 @@
+VO<docRootID, name, awbelID, bkselID, nelID> :- Author(aID, name), 
+												Sk_dr(docRootID),
+												Sk_awb(aID, awbelID), 
+												Sk_bks(aID, bkselID),
+												Sk_n(aID, nelID);
+												
+VI<docRootID, awbelID, bkselID, title, bkelID> :- Author(aID, name), 
+													  Book(bID, title),
+													  Author2Book(aID, bID),
+													  Sk_dr(docRootID),
+													  Sk_awb(aID, awbelID), 
+													  Sk_bks(aID, bkselID),
+													  Sk_bk(aID, bID, bkelID);

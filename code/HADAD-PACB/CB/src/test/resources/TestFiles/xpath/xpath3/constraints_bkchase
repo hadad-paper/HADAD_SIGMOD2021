@@ -1,0 +1,37 @@
+####################
+# semantics of copy
+####################
+
+child_v (p1, c1), copy (p, p1) -> child (p, c), copy (c, c1);
+tag_v (x1, t), copy (x, x1) -> tag (x, t);
+desc_v (x1, y1), copy (x, x1) -> desc (x, y), copy (y, y1);
+text_v (x1, y1), copy (x, x1) -> text (x, y), copy (y, y1);
+copy (x, x1), eq_v (x1, y) -> eq (x, y);
+
+
+########
+# view
+########
+
+v (r),
+child_v (r, ss), tag_v (ss, "streets"),
+child_v (ss, s)
+->
+v_create_1_1 (s);
+
+v_create_1_1 (s1) -> copy (s, s1), v_extr_1_1 (p, a, s);
+
+v_extr_1_1 (p, a, s) -> v_extr_1 (p, a), child (a, s);
+
+v_extr_1 (p, a)
+->
+root  (r), 
+child (r, si), tag (si, "site"),
+child (si, p), tag (p,  "person"),
+child (p,  a), tag (a,  "address");
+
+
+
+
+
+

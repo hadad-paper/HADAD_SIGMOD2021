@@ -1,0 +1,13 @@
+root (1), child (2), desc (2), tag (2), text (2),
+
+v_extr_1 (1), v_extr_1_1 (2), v_extr_1_2 (2), 
+v_create_1_1 (1), v_create_1_2 (1), 
+
+v (1), child_v (2), desc_v (2), tag_v (2), text_v (2),
+copy (2), eq (2), eq_v (2);
+
+
+v (1), child_v (2), desc_v (2), tag_v (2), text_v (2), eq_v (2);
+
+
+

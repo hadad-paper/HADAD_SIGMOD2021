@@ -1,0 +1,5 @@
+# union of source and target schemas:
+R(2), S(1), D(1), R_oi(2), S_o(1);
+
+# target schema:
+R_oi(2), S_o(1);

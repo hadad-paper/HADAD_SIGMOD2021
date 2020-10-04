@@ -1,0 +1,13 @@
+#Q: (XT)T
+Q<v>:-
+name(idX,"X"),
+size(idX,"3","5"),
+rev(idX,idR),
+cell(idR,"2","3",v);
+
+
+
+#Q<v>:-
+#name(idX,"X"),
+#size(idX,"3","5"),
+#cell(idX,"2","3",v);

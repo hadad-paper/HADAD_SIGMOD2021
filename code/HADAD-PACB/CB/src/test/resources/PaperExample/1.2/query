@@ -1,0 +1,7 @@
+Q<t>:-
+name(idM,"M"),
+name(idN,"N"),
+in(idM,idr1),
+add(idr1,idN,idr2),
+tr(idr2,t);
+

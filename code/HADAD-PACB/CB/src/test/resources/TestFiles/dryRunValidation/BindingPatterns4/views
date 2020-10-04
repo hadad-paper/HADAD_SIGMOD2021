@@ -1,0 +1,5 @@
+R_i<x> :- R(x);
+
+S_nno<z> :- S(x,y,z);
+S_noi<y,z> :- S(x,y,z);
+S_oii<x,y,z> :- S(x,y,z);

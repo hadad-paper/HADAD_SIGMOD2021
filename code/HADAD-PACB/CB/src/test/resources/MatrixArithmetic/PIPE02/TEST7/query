@@ -1,0 +1,12 @@
+Q<t>:-
+netflix(i,j,v),
+constructMatrixValue(i,j,v,idX),
+constructName (idX,"X"),
+name(idU,"U"),
+name(idV1,"V1"),
+name(idX1,"X"),
+matrixFilterGT(idX1,"4",idr3),
+tr(idV1,idVT),
+multi(idU,idVT,idr1),
+add(idr1,idr3,idr2),
+multi(idr2,idV1,t);

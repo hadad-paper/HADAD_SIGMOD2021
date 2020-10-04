@@ -1,0 +1,8 @@
+Q<t>:-
+name(idD,"D"),
+size(idD,"10000","10000"),
+name(idC,"C"),
+size(idC,"10000","10000"),
+add(idC,idD,idr1),
+in(idr1,idr2),
+trace(idr2,t);

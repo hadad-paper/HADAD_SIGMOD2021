@@ -1,0 +1,9 @@
+#Q: (XT)T
+Q<idr3>:-
+name(idA,"A"),
+size(idA,"10000","10000"),
+name(idB,"B"),
+size(idB,"10000","10000"),
+add(idA,idB,idr1),
+tr(idr1,idr2),
+tr(idr2,idr3);

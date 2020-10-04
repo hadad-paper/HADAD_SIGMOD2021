@@ -1,0 +1,9 @@
+Q<t>:-
+name(idA,"A"),
+size(idA,"1000000","100"),
+name(idB,"B"),
+size(idB,"1000000","100"),
+multi_s("2",idA,idr1),
+multi_s("2",idB,idr2),
+add(idr1,idr2,t);
+

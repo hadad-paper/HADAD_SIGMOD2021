@@ -1,0 +1,11 @@
+RW0<d> :- add(idA,idB,idr1),sum(idr1,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B");
+RW1<d> :- add(idB,idA,idr1),sum(idr1,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B");
+RW2<d> :- sum(idA,SK_396),sum(idB,SK_397),add_s(SK_396,SK_397,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B");
+RW3<d> :- sum(idA,SK_396),sum(idB,SK_397),add_s(SK_397,SK_396,d),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B");
+RW4<d> :- sum(idA,SK_396),sum(idB,SK_397),add_s(SK_396,SK_397,d),name(idA,"A"),name(idB,"B"),name(idr1,"V");
+RW5<d> :- sum(idA,SK_396),sum(idB,SK_397),add_s(SK_397,SK_396,d),name(idA,"A"),name(idB,"B"),name(idr1,"V");
+RW6<d> :- sum(idr1,d),name(idr1,"V");
+RW7<d> :- add(idB,idA,idr1),sum(idA,SK_396),sum(idB,SK_397),add_s(SK_397,SK_396,d),name(idr1,"V");
+RW8<d> :- add(idA,idB,idr1),sum(idA,SK_396),sum(idB,SK_397),add_s(SK_397,SK_396,d),name(idr1,"V");
+RW9<d> :- add(idB,idA,idr1),sum(idA,SK_396),sum(idB,SK_397),add_s(SK_396,SK_397,d),name(idr1,"V");
+RW10<d> :- add(idA,idB,idr1),sum(idA,SK_396),sum(idB,SK_397),add_s(SK_396,SK_397,d),name(idr1,"V");

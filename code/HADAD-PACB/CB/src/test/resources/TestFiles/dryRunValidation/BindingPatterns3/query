@@ -1,0 +1,9 @@
+# The intended query is
+#
+# Q(x) :- R(x,y,z);
+#
+#
+# Given the binding patterns, this query is not executable as such.
+# All three available binding patters for R are needed.
+
+Q<x> :- R(x,y,z),D(x),D(y),D(z);

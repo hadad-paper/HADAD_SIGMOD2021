@@ -1,0 +1,1 @@
+RW0<t> :- in(SK_99,t),multi(idD,idC,SK_99),size(idC,"10000","10000"),size(idD,"10000","10000"),name(idC,"C"),name(idD,"D");

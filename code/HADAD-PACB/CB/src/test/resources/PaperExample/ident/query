@@ -1,0 +1,8 @@
+Q<idr2>:-
+name(idN,"N"),
+size(idN,"5","6"),
+name(idM,"M"),
+size(idM,"5","6"),
+in(idN,idI),
+multi(idN,idI,idr1),
+multi(idM,idr1,idr2);

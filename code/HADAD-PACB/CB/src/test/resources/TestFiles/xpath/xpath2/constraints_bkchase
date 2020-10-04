@@ -1,0 +1,20 @@
+########
+# view
+########
+
+v_create_1_1 (t) -> v_extr_1_1 (p, s, t);
+
+v_extr_1_1 (p, s, t) -> v_extr_1 (p, s), text (s, t);
+
+v_extr_1 (p, s)
+->
+root  (r), 
+child (r, si), tag (si, "site"),
+child (si, p), tag (p,  "person"),
+child (p,  a), tag (a,  "address"),
+child (a,  s), tag (s,  "street");
+
+
+
+
+

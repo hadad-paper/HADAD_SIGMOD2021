@@ -1,0 +1,2 @@
+RW0<idr2> :- multi(idT,idN,idr1),name(idM,"M"),name(idN,"N"),exp(idr1,idr2),tr(idM,idT);
+RW1<idr2> :- name(idr1,"V1"),exp(idr1,idr2);

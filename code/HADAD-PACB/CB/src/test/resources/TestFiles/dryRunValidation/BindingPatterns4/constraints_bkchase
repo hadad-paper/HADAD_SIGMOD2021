@@ -1,0 +1,5 @@
+R(x) -> S(x,y,z);
+
+S_nno(z) -> D(z);
+S_noi(y,z), D(z) -> D(y);
+S_oii(x,y,z), D(z), D(y) -> D(x);

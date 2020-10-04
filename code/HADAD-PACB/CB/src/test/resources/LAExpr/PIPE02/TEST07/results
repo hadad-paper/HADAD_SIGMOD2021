@@ -1,0 +1,10 @@
+RW0<idr6> :- multi(idX1,idX2,idr4),multi(idr4,idX3,idr5),det(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");
+RW1<idr6> :- multi(idX2,idX3,SK_0),multi(idX1,SK_0,idr5),det(idr5,idr6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3");
+RW2<idr6> :- multi(idr4,idX3,idr5),multi(idX2,idX3,SK_0),multi(idX1,SK_0,idr5),det(idr4,SK_1),det(idX3,SK_2),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3"),multi_s(SK_1,SK_2,idr6);
+RW3<idr6> :- multi(idX1,idX2,idr4),det(idr4,SK_1),det(idX3,SK_2),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3"),multi_s(SK_1,SK_2,idr6);
+RW4<idr6> :- multi(idX1,idX2,idr4),multi(idr4,idX3,idr5),multi(idX1,SK_0,idr5),det(idX1,SK_3),det(SK_0,SK_4),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3"),multi_s(SK_3,SK_4,idr6);
+RW5<idr6> :- multi(idX2,idX3,SK_0),det(idX1,SK_3),det(SK_0,SK_4),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3"),multi_s(SK_3,SK_4,idr6);
+RW6<idr6> :- det(idX3,SK_2),det(idX1,SK_3),det(idX2,SK_6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3"),multi_s(SK_1,SK_2,idr6),multi_s(SK_3,SK_6,SK_1);
+RW7<idr6> :- det(idX3,SK_2),det(idX1,SK_3),det(idX2,SK_6),name(idX1,"X1"),name(idX2,"X2"),name(idX3,"X3"),multi_s(SK_3,SK_4,idr6),multi_s(SK_6,SK_2,SK_4);
+RW8<idr6> :- det(idX3,SK_2),name(idX3,"X3"),name(SK_1,"V1"),multi_s(SK_1,SK_2,idr6);
+RW9<idr6> :- det(idX1,SK_3),name(idX1,"X1"),name(SK_4,"V2"),multi_s(SK_3,SK_4,idr6);

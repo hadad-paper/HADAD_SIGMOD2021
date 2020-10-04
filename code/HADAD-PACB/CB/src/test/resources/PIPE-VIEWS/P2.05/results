@@ -1,0 +1,8 @@
+RW0<d> :- add(idC,idD,idr1),in(idr1,idr2),det(idr2,d),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C");
+RW1<d> :- add(idD,idC,idr1),in(idr1,idr2),det(idr2,d),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C");
+RW2<d> :- det(idr2,d),name(idr2,"V");
+RW3<d> :- add(idC,idD,idr1),ins(SK_99,d),det(idr1,SK_99),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C");
+RW4<d> :- add(idD,idC,idr1),ins(SK_99,d),det(idr1,SK_99),size(idD,"10000","10000"),size(idC,"10000","10000"),name(idD,"D"),name(idC,"C");
+RW5<d> :- add(idC,idD,idr1),ins(SK_99,d),det(idr1,SK_99),name(idD,"D"),name(idC,"C"),name(idr2,"V");
+RW6<d> :- add(idD,idC,idr1),ins(SK_99,d),det(idr1,SK_99),name(idD,"D"),name(idC,"C"),name(idr2,"V");
+RW7<d> :- in(idr1,idr2),ins(SK_99,d),det(idr1,SK_99),name(idr2,"V");

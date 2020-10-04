@@ -1,0 +1,17 @@
+->  root(rID);
+
+OcreateB(bwa, auts) -> OextrB(b), Sk_bwa (bwa, b),Sk_auts (auts, b);
+
+OcreateBvt(bwa, auts, tVal)-> OextrBvt(b, tVal), Sk_bwa (bwa,b), Sk_auts (auts, b);
+
+IcreateBA(bwa, auts, aut) -> IextrBA(b, a), Sk_aut (aut, b, a), Sk_bwa (bwa, b), Sk_auts (auts, b);
+
+IcreateBAvn(bwa, auts, aut, nVal) -> IextrBAvn(b, a, nVal), Sk_aut (aut, b, a), Sk_bwa (bwa, b), Sk_auts (auts,b);
+
+Sk_bwa (bwa, b1), Sk(bwa, b2) -> b1=b2;
+
+Sk_auts (auts, b1), Sk_auts(auts, b2) -> b1 = b2;
+
+Sk_aut (aut, b1, a1), Sk_aut (aut, b2, a2) -> a1=a2, b1=b2;
+
+root(rID1), root(rID2) -> rID1 = rID2;

@@ -1,0 +1,2 @@
+RW0<idr2> :- multi(idN,idI,idr1),multi(idr2,idr1,idr2),in(idN,idI),size(idN,"5","6"),size(idr2,"5","6"),name(idN,"N"),name(idr2,"M");
+RW1<idr2> :- multi(idr2,idr1,idr2),identity(idr1),size(idr2,"5","6"),size(idr1,"5","6"),name(idr2,"M");

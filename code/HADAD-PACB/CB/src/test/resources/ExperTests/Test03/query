@@ -1,0 +1,9 @@
+Q<idr4>:-
+name(idX,"X"),
+name(idY,"Y"),
+tr(idX,idT),
+multi(idT,idX,idr1),
+in(idr1,idI),
+multi(idI,idT,idr2),
+multi(idr2,idX,idr3),
+multi(idr3,idI,idr4);

@@ -1,0 +1,6 @@
+Q<title1, title2>:-Author(aID, name), 
+				   Book(bID1, title1), 
+				   Book(bID2, title2), 
+				   Author2Book(aID, bID1), 
+				   Author2Book(aID, bID2),
+				   Sk_dr(docRootID);

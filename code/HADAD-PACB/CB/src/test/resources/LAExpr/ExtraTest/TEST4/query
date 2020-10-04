@@ -1,0 +1,7 @@
+#Q: (XT)T
+Q<c>:-
+name(idA,"A"),
+size(idA,"10000","10000"),
+name(idB,"A"),
+size(idB,"10000","10000"),
+multi(idA,idB,idr1),colSums(idr1,c);

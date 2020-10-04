@@ -1,0 +1,1 @@
+RW0<t> :- add(SK_397,SK_396,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1");

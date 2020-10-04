@@ -1,0 +1,20 @@
+name(id1,n1),name(id2,n1)->id2=id1;
+cell(idA,i,j,v1),cell(idA,i,j,v2)->v2=v1;
+rev(idX,idr1),rev(idx,idr2)->idr2=idr1;
+tr(idX,idr1),tr(idx,idr2)->idr2=idr1;
+RowType(idA,o1),RowType(idA,o2)->o2=o1;
+div(idA,idB,idr1),div(idA,idB,idr2)->idr2=idr1;
+
+
+#name(idA,n),size(idA,"1",j),cell(idX,"1",k,v)->rev(idX,idR),cell(idR,"1",k,v);
+#name(idX,"X"),cell(idX,"2",k,v)->rev(idX,idR),cell(idR,"2",k,v);
+
+#name(idX,n),size(idX,i,j),RowType(idX,"O"),cell(idX,r,k,v),add(i,"1",r1),div(r1,"2",r)->
+#rev(idX,idR),
+#cell(idR,r,k,v);
+
+
+name(idA,n),size(idA,i,j),RowType(idA,"O")->add(i,"1",r1),div(r1,"2",r);
+
+
+name(idA,n),size(idA,i,j),add(i,"1",r1),div(r1,"2",r),cell(idA,r,k,v)-> rev(idA,idR),cell(idR,r,k,v);

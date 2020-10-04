@@ -1,0 +1,6 @@
+Q<t>:-
+name(idD,"D"),
+size(idD,"10000","10000"),
+in(idD,idr1),
+in(idr1,t);
+

@@ -1,0 +1,2 @@
+RW0<idr1> :- in(idX,idT),name(idX,"X"),tr(idT,idr1);
+RW1<idr1> :- name(idT,"V"),tr(idT,idr1);

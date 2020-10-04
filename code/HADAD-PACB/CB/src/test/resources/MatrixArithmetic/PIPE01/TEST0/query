@@ -1,0 +1,4 @@
+#Q: (XT)T
+Q<v>:-
+name(idX,"X"),
+cell(idX,"2","3",v);

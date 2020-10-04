@@ -1,0 +1,84 @@
+
+# Grex schema constraints
+eq(x,y)->eq(y,x);
+child(x,y)->desc(x,y);
+desc(x,y),desc(y,z)->desc(x,z);
+
+# Views constraints
+child(p,c),copy_V(p,p1)->child_V(p1,c1),copy_V(c,c1);
+tag(x,t),copy_V(x,x1)->tag_V(x1,t);
+desc(x,u),child(u,y),copy_V(x,x1)->desc_V(x1,u1),child_V(u1,y1),copy_V(u,u1),copy_V(y,y1);
+copy_V(x,x1),eq(x,y)->eq_V(x1,y);
+text(x,y),copy_V(x,x1)->text_V(x1,y1),copy_V(y,y1);
+
+# V_0 constraint for extract
+root(x_0),child(x_0,x_1),tag(x_1,"site"),desc(x_1,x_2),child(x_2,y_0),tag(y_0,"person"),desc(y_0,x_4),child(x_4,x_5),tag(x_5,"ssn"),text(x_5,y_1)->V_0_extr(y_0,y_1);
+
+# V_0 constraint relating extract with create
+V_0_extr(y_0,y_1)->copy_V(y_1,y_1_c),val_V(z_0,"id",y_1_c),V_0_create(z_0,z_1,z_7),V_0_sk0(z_0,y_0,y_1),V_0_sk1(z_1,y_0,y_1),V_0_sk2(z_7,y_0,y_1);
+
+# V_0 constraint connecting create to XML constructed by view
+V_0_create(z_0,z_1,z_7)->V(z_8),child_V(z_8,z_0),tag_V(z_0,"person"),attr_V(z_0,"id"),child_V(z_0,z_1),tag_V(z_1,"addresses"),child_V(z_0,z_7),tag_V(z_7,"hobbies");
+
+# V_0_0 constraint for extract
+V_0_extr(y_0,y_1),child(y_0,x_8),tag(x_8,"name"),child(x_8,y_2),tag(y_2,"first")->V_0_0_extr(y_0,y_1,y_2);
+
+# V_0_0 constraint relating extract with create
+V_0_0_extr(y_0,y_1,y_2)->copy_V(y_2,y_2_c),V_0_0_create(y_2_c),V_0_0_sk0(y_2_c,y_0,y_1,y_2);
+
+# V_0_0 constraint connecting create to XML constructed by view
+V_0_create(z_0,z_1,z_7),V_0_0_create(y_2_c),V_0_sk0(z_0,y_0,y_1),V_0_0_sk0(y_2_c,y_0,y_1,y_2)->child_V(z_0,y_2_c);
+
+# V_0_1 constraint for extract
+V_0_extr(y_0,y_1),child(y_0,x_10),tag(x_10,"name"),child(x_10,y_3),tag(y_3,"last")->V_0_1_extr(y_0,y_1,y_3);
+
+# V_0_1 constraint relating extract with create
+V_0_1_extr(y_0,y_1,y_3)->copy_V(y_3,y_3_c),V_0_1_create(y_3_c),V_0_1_sk0(y_3_c,y_0,y_1,y_3);
+
+# V_0_1 constraint connecting create to XML constructed by view
+V_0_create(z_0,z_1,z_7),V_0_1_create(y_3_c),V_0_sk0(z_0,y_0,y_1),V_0_1_sk0(y_3_c,y_0,y_1,y_3)->child_V(z_0,y_3_c);
+
+# V_0_2 constraint for extract
+V_0_extr(y_0,y_1),desc(y_0,x_12),child(x_12,y_4),tag(y_4,"address")->V_0_2_extr(y_0,y_1,y_4);
+
+# V_0_2 constraint relating extract with create
+V_0_2_extr(y_0,y_1,y_4)->V_0_2_create(z_2,z_3,z_4,z_5,z_6),V_0_2_sk0(z_2,y_0,y_1,y_4),V_0_2_sk1(z_3,y_0,y_1,y_4),V_0_2_sk2(z_4,y_0,y_1,y_4),V_0_2_sk3(z_5,y_0,y_1,y_4),V_0_2_sk4(z_6,y_0,y_1,y_4);
+
+# V_0_2 constraint connecting create to XML constructed by view
+V_0_create(z_0,z_1,z_7),V_0_2_create(z_2,z_3,z_4,z_5,z_6),V_0_sk1(z_1,y_0,y_1),V_0_2_sk0(z_2,y_0,y_1,y_4),V_0_2_sk1(z_3,y_0,y_1,y_4),V_0_2_sk2(z_4,y_0,y_1,y_4),V_0_2_sk3(z_5,y_0,y_1,y_4),V_0_2_sk4(z_6,y_0,y_1,y_4)->child_V(z_1,z_2),tag_V(z_2,"SDAddress"),child_V(z_2,z_3),tag_V(z_3,"zip"),child_V(z_2,z_4),tag_V(z_4,"street"),child_V(z_4,z_5),tag_V(z_5,"name"),child_V(z_4,z_6),tag_V(z_6,"number");
+
+# V_0_2_0 constraint for extract
+V_0_2_extr(y_0,y_1,y_4),child(y_4,x_14),tag(x_14,"zip"),text(x_14,y_5)->V_0_2_0_extr(y_0,y_1,y_4,y_5);
+
+# V_0_2_0 constraint relating extract with create
+V_0_2_0_extr(y_0,y_1,y_4,y_5)->copy_V(y_5,y_5_c),V_0_2_0_create(y_5_c),V_0_2_0_sk0(y_5_c,y_0,y_1,y_4,y_5);
+
+# V_0_2_0 constraint connecting create to XML constructed by view
+V_0_2_create(z_2,z_3,z_4,z_5,z_6),V_0_2_0_create(y_5_c),V_0_2_sk1(z_3,y_0,y_1,y_4),V_0_2_0_sk0(y_5_c,y_0,y_1,y_4,y_5)->text_V(z_3,y_5_c);
+
+# V_0_2_1 constraint for extract
+V_0_2_extr(y_0,y_1,y_4),child(y_4,x_17),tag(x_17,"street"),text(x_17,y_6)->V_0_2_1_extr(y_0,y_1,y_4,y_6);
+
+# V_0_2_1 constraint relating extract with create
+V_0_2_1_extr(y_0,y_1,y_4,y_6)->copy_V(y_6,y_6_c),V_0_2_1_create(y_6_c),V_0_2_1_sk0(y_6_c,y_0,y_1,y_4,y_6);
+
+# V_0_2_1 constraint connecting create to XML constructed by view
+V_0_2_create(z_2,z_3,z_4,z_5,z_6),V_0_2_1_create(y_6_c),V_0_2_sk3(z_5,y_0,y_1,y_4),V_0_2_1_sk0(y_6_c,y_0,y_1,y_4,y_6)->text_V(z_5,y_6_c);
+
+# V_0_2_2 constraint for extract
+V_0_2_extr(y_0,y_1,y_4),child(y_4,x_20),tag(x_20,"number"),text(x_20,y_7)->V_0_2_2_extr(y_0,y_1,y_4,y_7);
+
+# V_0_2_2 constraint relating extract with create
+V_0_2_2_extr(y_0,y_1,y_4,y_7)->copy_V(y_7,y_7_c),V_0_2_2_create(y_7_c),V_0_2_2_sk0(y_7_c,y_0,y_1,y_4,y_7);
+
+# V_0_2_2 constraint connecting create to XML constructed by view
+V_0_2_create(z_2,z_3,z_4,z_5,z_6),V_0_2_2_create(y_7_c),V_0_2_sk4(z_6,y_0,y_1,y_4),V_0_2_2_sk0(y_7_c,y_0,y_1,y_4,y_7)->text_V(z_6,y_7_c);
+
+# V_0_3 constraint for extract
+V_0_extr(y_0,y_1),desc(y_0,x_23),child(x_23,y_8),tag(y_8,"hobbie")->V_0_3_extr(y_0,y_1,y_8);
+
+# V_0_3 constraint relating extract with create
+V_0_3_extr(y_0,y_1,y_8)->copy_V(y_8,y_8_c),V_0_3_create(y_8_c),V_0_3_sk0(y_8_c,y_0,y_1,y_8);
+
+# V_0_3 constraint connecting create to XML constructed by view
+V_0_create(z_0,z_1,z_7),V_0_3_create(y_8_c),V_0_sk2(z_7,y_0,y_1),V_0_3_sk0(y_8_c,y_0,y_1,y_8)->child_V(z_7,y_8_c);

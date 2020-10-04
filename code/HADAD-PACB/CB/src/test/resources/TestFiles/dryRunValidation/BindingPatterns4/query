@@ -1,0 +1,18 @@
+# This example illustrates a query that can be rendedered executable only after
+# exploiting an integrity constraint and several binding patterns.
+# Intended query:
+#
+# Q(x) :- R(x);
+#
+# which is not executable because the only bp for R is R_i.
+# All one can do with R_i is to lookup an already extracted
+# value to check if it is in R_i. To execute the query we need
+# to extract the lookup candidates from somewhere else, namely
+# from S. The intergrity constraint states an inclusion that
+# guarantees that all values of R_i are among those in S's
+# first column. The problem is that S's first column cannot
+# be directly extracted. Doing so requires exploiting three
+# binding patterns on S: S_nno, S_noi, S_oii.
+#
+
+Q<x> :- R(x), D(x);

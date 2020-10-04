@@ -1,0 +1,9 @@
+#Q: det(XT)
+Q<idr2>:-
+name(idM,"M"),
+size(idM,"8","8"),
+name(idN,"N"),
+size(idN,"8","8"),
+tr(idM,idT),
+multi(idT,idN,idr1),
+det(idr1,idr2);

@@ -1,0 +1,8 @@
+#Q: det((M+N)-1)
+Q<idr6>:-
+name(idM,"M"),
+name(idN,"N"),
+add(idM,idN,idr3),
+in(idr3,idr4),
+exp(idr4,idr6);
+

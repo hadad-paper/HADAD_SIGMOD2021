@@ -1,0 +1,5 @@
+#Q: det(XT)
+Q<idr2>:-
+name(idX,"X"),
+exp(idX,idr1),
+ins(idr1,idr2);

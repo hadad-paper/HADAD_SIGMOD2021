@@ -1,0 +1,1 @@
+RW0<t1> :- tag_V(SK_1,"result"),tag_V(SK_0,"person"),tag_V(SK_2,"name"),child_V(SK_1,SK_0),child_V(SK_0,SK_2),eq_V(SK_3,t1),V(SK_1),text_V(SK_2,SK_3);

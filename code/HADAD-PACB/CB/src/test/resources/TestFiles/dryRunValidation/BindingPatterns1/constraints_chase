@@ -1,0 +1,4 @@
+# integrity constraints:
+#
+R(x,y) -> S(y,z);
+S(y,z) -> T(z);

@@ -1,0 +1,7 @@
+#det((((M+N)-1)T)*D) 
+#det(A-1-1-1)
+Q<idr1>:-
+name(idM,"Z"),
+type(idM,"S"),
+name(idN,"N"),
+add(idM,idN,idr1);

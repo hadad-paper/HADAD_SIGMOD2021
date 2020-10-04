@@ -1,0 +1,7 @@
+Q<d>:-
+name(idD,"D"),
+name(idC,"C"),
+name(idE,"E"),
+multi(idD,idC,idr1),
+multi(idr1,idE,idr2),
+det(idr2,d);

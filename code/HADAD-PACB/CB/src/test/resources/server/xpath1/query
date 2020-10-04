@@ -1,0 +1,8 @@
+q<c1> :- 
+      root (r), 
+      child (r, s), tag (s, "site"), 
+      desc (s,t), 
+      child (t,p), tag (p, "person"), 
+      desc (p, u), 
+      child (u, c), tag (c, "city"),
+      eq (c,c1);

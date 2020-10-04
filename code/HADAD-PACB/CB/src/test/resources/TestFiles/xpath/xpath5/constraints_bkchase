@@ -1,0 +1,49 @@
+####################
+# semantics of copy
+####################
+
+child_v (p1, c1), copy (p, p1) -> child (p, c), copy (c, c1);
+tag_v (x1, t), copy (x, x1) -> tag (x, t);
+desc_v (x1, y1), copy (x, x1) -> desc (x, y), copy (y, y1);
+text_v (x1, y1), copy (x, x1) -> text (x, y), copy (y, y1);
+copy (x, x1), eq_v (x1, y) -> eq (x, y);
+
+
+########
+# view
+########
+
+
+# extract
+v_extr_1 (p)
+->
+root  (r),
+desc  (r, x), 
+child (x, p), tag (p, "person");
+
+v_extr_1_1 (p, n)
+-> 
+v_extr_1 (p), child (p, n), tag (n, "name");
+
+v_extr_1_2 (p, c)
+-> 
+v_extr_1 (p), desc (p, x), child (x, c), tag (c, "city");  
+
+
+# create
+v_create_1_1 (n1) -> v_extr_1_1 (p, n), copy (n, n1);
+v_create_1_2 (c1) -> v_extr_1_2 (p, c), copy (c, c1);
+
+
+# view consists of two kinds of created nodes
+v (r), child_v (r, rs), tag_v (rs, "results"), child_v (rs, n), tag_v (n, "name")
+->
+v_create_1_1 (n);
+
+v (r), child_v (r, rs), tag_v (rs, "results"), child_v (rs, c), tag_v (n, "city")
+->
+v_create_1_2 (c);
+
+
+
+

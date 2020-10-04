@@ -1,0 +1,4 @@
+Q<v>:-
+name(idA,"X"),
+tr(idA,idr1),
+cell(idr1,"3","2",v);

@@ -1,0 +1,11 @@
+RW0<t> :- add(idA,idB,idr1),multi(idr1,idV1,t),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1");
+RW1<t> :- add(idB,idA,idr1),multi(idr1,idV1,t),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1");
+RW2<t> :- add(SK_396,SK_397,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1");
+RW3<t> :- add(SK_397,SK_396,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1");
+RW4<t> :- add(SK_396,SK_397,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1"),name(idr1,"V");
+RW5<t> :- add(SK_397,SK_396,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1"),name(idr1,"V");
+RW6<t> :- multi(idr1,idV1,t),size(idV1,"100","1"),name(idV1,"V1"),name(idr1,"V");
+RW7<t> :- add(idA,idB,idr1),add(SK_396,SK_397,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idV1,"100","1"),name(idV1,"V1"),name(idr1,"V");
+RW8<t> :- add(idB,idA,idr1),add(SK_396,SK_397,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idV1,"100","1"),name(idV1,"V1"),name(idr1,"V");
+RW9<t> :- add(idA,idB,idr1),add(SK_397,SK_396,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idV1,"100","1"),name(idV1,"V1"),name(idr1,"V");
+RW10<t> :- add(idB,idA,idr1),add(SK_397,SK_396,t),multi(idA,idV1,SK_396),multi(idB,idV1,SK_397),size(idV1,"100","1"),name(idV1,"V1"),name(idr1,"V");

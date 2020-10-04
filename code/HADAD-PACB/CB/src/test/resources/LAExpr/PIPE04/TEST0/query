@@ -1,0 +1,9 @@
+Q<idr6>:- 
+name(idX1,"X1"),
+name(idX2,"X2"),
+name(idX3,"X3"),
+det(idX3,SK_2),
+det(idX1,SK_3),
+det(idX2,SK_6),
+multi_s(SK_3,SK_6,SK_4),
+multi_s(SK_4,SK_2,idr6);

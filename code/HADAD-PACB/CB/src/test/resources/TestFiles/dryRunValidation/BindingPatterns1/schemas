@@ -1,0 +1,7 @@
+# source + target + aux:
+R(2), S(2), T(1), R_oi(2), S_oi(2), T_o(1), D(1);
+
+# target:
+R_oi(2), S_oi(2), T_o(1);
+
+

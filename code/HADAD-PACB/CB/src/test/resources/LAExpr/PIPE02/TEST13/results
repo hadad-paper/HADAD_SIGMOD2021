@@ -1,0 +1,4 @@
+RW0<idr6> :- add(idM,idN,idr3),in(idr3,idr4),det(idr4,idr6),name(idM,"M"),name(idN,"N");
+RW1<idr6> :- add(idN,idM,idr3),in(idr3,idr4),det(idr4,idr6),name(idM,"M"),name(idN,"N");
+RW2<idr6> :- add(idM,idN,idr3),ins(SK_0,idr6),det(idr3,SK_0),name(idM,"M"),name(idN,"N");
+RW3<idr6> :- add(idN,idM,idr3),ins(SK_0,idr6),det(idr3,SK_0),name(idM,"M"),name(idN,"N");

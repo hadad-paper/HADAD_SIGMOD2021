@@ -1,0 +1,21 @@
+# The intended query is simply
+#
+# Q<x,y> :- R(x,y).
+#
+# We use instead the domain-extended version below:
+
+Q<x,y> :- R(x,y), D(x), D(y);
+
+# This translation conforms to our result stating that
+# 
+# the minimal executable rewritings of a query (wrt binding patterns)
+# are precisely the minimal rewritings of its domain-extended form 
+# (the latter minimality is defined under the appropriate constraints
+#  modeling the binding patterns). 
+#
+# Remarkably, this reduces the problem from rewriting under binding 
+# patterns to rewriting only under constraints. Which means that
+# if we have an algorithm for rewriting under constraints, we can "trick"
+# it into rewriting under binding patterns even though it is unaware of
+# them and does not treat them as first-class citizens.
+

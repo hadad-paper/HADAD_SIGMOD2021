@@ -1,0 +1,5 @@
+RW0<idr2> :- multi(idT,idN,idr1),trace(idr1,idr2),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N"),tr(idM,idT);
+RW1<idr2> :- multi(idT,idN,idr1),trace(idr1,idr2),name(idM,"M"),name(idN,"N"),name(SK_0,"V1"),tr(idM,idT);
+RW2<idr2> :- multi(idN,idT,SK_0),trace(SK_0,idr2),size(idM,"6","6"),size(idN,"6","6"),name(idM,"M"),name(idN,"N"),tr(idM,idT);
+RW3<idr2> :- trace(SK_0,idr2),name(SK_0,"V1");
+RW4<idr2> :- multi(idT,idN,idr1),multi(idN,idT,SK_0),trace(idr1,idr2),name(SK_0,"V1");

@@ -1,0 +1,3 @@
+RW0<idr1> :- name(idX,"X"),exp(idX,idr1);
+RW1<idr1> :- name(idX,"X"),exp(SK_0,idr1),tr(idX,SK_0);
+RW2<idr1> :- name(idr1,"V");

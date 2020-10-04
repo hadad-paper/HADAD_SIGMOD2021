@@ -1,0 +1,1 @@
+RW0<title1,title2> :- VI(VAR_6,SK_0,SK_1,title1,SK_3),VI(VAR_6,SK_0,SK_1,title2,SK_4);

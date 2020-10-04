@@ -1,0 +1,8 @@
+#det((A+B))T*D-1)
+Q<idr3>:-
+name(idA,"A"),
+name(idB,"B"),
+tr(idB,idT),
+multi(idT,idA,idr1),
+in(idr1,idr2),
+det(idr2,idr3);

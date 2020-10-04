@@ -1,0 +1,8 @@
+Q<v>:-
+name(idA,"A"),
+in(idA,idI),
+in(idI,idII),
+name(idB,"B"),
+add(idII,idB,idr1),
+tr(idr1,id21),
+cell(id21,"3","4",v);

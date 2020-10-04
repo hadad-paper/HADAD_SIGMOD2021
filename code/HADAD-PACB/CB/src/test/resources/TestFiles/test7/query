@@ -1,0 +1,6 @@
+Q<btVal> :- root(rID), child(rID, a),
+			tag(a, "authorWithBooks"),
+			attr(a, "name"), val(a, "name", "Kipling"),
+			child(a,bs), tag(bs, "books"),
+			child(bs,b), tag(b, "book"),
+			attr(b,"title"), val(b, "title", btVal);

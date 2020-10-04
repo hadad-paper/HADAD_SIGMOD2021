@@ -1,0 +1,8 @@
+RW0<idr2> :- add(idAT,idBT,idr1),rowSums(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,idAT),tr(idB,idBT);
+RW1<idr2> :- add(idBT,idAT,idr1),rowSums(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,idAT),tr(idB,idBT);
+RW2<idr2> :- add(idAT,idBT,idr1),colSums(SK_145,SK_147),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,idAT),tr(idB,idBT),tr(SK_145,idr1),tr(SK_147,idr2);
+RW3<idr2> :- add(idBT,idAT,idr1),colSums(SK_145,SK_147),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(idA,idAT),tr(idB,idBT),tr(SK_145,idr1),tr(SK_147,idr2);
+RW4<idr2> :- add(idA,idB,SK_145),rowSums(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(SK_145,idr1);
+RW5<idr2> :- add(idB,idA,SK_145),rowSums(idr1,idr2),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(SK_145,idr1);
+RW6<idr2> :- add(idA,idB,SK_145),colSums(SK_145,SK_147),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(SK_147,idr2);
+RW7<idr2> :- add(idB,idA,SK_145),colSums(SK_145,SK_147),size(idA,"10000","10000"),size(idB,"10000","10000"),name(idA,"A"),name(idB,"B"),tr(SK_147,idr2);

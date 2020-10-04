@@ -1,0 +1,2 @@
+RW0<v> :- cell(id21,"6","2",v),name(idA,"A"),tr(idA,id21);
+RW1<v> :- cell(idA,"2","6",v),name(idA,"A");

@@ -1,0 +1,5 @@
+# union of source and target schemas:
+T(3), D(1), H(2), C(1), V1(4),V2(4), R(1), Hio(2), Ro(1);
+
+# target schema:
+Hio(2), V1(4),V2(4), Ro(1), C(1);

@@ -1,0 +1,2 @@
+RW0<d> :- in(idD,idr1),det(idr1,d),size(idD,"10000","10000"),name(idD,"D");
+RW1<d> :- ins(SK_7099,d),det(idD,SK_7099),size(idD,"10000","10000"),name(idD,"D");

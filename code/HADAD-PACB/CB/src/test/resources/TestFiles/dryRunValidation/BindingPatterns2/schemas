@@ -1,0 +1,5 @@
+# source + target + aux
+R(2), R_oi(2), D(1), constant(1);
+
+# target
+R_oi(2), constant(1);
