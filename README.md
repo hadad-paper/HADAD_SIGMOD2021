@@ -33,7 +33,9 @@ $ chmod +x generate-synthetic.sh
 $./generate-synthetic.sh 
 ```
 ### Real-wrold
-TOADD
+The real-data can be found in this [link](https://drive.google.com/drive/folders/1imC5lMV8hA7csua91nj0efW19lK2GN9p?usp=sharing).
+The datasets should be palced under ``data/real-data`` folder.
+
 ### Views
 ```data/views```  : this directory generates the views. 
 ```bash
