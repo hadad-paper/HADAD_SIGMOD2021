@@ -1,0 +1,12 @@
+
+# Grex schema constraints
+collection_rk(p,c1,k,t),collection_rk(p,c2,k,t)->c1=c2;
+mainmap_rk_73120152(x),mainmap_rk_73120152(y)->x=y;
+internal_map_rk(i,v1),internal_map_rk(i,v2)->v1=v2;
+
+# V view constraints
+collection_rk(p,c,k,t),copy_rk_V(p,p1)->collection_rk_V(p1,c1,k,t),copy_rk_V(c,c1);
+copy_rk_V(x,x1),eq_rk(x,y)->eq_rk_V(x1,y);
+
+# V constraint for Body Encoding
+mainmap_rk_1449210115(f_0),collection_rk(f_0,g_0,"Cities","m"),collection_rk(g_0,f_2,"0","s"),collection_rk(f_0,g_1,f_2,"m"),collection_rk(g_1,g_2,"name","im"),collection_rk(g_2,f_5,"0","s")->V(s_0),collection_rk_V(s_0,f_5,"0","s");

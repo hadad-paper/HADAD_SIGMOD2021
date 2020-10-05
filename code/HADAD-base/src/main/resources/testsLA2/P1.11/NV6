@@ -1,0 +1,4 @@
+V6:  import numpy as p
+	 A= genfromtxt("syn3a.csv", delimiter=",")
+	 B= genfromtxt("syn3b.csv", delimiter=",")
+	 D= np.add(A,B)

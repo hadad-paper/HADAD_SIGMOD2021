@@ -1,0 +1,2 @@
+file_tq_3556498 (x), file_tq_3556498 (y) -> x=y;
+column_tq (p,c1,i), column_tq (p,c2,i) -> c1 = c2;

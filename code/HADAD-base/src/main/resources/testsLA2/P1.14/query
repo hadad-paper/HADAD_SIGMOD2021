@@ -1,0 +1,12 @@
+#Q: (XT)T
+Q<s>:-
+name(idM,"M"),
+size(idM,"10000","10000"),
+name(idN,"N"),
+size(idN,"10000","10000"),
+tr(idM,t1),
+tr(idN,t2),
+multi(t2,t1,idr1),
+rowSums(idr1,r),
+sum(r,s);
+

@@ -1,0 +1,2 @@
+copy_xq_v (x,x1), eq_xq (x, y) -> eq_xq_v (x1, y);
+copy_xq_v (x,x1), eq (x, y) -> eq_v (x1, y);

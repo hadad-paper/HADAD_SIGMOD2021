@@ -1,0 +1,1 @@
+V = for $p in document(X)//person return <person>{for $n in $p/name return $n}, {for $c in $p//city return $c}</person>

@@ -1,0 +1,14 @@
+#aj Configurations
+child_aj_V(p1,c1,t,d),copy_aj_V(p,p1)->child_aj(p,c,t,d),copy_aj_V(c,c1);
+copy_aj_V(x,x1),eq_aj_V(x1,y)->eq_aj(x,y);
+#child_aj_R(p1,c1,t,d),copy_aj_R(p,p1)->child_aj(p,c,t,d),copy_aj_R(c,c1);
+#copy_aj_R(x,x1),eq_aj_R(x1,y)->eq_aj(x,y);
+#rk Configurations
+collection_rk_V (p1, c1, k, t), copy_rk_V (p, p1) -> collection_rk(p, c, k, t), copy_rk_V (c, c1);
+copy_rk_V (x, x1), eq_rk_V (x1, y) -> eq_rk (x, y);
+#rk Configurations
+#collection_rk_R (p1, c1, k, t), copy_rk_R (p, p1) -> collection_rk(p, c, k, t), copy_rk_R (c, c1);
+#copy_rk_R (x, x1), eq_rk_R (x1, y) -> eq_rk (x, y);
+#SPPJ Configurations
+child_sppj_V(p1,c1,t,d),copy_sppj_V(p,p1)->child_sppj(p,c,t,d),copy_sppj_V(c,c1);
+copy_sppj_V(x,x1),eq_sppj_V(x1,y)->eq_sppj(x,y);

@@ -1,0 +1,4 @@
+V:  import numpy as p
+	M= genfromtxt("syn1.csv", delimiter=",")
+	Z= genfromtxt("syn2.csv", delimiter=",")
+	D= np.matmul(np.transpose(M),np.transpose(Z))

@@ -1,0 +1,23 @@
+# RQ Configurations
+constant(i,v1),constant(i,v2)->v1=v2;
+# JQ Configurations
+eq_rq(x,y)->eq_rq(y,x);
+eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y), eq_jq(y,z) -> eq_jq(x,z);
+#eq(x,y), eq(y,z) -> eq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+val_jq(i,v1), val_jq(i,v2) -> v1 = v2;
+root_jq_1(x),root_jq_1(y)->x=y;
+root_jq_68(x),root_jq_68(y) -> x=y;
+root_jq_88(x),root_jq_88(y) -> x=y;
+# KQ Configurations
+eq_kq (x, y) -> eq_kq (y, x);
+val_kq(i,v1), val_kq(i,v2) -> v1 = v2;
+collection_kq (p,c1,k,t), collection_kq (p,c2,k,t) -> c1 = c2;
+mainmap_kq_73120152(x), mainmap_kq_73120152(y) -> x = y;
+mainmap_kq_jq_68(x),mainmap_kq_jq_68(y) -> x=y;
+internal_map_kq(i,v1),internal_map_kq(i,v2) ->v1=v2;
+#TQ Configurations
+eq_tq (x, y) -> eq_tq (y, x);
+file_tq_3556498 (x), file_tq_3556498 (y) -> x=y;
+column_tq (p,c1,i), column_tq (p,c2,i) -> c1 = c2;

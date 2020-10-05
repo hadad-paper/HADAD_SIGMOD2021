@@ -1,0 +1,12 @@
+V:  import tensorflow as tf
+	MD= genfromtxt("syn1.csv", delimiter=",")
+    ND= genfromtxt("syn2.csv", delimiter=",")
+    G= tf.Graph()
+    init = tf.global_variables_initializer()
+    with G.as_default():
+    	M = tf.placeholder(float64, shape=MD.shape)
+    	N = tf.placeholder(float64, shape=ND.shape)
+    	R=  tf.transpose(tf.matmul(M,N))
+    	with tf.Session() as sess:
+    		sess.run(init)
+    		sess.run(pipe, feed_dict={M: MD,N:ND})

@@ -1,0 +1,21 @@
+# Grex schema constraints
+eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+artist(x),artist(y)->x=y;
+area(x),area(y)->x=y;
+release(x),release(y)->x=y;
+
+# R View
+R(artistid,areaname,artistname)->artist(A),
+area(AR),
+child_jq(A, artists ,"artists","o"),
+child_jq(artists, artist  ,"artist","o"),
+child_jq(artist,artistid,"id","o"),
+child_jq(artist,artistArea,"area","o"),
+child_jq(artistArea,areaID,"id","o"),
+child_jq(AR,area,"areaInfo","o"),
+child_jq(area,areaID,"id","o"),
+eq_jq(areaID,artistareaId),
+child_jq(artist,artistname,"name","o"),
+child_jq(area,areaname,"name","o");

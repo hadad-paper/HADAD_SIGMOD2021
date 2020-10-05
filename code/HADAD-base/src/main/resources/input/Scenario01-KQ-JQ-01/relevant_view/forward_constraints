@@ -1,0 +1,20 @@
+
+# Grex schema constraints
+#eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+root_jq_88(x),root_jq_88(y)->x=y;
+root_jq_89(x),root_jq_89(y)->x=y;
+root_jq_90(x),root_jq_90(y)->x=y;
+val_jq(x),val_jq(y)->x=y;
+
+# View S
+root_jq_88 (r1),
+root_jq_89 (r2), 
+child_jq (r1, id1, "id", "o"),
+child_jq (r1, arname, "name", "o"),
+child_jq (r1, areainfo, "area", "o"),
+child_jq (areainfo, areaid, "id", "o"),
+child_jq (r2, id2, "id", "o"),
+child_jq (r2,aname, "areaname", "o"),
+eq_jq(areaid,id2)->S(id1,aname,arname);

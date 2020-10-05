@@ -1,0 +1,7 @@
+Q<c_2>:-
+root_sj_3556498(b_0),
+child_sj(b_0,c_1,"v","o"),
+child_sj(b_0,c_2,"a","o"),
+child_sj(b_0,c_3,"b","o"),
+val_sj(c_3,"val"),
+val_sj(c_1,"text");

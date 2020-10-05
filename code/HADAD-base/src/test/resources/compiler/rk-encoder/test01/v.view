@@ -1,0 +1,1 @@
+V = SELECT Name FROM City IN MAIN ['Cities'], CityInfo IN MAIN [City] , Name IN CityInfo ['name']

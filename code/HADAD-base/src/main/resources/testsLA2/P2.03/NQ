@@ -1,0 +1,4 @@
+Q:  import numpy as np
+	D= genfromtxt("syn5c.csv", delimiter=",")
+	R= np.trace(np.transpose(D))
+	

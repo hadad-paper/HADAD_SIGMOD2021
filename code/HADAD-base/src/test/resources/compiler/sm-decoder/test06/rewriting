@@ -1,0 +1,1 @@
+RW1<b_1> :- name(b_0,"syn3a.csv"),sum(b_0,b_1);

@@ -1,0 +1,10 @@
+V:  import tensorflow as tf
+	CD= genfromtxt("syn5c.csv", delimiter=",")
+    G= tf.Graph()
+    init = tf.global_variables_initializer()
+    with G.as_default():
+    	C = tf.placeholder(float64, shape=CD.shape)
+    	R=  tf.linalg.inv(tf.linalg.inv(C))
+    	with tf.Session() as sess:
+    		sess.run(init)
+    		sess.run(pipe, feed_dict={C:CD})

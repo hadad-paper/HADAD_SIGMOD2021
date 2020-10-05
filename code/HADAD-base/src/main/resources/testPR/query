@@ -1,0 +1,1 @@
+Q<name> :- r(ID,name),s(ID,Z);

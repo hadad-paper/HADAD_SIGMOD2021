@@ -1,0 +1,1 @@
+RW0<t1> :- tag_xq_V(SK_1,"result"),tag_xq_V(SK_0,"person"),tag_xq_V(SK_2,"name"),child_xq_V(SK_1,SK_0),child_xq_V(SK_0,SK_2),eq_xq_V(SK_3,t1),V(SK_1),text_xq_V(SK_2,SK_3);

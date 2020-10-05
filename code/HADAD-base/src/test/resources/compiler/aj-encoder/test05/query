@@ -1,0 +1,4 @@
+q<t1> :- root_aj_88 (r),
+     	 child_aj (r, p, "person", "o"),
+	  	 child_aj (p, n, "name", "o"),
+	  	 eq_aj (n, t1);

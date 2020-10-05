@@ -1,0 +1,1 @@
+RW3<b_2> :- name(b_0,"syn3a.csv"),name(b_1,"syn3b.csv"),add(b_0,b_1,SK_1110),tr(SK_1110,b_2);

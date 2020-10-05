@@ -1,0 +1,8 @@
+q<c1> :- 
+      root_sppj_88(b_0),
+      child_sppj(b_0,c_1,"site","o"),
+      child_sppj(c_1,c_2,"person","o"),
+      child_sppj(c_2,c_3,"address","o"),
+      child_sppj(c_3,b_1,"street","o"),
+      child_sppj(b_1,b_2,"text","o"),
+      eq_sppj(b_2,c1);

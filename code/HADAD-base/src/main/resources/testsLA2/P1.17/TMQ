@@ -1,0 +1,14 @@
+V:  import tensorflow as tf
+	CD= genfromtxt("syn5c.csv", delimiter=",")
+	DD= genfromtxt("syn5d.csv", delimiter=",")
+	ED= genfromtxt("syn5e.csv", delimiter=",")
+    G= tf.Graph()
+    init = tf.global_variables_initializer()
+    with G.as_default():
+    	C = tf.placeholder(float64, shape=CD.shape)
+    	D = tf.placeholder(float64, shape=DD.shape)
+    	E = tf.placeholder(float64, shape=ED.shape)
+    	R= tf.linalg.det(tf.matmul(tf.matmul(C,D),E))
+    	with tf.Session() as sess:
+    		sess.run(init)
+    		sess.run(pipe, feed_dict={E:ED,C:CD,D:DD})

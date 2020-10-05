@@ -1,0 +1,5 @@
+library(psych)
+library(Matrix)
+b_0<-as.matrix(read.table("syn3a.csv", format="csv", header=FALSE, sep=","))
+b_1<-as.matrix(read.table("syn3b.csv", format="csv", header=FALSE, sep=","))
+RW3<-((sum(b_1))+(sum(b_0)))

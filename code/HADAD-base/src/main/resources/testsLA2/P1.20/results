@@ -1,0 +1,2 @@
+RW0<i> :- in(idM,t),trace(t,i),size(idM,"10000","10000"),name(idM,"M");
+RW1<i> :- trace(t,i),name(t,"V");

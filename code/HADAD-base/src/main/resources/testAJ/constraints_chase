@@ -1,0 +1,19 @@
+
+# Grex schema constraints
+eq_aj(x,y),eq_aj(y,z)->eq_aj(x,z);
+child_aj(u,x,v,w),child_aj(u,y,v,w)->x=y;
+root_aj_73362187(x),root_aj_73362187(y)->x=y;
+
+# V view constraints
+child_aj(p,c,t,d),copy_aj_V(p,p1)->child_aj_V(p1,c1,t,d),copy_aj_V(c,c1);
+copy_aj_V(x,x1),eq_aj(x,y)->eq_aj_V(x1,y);
+copy_aj_V(x,x1),eq(x,y)->eq_V(x1,y);
+
+# V_0 constraint for extract
+root_aj_73362187(b_0),child_aj(b_0,b_1,"admission","o")->V_0_extr_aj(b_0,b_1);
+
+# V_0 constraint relating extract with create
+V_0_extr_aj(b_0,b_1)->copy_aj_V(b_1,b_1_c),V_0_create_aj(b_1_c),V_0_sk_aj0(b_1_c,b_0,b_1);
+
+# V_0 constraint connecting create to JSON constructed by view
+V_0_create_aj(b_1_c)->V(b_1_c);

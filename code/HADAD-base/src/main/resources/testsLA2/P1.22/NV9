@@ -1,0 +1,4 @@
+V9:  import numpy as np
+	C= genfromtxt("syn5c.csv", delimiter=",")
+	D= genfromtxt("syn5d.csv", delimiter=",")
+	R= np.add(np.linalg.inv(D),np.linalg.inv(C))

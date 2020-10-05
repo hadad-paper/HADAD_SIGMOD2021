@@ -1,0 +1,2 @@
+V1:  C<- as.matrix ( read.table ( "syn5c.csv" , header = FALSE, sep = ","));
+	 R<- solve(C);

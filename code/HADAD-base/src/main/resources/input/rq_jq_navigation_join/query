@@ -1,0 +1,6 @@
+q<n,c>:- artist(id,gender,area,name),
+area(type,area,cname),
+area_type(type,"Country"),
+gender(gender,"Male"),
+eq_rq(name,n),
+eq_rq(cname,c);

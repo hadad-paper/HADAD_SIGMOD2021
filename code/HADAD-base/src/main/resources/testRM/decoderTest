@@ -1,0 +1,1 @@
+Q<id5>:- add_rm(idT,id4,id5),tr_rm(id3,idT),name_rm(id3,"V1"),name_rm(id4,"V2");

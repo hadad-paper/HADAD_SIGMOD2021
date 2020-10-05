@@ -1,0 +1,9 @@
+child_xq_v (p1, c1), copy_xq_v (p, p1) -> child_xq (p, c), copy_xq_v (c, c1);
+attr_xq_v (p1, a), copy_xq_v (p, p1) -> attr_xq (p, a);
+tag_xq_v (x1, t), copy_xq_v (x, x1) -> tag_xq (x, t);
+desc_xq_v (x1, u1), child_xq_v (u1, y1), copy_xq_v (x, x1) -> desc_xq (x, u), child_xq (u, y), copy_xq_v (u, u1), copy_xq_v (y, y1);
+text_xq_v (x1, y1), copy_xq_v (x, x1) -> text_xq (x, y), copy_xq_v (y, y1);
+copy_xq_v (x, x1), eq_xq_v (x1, y) -> eq_xq (x, y);
+copy_xq_v (x, x1), eq_v (x1, y) -> eq (x, y);
+#eq_xq_v(x, y) -> eq_xq_v(y, x);
+tag_xq_v (x,t), tag_xq_v (x, t1) -> t = t1;

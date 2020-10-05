@@ -1,0 +1,2 @@
+Q:  D= as.matrix ( read.table ( "syn5d.csv" , header = FALSE, sep = ","));
+	R= trace(t(D));

@@ -1,0 +1,3 @@
+Q:  M<- as.matrix ( readMM ( "AS.mtx") );
+	N<- as.matrix ( read.table ( "syn2.csv" , header = FALSE, sep = ","));
+	D<- t(M %*% N);

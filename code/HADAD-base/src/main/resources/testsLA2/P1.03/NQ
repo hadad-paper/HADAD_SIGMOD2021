@@ -1,0 +1,4 @@
+V:  import numpy as np
+	C= genfromtxt("syn5c.csv", delimiter=",")
+	D= genfromtxt("syn5d.csv", delimiter=",")
+	R= np.matmul(np.linalg.inv(C),np.linalg.inv(D))

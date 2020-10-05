@@ -1,0 +1,3 @@
+q<c1> :-root_aj_73362187(b_0),
+      	child_aj(b_0,b_1,"admission","o"),
+      	eq_aj(b_1,c1);

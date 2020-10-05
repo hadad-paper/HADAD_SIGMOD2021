@@ -1,0 +1,5 @@
+library(psych)
+library(Matrix)
+b_0<-as.matrix(read.table("syn5c.csv", format="csv", header=FALSE, sep=","))
+b_1<-as.matrix(read.table("syn5d.csv", format="csv", header=FALSE, sep=","))
+RW8<-((det(b_0))*(det(b_1)))

@@ -1,0 +1,1 @@
+V = for $p in document(X)/site//person return $p

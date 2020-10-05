@@ -1,0 +1,1 @@
+q2<SUBJECT_ID,HADM_ID> :- Notes(SK_18),child_sj_Notes(SK_18,SUBJECT_ID,"SUBJECT_ID","o"),child_sj_Notes(SK_18,HADM_ID,"HADM_ID","o"),child_sj_Notes(SK_18,TEXT,"TEXT","o"),val_sj(TEXT,"respiratoryfailure");

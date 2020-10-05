@@ -1,0 +1,19 @@
+Q<SID>:-
+root_pj_73362187(AD),
+child_pj(AD,SID,"SUBJECT_ID","o"),
+child_pj(AD,DOB,"DOB","o"),
+child_pj(AD,GENDER,"GENDER","o"),
+child_pj(AD,A,"ADMISSIONS","o"),
+child_pj(A,AID,"HADM_ID","o"),
+child_pj(A,LABEVENTS,"labevents","o"),
+child_pj(LABEVENTS,ITEMID,"ITEMID","o"),
+child_pj(A,NOTEEVENTS,"noteevents","o"),
+child_pj(NOTEEVENTS,TEXT, "TEXT", "o"),
+val_pj(TEXT,"Graves disease"),
+root_pj_1781587984(D_L), 
+child_pj(D_L, ITEMID, "ITEMID","o"), 
+child_pj(D_L, LABEL, "LABEL","o"),
+val_pj(LABEL,"Hematocrit"),
+child_pj(D_L, FLUID, "FLUID","o"),
+val_pj(FLUID,"Blood");
+

@@ -1,0 +1,7 @@
+q<t1> :- root_xq_88 (r), 
+         child_xq (r,  si), tag_xq (si, "site"), 
+       	 child_xq (si, p),  tag_xq (p, "person"),
+       	 child_xq (p,  a),  tag_xq (a, "address"),
+       	 child_xq (a,  s), tag_xq (s, "street"),
+       	 text_xq  (s,  t),
+         eq_xq (t, t1);

@@ -1,0 +1,1 @@
+RW0<t1> :- child_aj_V(SK_0,SK_1,"cities","o"),child_aj_V(SK_1,SK_2,a_1,"a"),eq_aj_V(SK_2,t1),V(SK_0);

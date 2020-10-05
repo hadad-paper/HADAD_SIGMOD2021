@@ -1,0 +1,4 @@
+V:  M= matrix con1;
+	Z= matrix con2;
+	D= (t(M) %*% t(Z));
+	

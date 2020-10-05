@@ -1,0 +1,1 @@
+V = <streets>{for $p in document(X)/site/person, $s in $p/address/street return <street>{for $t in $s/text() return $t}</street>}</streets>

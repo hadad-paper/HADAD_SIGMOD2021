@@ -1,0 +1,3 @@
+b_0=read("syn1.csv", format="csv", header=FALSE, sep=",")
+b_1=read("syn2.csv", format="csv", header=FALSE, sep=",")
+RW8=(sum((b_1%*%b_0)))

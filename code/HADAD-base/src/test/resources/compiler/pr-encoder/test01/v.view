@@ -1,0 +1,1 @@
+V=SELECT R.y,S.x FROM r as R, s as S WHERE R.a=S.a

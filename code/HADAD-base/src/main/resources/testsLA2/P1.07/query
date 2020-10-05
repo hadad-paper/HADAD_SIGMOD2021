@@ -1,0 +1,6 @@
+Q<t>:-
+name(idA,"A"),
+size(idA,"1000000","100"),
+tr(idA,idr1),
+tr(idr1,t);
+

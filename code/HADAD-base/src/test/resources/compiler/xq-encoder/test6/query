@@ -1,0 +1,16 @@
+q<ft1, lt1>  :- 
+	root_xq_88 (r),
+	child_xq (r, x1), tag_xq (x1, "site"),
+	desc_xq (x1, x2),
+	child_xq (x2, p), tag_xq (p, "person"),
+	desc_xq (p, x3),
+	child_xq (x3, s), tag_xq (s, "ssn"),
+    text_xq (s, t),
+	desc_xq (p, x0),
+	child_xq (x0, a), tag_xq (a, "address"),
+	child_xq (p, n1), tag_xq (n1, "name"),
+	child_xq (n1, f), tag_xq (f, "first"),
+	text_xq (f, ft), eq_xq (ft, ft1),
+	child_xq (p, n2), tag_xq (n2, "name"),
+	child_xq (n2, l), tag_xq (l, "last"),
+	text_xq (l, lt), eq_xq (lt, lt1);

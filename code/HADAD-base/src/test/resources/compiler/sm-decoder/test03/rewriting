@@ -1,0 +1,1 @@
+RW0<b_2> :- multi(c_2,b_0,c_3),tr(b_1,c_2),name(b_1,"syn5d.csv"),in(c_3,b_2),name(b_0,"syn5c.csv");

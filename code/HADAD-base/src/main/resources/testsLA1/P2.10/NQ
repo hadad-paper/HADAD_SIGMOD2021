@@ -1,0 +1,4 @@
+Q:  import numpy as np
+	M= genfromtxt("syn1.csv", delimiter=",")
+	N= genfromtxt("syn2.csv", delimiter=",")
+	R= np.sum(np.matmul(M,N), axis=1)

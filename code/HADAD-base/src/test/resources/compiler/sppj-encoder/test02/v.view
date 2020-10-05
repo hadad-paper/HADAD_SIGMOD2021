@@ -1,0 +1,2 @@
+V = FROM X AS D, D.site.person.address.street AS S
+	SELECT {"streets": FROM S.text AS t  SELECT t}

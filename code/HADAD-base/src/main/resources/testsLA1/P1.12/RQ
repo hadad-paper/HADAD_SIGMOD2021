@@ -1,0 +1,3 @@
+Q:  M<- as.matrix ( read.table ( "syn1.csv" , header = FALSE, sep = ","));
+ 	N<- as.matrix ( read.table ( "syn2.csv" , header = FALSE, sep = ","));
+	R<- colSums(M %*% N);

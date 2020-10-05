@@ -1,0 +1,4 @@
+eq_sppj (x, y) -> eq_sppj (y, x);
+eq_sppj(x,y), eq_sppj(y,z) -> eq_sppj(x,z);
+child_sppj (u,x,v,w), child_sppj (u,y,v,w) -> x = y;
+root_d(x), root_d(y) -> x = y;

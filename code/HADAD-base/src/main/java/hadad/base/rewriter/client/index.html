@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PACB web client</title>
+	<!-- jQuery -->
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+<h1>Configuration</h1>
+
+<form id="configuration_form">
+Port: <input type="text" id="port" name="port" value="8081">
+</form>
+
+<hr>
+
+<h1>XQuery to Rel service</h1>
+<form id="compile_query_form">
+<input type="hidden" name="prettify" value="true">
+Query:
+<br/>
+<textarea id="query2" name="query" rows="8" cols="120">
+</textarea>
+<br/>
+<input type="submit" value="Submit">
+</form>
+
+<div id="result2">
+	<div id="result_query"></div>
+</div>
+
+<hr>
+
+<h1>PACB rewritings service</h1>
+<form id="rewritings_form">
+<input type="hidden" name="prettify" value="true">
+Executions:
+<br/>
+<input type="text" id="executions" name="executions" value="1">
+<br/>
+Query:
+<br/>
+<textarea id="query" name="query" rows="8" cols="120">
+</textarea>
+<br/>
+<input type="submit" value="Submit">
+</form>
+
+<div id="result">
+	<div id="result_execution_time"></div>
+	<div id="result_rewritings"></div>
+</div>
+
+<hr>
+
+<h1>Server restart</h1>
+<form id="restart_form">
+Reloads the schemas, forward and backward constraints (from the files).
+<br/>
+<input type="submit" value="Submit">
+</form>
+
+<script>
+function serverUrl() {
+ return "http://localhost:" + $("#port").val() + "/";
+}
+
+$( "#restart_form" ).submit(function( event ) {
+	event.preventDefault();
+	var jqxhr = $.post(	serverUrl() + "restart/", 
+						$( this ).serialize(), 
+						function( response ) { alert( "Server restarted." ); }, 
+						"json");
+	jqxhr.fail(function() {
+		alert( "The was an error processing the request." );
+	});
+});
+
+$( "#rewritings_form" ).submit(function( event ) {
+	event.preventDefault();
+	if ($("#query").val() && $("#executions").val()) {
+		var jqxhr = $.post(	serverUrl() + "rewritings/", 
+							$( this ).serialize(), 
+							function( response ) { rewritings(response.execution_time_in_ms, response.rewritings); }, 
+							"json");
+		jqxhr.fail(function() {
+			alert( "The was an error processing the request." );
+		});
+	} else {
+		alert("Please write a conjunctive query to be processed and the number of executions.");
+	}
+});
+
+$( "#compile_query_form" ).submit(function( event ) {
+	event.preventDefault();
+	if ($("#query2").val()) {
+		var jqxhr = $.post(	serverUrl() + "compile/query/", 
+							$( this ).serialize(), 
+							function( response ) { query(response.query); }, 
+							"json");
+		jqxhr.fail(function() {
+			alert( "The was an error processing the request." );
+		});
+	} else {
+		alert("Please write a conjunctive query to be processed.");
+	}
+});
+
+function rewritings(executionTime, rewritings) {
+	$("#result_execution_time").empty();
+	$("#result_execution_time").append("<p style='font-size: 16px;'><strong>Execution time (ms): </strong>" + executionTime + "</p>");
+	$("#result_rewritings").empty();
+	$("#result_rewritings").append("<p style='font-size: 16px;'><strong>Rewritings:</strong></p><pre><code id='result_rewritings_code'></code></pre>");
+	$("#result_rewritings_code").text(rewritings.join("\n"));
+}
+
+function query(query) {
+	$("#result_query").empty();
+	$("#result_query").append("<p style='font-size: 16px;'><strong>Compiled query:</strong></p><pre><code id='result_query_code'></code></pre>");
+	$("#result_query_code").text(query);
+}
+</script>
+</body>
+</html>

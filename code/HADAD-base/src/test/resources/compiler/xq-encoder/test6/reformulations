@@ -1,0 +1,1 @@
+RW0<ft1,lt1> :- child_xq_V(SK_1,SK_2),child_xq_V(SK_1,SK_4),child_xq_V(SK_1,SK_5),child_xq_V(SK_2,SK_6),V(SK_1),tag_xq_V(SK_1,"person"),tag_xq_V(SK_2,"addresses"),tag_xq_V(SK_6,"SDAddress"),tag_xq_V(SK_4,"first"),tag_xq_V(SK_5,"last"),eq_xq_V(SK_11,ft1),eq_xq_V(SK_12,lt1),text_xq_V(SK_4,SK_11),text_xq_V(SK_5,SK_12);

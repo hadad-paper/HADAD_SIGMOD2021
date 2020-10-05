@@ -1,0 +1,8 @@
+Q<t>:-
+name(idC,"C"),
+size(idC,"10000","10000"),
+name(idD,"D"),
+size(idD,"10000","10000"),
+in(idC,in1),
+in(idD,in2),
+multi(in1,in2,t);

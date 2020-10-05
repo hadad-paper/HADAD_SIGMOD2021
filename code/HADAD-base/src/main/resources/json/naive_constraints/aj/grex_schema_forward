@@ -1,0 +1,4 @@
+#eq_aj (x, y) -> eq_aj (y, x);
+eq_aj(x,y), eq_aj(y,z) -> eq_aj(x,z);
+child_aj (u,x,v,w), child_aj (u,y,v,w) -> x = y;
+root_d(x), root_d(y) -> x = y;

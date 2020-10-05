@@ -1,0 +1,1 @@
+V= SELECT R.name FROM r AS R , s AS S WHERE R.ID=S.ID

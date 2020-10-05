@@ -1,0 +1,6 @@
+q<t1> :- root_xq_88 (r),
+     	 desc_xq (r, x),
+	  	 child_xq (x, p), tag_xq (p, "person"),
+	  	 desc_xq (p, n), child_xq(n, c), tag_xq (c, "city"),
+	  	 text_xq (c, t),
+	  	 eq_xq (t, t1);

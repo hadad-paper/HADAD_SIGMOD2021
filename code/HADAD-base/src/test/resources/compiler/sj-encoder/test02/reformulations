@@ -1,0 +1,1 @@
+RW0<c_2> :- V(SK_0),child_sj_V(SK_0,c_1,"a","o"),child_sj_V(SK_0,c_2,"b","o"),child_sj_V(SK_0,c_3,"c","o");

@@ -1,0 +1,4 @@
+q<c1> :- 
+      root_pj_73362187(b_0),
+      child_pj(b_0,b_1,"admission","o"),
+      eq_pj(b_1,c1);

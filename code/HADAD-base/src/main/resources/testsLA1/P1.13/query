@@ -1,0 +1,7 @@
+Q<d>:-
+name(idA,"A"),
+size(idA,"1000000","100"),
+name(idB,"B"),
+size(idB,"1000000","100"),
+add(idA,idB,idr1),
+sum(idr1,d);

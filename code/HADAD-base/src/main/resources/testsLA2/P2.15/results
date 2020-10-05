@@ -1,0 +1,2 @@
+RW0<t> :- rowSums(idA,d),sum(d,t),size(idA,"1000000","100"),name(idA,"A");
+RW1<t> :- sum(idA,t),size(idA,"1000000","100"),name(idA,"A");

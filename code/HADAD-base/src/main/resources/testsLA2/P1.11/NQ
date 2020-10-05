@@ -1,0 +1,4 @@
+Q:  import numpy as np
+	A= genfromtxt("syn3a.csv", delimiter=",")
+	B= genfromtxt("syn3a.csv", delimiter=",")
+	R= np.sum(np.add(np.transpose(A),np.transpose(B)),axis=1)

@@ -1,0 +1,10 @@
+Q<t>:-
+name(idB,"B"),
+size(idB,"1000","100"),
+name(idC,"C"),
+size(idC,"1000","100"),
+name(idD,"D"),
+size(idD,"1000","100"),
+multi(idB,idC,idr1),
+multi(idr1,idD,idr2),
+tr(idr2,t);

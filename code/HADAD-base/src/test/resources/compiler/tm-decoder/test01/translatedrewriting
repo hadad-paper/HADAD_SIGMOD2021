@@ -1,0 +1,3 @@
+b_0=read("syn3a.csv", format="csv", header=FALSE, sep=",")
+b_1=read("syn3b.csv", format="csv", header=FALSE, sep=",")
+RW3=(t((b_0+b_1)))

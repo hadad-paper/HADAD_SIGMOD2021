@@ -1,0 +1,2 @@
+Q:  A= as.matrix ( read.table ( "syn3a.csv" , header = FALSE, sep = ","));
+	R= sum(colSums(A));

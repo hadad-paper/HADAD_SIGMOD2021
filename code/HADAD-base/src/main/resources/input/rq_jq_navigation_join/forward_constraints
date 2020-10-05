@@ -1,0 +1,23 @@
+# Grex schema constraints
+eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+val_jq(i,v1),val_jq(i,v2)->v1=v2;
+
+# V view constraints
+child_jq(p,c,t,d),copy_jq_V(p,p1)->child_jq_V(p1,c1,t,d),copy_jq_V(c,c1);
+copy_jq_V(x,x1),eq_jq(x,y)->eq_jq_V(x1,y);
+
+# V constraint for extract
+artist(sg_0,sg_1,sg_5,sg_3),area(sg_4,sg_5,sg_6),gender(sg_1,"Male"),area_type(sg_4,"Country")->V_0_extr_jq(sg_0,sg_3,sg_6);
+
+# V_0 constraint relating extract with create
+V_0_extr_jq(sg_0,sg_3,sg_6)->copy_jq_V(sg_0,sg_0_c),copy_jq_V(sg_3,sg_3_c),copy_jq_V(sg_6,sg_6_c),V_0_create_jq(z_0,sg_0_c,sg_3_c,sg_6_c),V_0_sk_jq0(z_0,sg_0,sg_3,sg_6),V_0_sk_jq1(sg_0_c,sg_0,sg_3,sg_6),V_0_sk_jq2(sg_3_c,sg_0,sg_3,sg_6),V_0_sk_jq3(sg_6_c,sg_0,sg_3,sg_6);
+
+# V_0 constraint connecting create to JSON constructed by view
+V_0_create_jq(z_0,sg_0_c,sg_3_c,sg_6_c)->V(z_0),child_jq_V(z_0,sg_0_c,"artist_id","o"),child_jq_V(z_0,sg_3_c,"artist_name","o"),child_jq_V(z_0,sg_6_c,"area_name","o");
+
+# V_0 constraints for type inference
+V_0_sk_jq1(sg_0_c,sg_0,sg_3,sg_6)->val_jq(sg_0_c,sg_0);
+V_0_sk_jq2(sg_3_c,sg_0,sg_3,sg_6)->val_jq(sg_3_c,sg_3);
+V_0_sk_jq3(sg_6_c,sg_0,sg_3,sg_6)->val_jq(sg_6_c,sg_6);

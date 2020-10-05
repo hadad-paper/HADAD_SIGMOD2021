@@ -1,0 +1,36 @@
+4
+query
+mainmap_rk_689930212(t0),collection_rk(t1,t2,co.Cities,co.m),collection_rk(t3,t4,co.0,co.s),collection_rk(t5,t6,t7,co.m),collection_rk(t8,t9,co.name,co.im),collection_rk(t10,t11,co.0,co.s),eq_rk(t12,co.$c1)
+t0=t1,t0=t5,t1=t0,t1=t5,t2=t3,t3=t2,t4=t7,t5=t0,t5=t1,t6=t8,t7=t4,t8=t6,t9=t10,t10=t9,t11=t12,t12=t11
+
+constraints
+6
+TGD
+eq_rk(t0,t1)
+
+eq_rk(t1,t0)
+EGD
+collection_rk(t0,t1,t2,t3),collection_rk(t4,t5,t6,t7)
+t0=t4,t2=t6,t3=t7,t4=t0,t6=t2,t7=t3
+t1=t5
+EGD
+mainmap_rk_73120152(t0),mainmap_rk_73120152(t1)
+
+t0=t1
+TGD
+collection_rk_V(t0,t1,t2,t3),copy_rk_V(t4,t5)
+t0=t5,t5=t0
+collection_rk(t4,c,t2,t3),copy_rk_V(c,t1)
+TGD
+copy_rk_V(t0,t1),eq_rk_V(t2,t3)
+t1=t2,t2=t1
+eq_rk(t0,t3)
+TGD
+V(t0),collection_rk_V(t1,t2,co.0,co.s)
+t0=t1,t1=t0
+mainmap_rk_689930212(f_0),collection_rk(f_0,g_0,co.Cities,co.m),collection_rk(g_0,f_2,co.0,co.s),collection_rk(f_0,g_1,f_2,co.m),collection_rk(g_1,g_2,co.name,co.im),collection_rk(g_2,t2,co.0,co.s)
+instance
+eq_rk(f_1,co.$c1) p0
+collection_rk_V(SK_165,f_1,co.0,co.s) p1
+V(SK_165) p2
+TRUE() true

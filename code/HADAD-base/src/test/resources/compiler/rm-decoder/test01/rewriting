@@ -1,0 +1,1 @@
+RW0<b_2> :- tr(c_2,b_2),name(b_0,"AS.mtx"),multi(b_0,b_1,c_2),name(b_1,"syn2.csv");

@@ -1,0 +1,4 @@
+#eq_pj (x, y) -> eq_pj (y, x);
+eq_pj(x,y), eq_pj(y,z) -> eq_pj(x,z);
+child_pj (u,x,v,w), child_pj (u,y,v,w) -> x = y;
+root_d(x), root_d(y) -> x = y;

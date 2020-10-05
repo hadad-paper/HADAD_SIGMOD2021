@@ -1,0 +1,1 @@
+RW0<SID> :- child_pj_V23_JSONT(SK_109,AID,"HADM_ID","o"),child_sj_VTEXT(SK_110,AID,"HADM_ID","o"),child_sj_VTEXT(SK_110,SID,"SUBJECT_ID","o"),child_sj_VTEXT(SK_110,TEXT,"TEXT","o"),VTEXT(SK_110),val_pj(TEXT,"intracranial hemorrhag"),child_pj_V23_JSONT(SK_109,SID,"SUBJECT_ID","o"),V23_JSONT(SK_109),V_PATIENTS(SID,DOB,GENDER);

@@ -1,0 +1,15 @@
+q<an>:-     
+artist(A),
+area(AR),
+child_jq(A, artists ,"artists","o"),
+child_jq(artists, artist  ,"artist","o"),
+child_jq(artist,artistid,"id","o"),
+child_jq(artist,artistArea,"area","o"),
+child_jq(artistArea,areaID,"id","o"),
+child_jq(AR,area,"areaInfo","o"),
+child_jq(area,areaID,"id","o"),
+eq_jq(areaID,artistareaId),
+child_jq(artist,artistname,"name","o"),
+child_jq(area,areaname,"name","o"),
+eq_rq(areaname,"France"),
+eq_rq(artistname,an);

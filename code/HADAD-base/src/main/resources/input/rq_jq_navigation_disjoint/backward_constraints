@@ -1,0 +1,41 @@
+# Grex schema constraints
+artist(id,gender1,area1,name1),artist(id,gender2,area2,name2)->gender1=gender2,area1=area2,name1=name2;
+area(type1,id,cname1),area(type2,id,cname2)->type1=type2,cname1=cname2;
+eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+val_jq(i,v1),val_jq(i,v2)->v1=v2;
+
+# V view constraints
+child_jq_V(p1,c1,t,d),copy_jq_V(p,p1)->child_jq(p,c,t,d),copy_jq_V(c,c1);
+copy_jq_V(x,x1),eq_jq_V(x1,y)->eq_jq(x,y);
+
+# V_0 constraints for skolem functions
+V_0_sk_jq0(z_0,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq0(z_0_p,sg_0,sg_20,sg_27,sg_24)->z_0=z_0_p;
+V_0_sk_jq0(z_0,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq0(z_0,sg_0_p,sg_20_p,sg_27_p,sg_24_p)->sg_0=sg_0_p,sg_20=sg_20_p,sg_27=sg_27_p,sg_24=sg_24_p;
+V_0_sk_jq1(sg_0_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq1(sg_0_c_p,sg_0,sg_20,sg_27,sg_24)->sg_0_c=sg_0_c_p;
+V_0_sk_jq1(sg_0_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq1(sg_0_c,sg_0_p,sg_20_p,sg_27_p,sg_24_p)->sg_0=sg_0_p,sg_20=sg_20_p,sg_27=sg_27_p,sg_24=sg_24_p;
+V_0_sk_jq2(sg_20_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq2(sg_20_c_p,sg_0,sg_20,sg_27,sg_24)->sg_20_c=sg_20_c_p;
+V_0_sk_jq2(sg_20_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq2(sg_20_c,sg_0_p,sg_20_p,sg_27_p,sg_24_p)->sg_0=sg_0_p,sg_20=sg_20_p,sg_27=sg_27_p,sg_24=sg_24_p;
+V_0_sk_jq3(sg_27_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq3(sg_27_c_p,sg_0,sg_20,sg_27,sg_24)->sg_27_c=sg_27_c_p;
+V_0_sk_jq3(sg_27_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq3(sg_27_c,sg_0_p,sg_20_p,sg_27_p,sg_24_p)->sg_0=sg_0_p,sg_20=sg_20_p,sg_27=sg_27_p,sg_24=sg_24_p;
+V_0_sk_jq4(sg_24_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq4(sg_24_c_p,sg_0,sg_20,sg_27,sg_24)->sg_24_c=sg_24_c_p;
+V_0_sk_jq4(sg_24_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq4(sg_24_c,sg_0_p,sg_20_p,sg_27_p,sg_24_p)->sg_0=sg_0_p,sg_20=sg_20_p,sg_27=sg_27_p,sg_24=sg_24_p;
+
+# V_0 constraint connecting create to JSON constructed by view
+V(z_0),child_jq_V(z_0,sg_0_c,"artist_id","o")->V_0_create_jq(z_0,sg_0_c,sg_20_c,sg_27_c,sg_24_c);
+V(z_0),child_jq_V(z_0,sg_20_c,"track_name","o")->V_0_create_jq(z_0,sg_0_c,sg_20_c,sg_27_c,sg_24_c);
+V(z_0),child_jq_V(z_0,sg_27_c,"release_name","o")->V_0_create_jq(z_0,sg_0_c,sg_20_c,sg_27_c,sg_24_c);
+V(z_0),child_jq_V(z_0,sg_24_c,"format_name","o")->V_0_create_jq(z_0,sg_0_c,sg_20_c,sg_27_c,sg_24_c);
+
+# V_0 constraint relating extract with create
+V_0_create_jq(z_0,sg_0_c,sg_20_c,sg_27_c,sg_24_c)->V_0_extr_jq(sg_0,sg_20,sg_27,sg_24),V_0_sk_jq0(z_0,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq1(sg_0_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq2(sg_20_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq3(sg_27_c,sg_0,sg_20,sg_27,sg_24),V_0_sk_jq4(sg_24_c,sg_0,sg_20,sg_27,sg_24);
+
+# V_0 constraint for extract
+V_0_extr_jq(sg_0,sg_20,sg_27,sg_24)->artist(sg_0,sg_1,sg_5,sg_3),area(sg_4,sg_5,sg_6),gender(sg_1,"Male"),area_type(sg_4,"Country"),artist_credit_name(sg_0,sg_12),artist_credit(sg_12,sg_14),recording(sg_15,sg_12,sg_17),track(sg_17,sg_19,sg_20),medium(sg_19,sg_22,sg_23),medium_format(sg_24,sg_23),release(sg_22,sg_27,sg_12,sg_29,sg_30),language(sg_29,"en");
+
+# V_0 constraints for type inference
+V_0_sk_jq1(sg_0_c,sg_0,sg_20,sg_27,sg_24)->val_jq(sg_0_c,sg_0);
+V_0_sk_jq2(sg_20_c,sg_0,sg_20,sg_27,sg_24)->val_jq(sg_20_c,sg_20);
+V_0_sk_jq3(sg_27_c,sg_0,sg_20,sg_27,sg_24)->val_jq(sg_27_c,sg_27);
+V_0_sk_jq4(sg_24_c,sg_0,sg_20,sg_27,sg_24)->val_jq(sg_24_c,sg_24);

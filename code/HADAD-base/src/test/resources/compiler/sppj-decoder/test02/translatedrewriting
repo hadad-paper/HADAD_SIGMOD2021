@@ -1,0 +1,1 @@
+SELECT SK_1 FROM V AS SK_0, SK_0.street AS SK_1

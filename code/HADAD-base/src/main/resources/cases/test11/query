@@ -1,0 +1,28 @@
+Q<SID>:-
+root_jq_88(AD),
+child_jq(AD,SID,"SUBJECT_ID","o"),
+child_jq(AD,DOB,"DOB","o"),
+child_jq(AD,GENDER,"GENDER","o"),
+child_jq(AD,A,"ADMISSION","o"),
+child_jq(A,AID,"HADM_ID","o"),
+child_jq(A,LABEVENTS,"LABEVENTS","o"),
+child_jq(LABEVENTS,ITEMID,"ITEMID","o"),
+
+child_jq(A,MICROBIOLOGYEVENTS,"MICROBIOLOGYEVENTS","o"),
+child_jq(MICROBIOLOGYEVENTS,AB_NAME, "AB_NAME","o"),
+child_jq(MICROBIOLOGYEVENTS,INTERPRETATION, "INTERPRETATION","o"),
+val_jq(AB_NAME,"ERYTHROMYCIN"),
+val_jq(INTERPRETATION,"R"),
+
+child_jq(A,NOTEEVENTS,"NOTEEVENTS","o"),
+child_jq(NOTEEVENTS,TEXT, "TEXT", "o"),
+val_jq(TEXT,"Gallstone Pancreatitis"),
+root_jq_90(D_L), 
+child_jq(D_L, ITEMID, "ITEMID_l","o"), 
+child_jq(D_L, LABEL, "LABEL","o"),
+#val_jq(LABEL,"24 hr Calcium"),
+child_jq(D_L, FLUID, "FLUID","o"),
+val_jq(FLUID,"Urine"),
+child_jq(D_L, CATEGORY, "CATEGORY","o");
+
+

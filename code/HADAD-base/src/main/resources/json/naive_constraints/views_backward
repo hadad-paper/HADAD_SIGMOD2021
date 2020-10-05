@@ -1,0 +1,4 @@
+child_jq_v (p1, c1, t, d), copy_jq_v (p, p1) -> child_jq (p, c, t, d), copy_jq_v (c, c1);
+copy_jq_v (x, x1), eq_v (x1, y) -> eq (x, y);
+copy_jq_v (x, x1), eq_jq_v (x1, y) -> eq_jq (x, y);
+#eq_jq_v(x, y) -> eq_jq_v(y, x);

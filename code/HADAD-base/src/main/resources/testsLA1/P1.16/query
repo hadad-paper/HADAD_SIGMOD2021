@@ -1,0 +1,5 @@
+Q<t>:-
+name(idA,"A"),
+size(idA,"1000000","100"),
+tr(idA,d),
+sum(d,t);

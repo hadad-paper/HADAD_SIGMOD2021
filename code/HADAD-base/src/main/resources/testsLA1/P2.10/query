@@ -1,0 +1,7 @@
+Q<d>:-
+name(idM,"M"),
+size(idM,"50000","100"),
+name(idN,"N"),
+size(idN,"100","50000"),
+multi(idM,idN,idr1),
+rowSums(idr1,d);

@@ -1,0 +1,82 @@
+#Matrix name
+name_sm(id1,n1),name_sm(id2,n1)->id2=id1;
+#Matrix size
+size_sm(id1,i1,j1),size_sm(id1,i2,j2)->i2=i1,j1=j2;
+#Zero Matrix
+zero_sm(o1),size_sm(o1,i,j),zero_sm(o2),size_sm(o2,i,j)->o2=o1;
+#Identity Matrix
+identity_sm(i1),size_sm(i1,i,j),identity_sm(i2),size_sm(i2,i,j)->i2=i1;
+#temp equality
+eq_sm(id1,id2)->eq_sm(id2,id1);
+####### DML LA Operations ##########
+
+#Add Operation
+add_sm(x,y,id1),add_sm(x,y,id2)->id2=id1;
+#Scalar-Multiplication Operation
+multi_s_sm(s,y,id1),multi_s_sm(s,y,id2)->id2=id1;
+#Matrix Multiplication Operation
+multi_sm(x,y,id1),multi_sm(x,y,id2)->id2=id1;
+#Matrix Multiplication (element-wise) Operation
+multi_e_sm(x,y,id1),multi_e_sm(x,y,id2)->id2=id1;
+#Division Operation
+div_sm(x,y,id1),div_sm(x,y,id2)->id2=id1;
+#Scalar-Division Operation
+div_s_sm(x,s,id1),div_s_sm(x,s,id2)->id2=id1;
+#Transpose Operation
+tr_sm(x,id1),tr_sm(x,id2)->id2=id1;
+#Inverse Operation
+inv_sm(x,id1),inv_sm(x,id2)->id2=id1;
+#Determinant Operation
+det_sm(x,v1),det_sm(x,v2)->v2=v1;
+#Adjoint Operation
+adj_sm(x,id1),adj_sm(x,id2)->id2=id1;
+#Cofactor
+cof_sm(x,id1),cof_sm(x,id2)->id2=id1;
+#Trace Operation
+trace_sm(x,v1),trace_sm(x,v2)->v2=v1;
+#Diagonal Operation
+diag_sm(x,id1),diag_sm(x,id2)->id2=id1;
+#Matrix Power
+pow_sm(x,n,id1),pow_sm(x,n,id2)->id2=id1;
+#Scalar-power 
+pow_s_sm(x,n,id1),pow_s_sm(x,n,id2)->id2=id1;
+####### DML Statistical Operations ##########
+avg_sm(id1,v1),avg_sm(id1,v2)->v2=v1;
+mean_sm(id1,v1),mean_sm(id1,v2)->v2=v1;
+var_sm(id1,v1),var_sm(id1,v2)->v2=v1;
+sd_sm(id1,v1),sd_sm(id1,v2)->v2=v1;
+colSums_sm(id1,m1),colSums_sm(id1,m2)->m2=m1;
+colMeans_sm(id1,m1),colMeans_sm(id1,m2)->m2=m1;
+colVars_sm(id1,m1),colVars_sm(id1,m2)->m2=m1;
+colSds_sm(id1,m1),colSds_sm(id1,m2)->m2=m1;
+colMaxs_sm(id1,m1),colMaxs_sm(id1,m2)->m2=m1;
+colMins_sm(id1,m1),colMins_sm(id1,m2)->m2=m1;
+rowSums_sm(id1,m1),rowSums_sm(id1,m2)->m2=m1;
+rowMeans_sm(id1,m1),rowMeans_sm(id1,m2)->m2=m1;
+rowVars_sm(id1,m1),rowVars_sm(id1,m2)->m2=m1;
+rowSds_sm(id1,m1),rowSds_sm(id1,m2)->m2=m1;
+rowMaxs_sm(id1,m1),rowMaxs_sm(id1,m2)->m2=m1;
+rowMins_sm(id1,m1),rowMins_sm(id1,m2)->m2=m1;
+cumsum_sm(id1,m1),cumsum_sm(id1,m2)->m2=m1;
+cumprod_sm(id1,m1),cumprod_sm(id1,m2)->m2=m1;
+cummin_sm(id1,m1),cummin_sm(id1,m2)->m2=m1;
+cummax_sm(id1,m1),cummax_sm(id1,m2)->m2=m1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

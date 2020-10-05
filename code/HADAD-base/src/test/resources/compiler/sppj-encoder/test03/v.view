@@ -1,0 +1,2 @@
+V = FROM X AS D, D.person AS P
+  	SELECT {"names": FROM P.name AS N SELECT N, "cities": FROM P.city AS C SELECT C}

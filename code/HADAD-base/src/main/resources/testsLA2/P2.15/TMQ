@@ -1,0 +1,10 @@
+V:  import tensorflow as tf
+	AD= genfromtxt("syn3a.csv", delimiter=",")
+    G= tf.Graph()
+    init = tf.global_variables_initializer()
+    with G.as_default():
+    	A = tf.placeholder(float64, shape=AD.shape)
+    	R=  tf.reduce_sum(tf.reduce_sum(A,axis=1))
+    	with tf.Session() as sess:
+    		sess.run(init)
+    		sess.run(pipe, feed_dict={A:AD})

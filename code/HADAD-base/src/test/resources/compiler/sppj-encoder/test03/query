@@ -1,0 +1,4 @@
+q<t1> :- root_sppj_88 (r),
+     	 child_sppj (r, p, "person", "o"),
+	  	 child_sppj (p, c, "city", "o"),
+	  	 eq_sppj (c, t1);

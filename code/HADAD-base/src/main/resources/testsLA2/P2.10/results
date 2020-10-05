@@ -1,0 +1,2 @@
+RW0<d> :- rowSums(idr1,d),multi(idM,idN,idr1),size(idM,"50000","100"),size(idN,"100","50000"),name(idM,"M"),name(idN,"N");
+RW1<d> :- rowSums(idN,SK_99),multi(idM,SK_99,d),size(idM,"50000","100"),size(idN,"100","50000"),name(idM,"M"),name(idN,"N");

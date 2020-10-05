@@ -1,0 +1,4 @@
+eq_xq (x, y) -> eq_xq (y, x);
+child_xq (x,y) -> desc_xq (x,y);
+desc_xq (x,y) , desc_xq (y,z) -> desc_xq (x,z);
+root_xq_d(x), root_xq_d(y) -> x = y;

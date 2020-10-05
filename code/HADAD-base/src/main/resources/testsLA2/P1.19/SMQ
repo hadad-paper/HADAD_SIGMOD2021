@@ -1,0 +1,2 @@
+Q:  C= as.matrix ( read.table ( "syn5c.csv" , header = FALSE, sep = ","));
+	R= t(inv(C));

@@ -1,0 +1,28 @@
+
+# Grex schema constraints
+#eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+root_jq_88(x),root_jq_88(y)->x=y;
+root_jq_89(x),root_jq_89(y)->x=y;
+root_jq_90(x),root_jq_90(y)->x=y;
+val_jq(x),val_jq(y)->x=y;
+
+# V view constraints
+#child_jq(p,c,t,d),copy_jq_V(p,p1)->child_jq_V(p1,c1,t,d),copy_jq_V(c,c1);
+#copy_jq_V(x,x1),eq_jq(x,y)->eq_jq_V(x1,y);
+
+# V_0 constraint for extract
+root_jq_88(b_0),root_jq_89(b_1),root_jq_90(b_2),child_jq(b_0,c_3,"area","o"),child_jq(c_3,b_3,"id","o"),child_jq(b_1,b_4,"type","o"),child_jq(b_2,c_6,"type","o"),child_jq(c_6,b_5,"language","o"),child_jq(b_2,b_6,"media","o"),child_jq(b_6,b_7,"tracks","o"),child_jq(b_7,c_10,"recording","o"),child_jq(c_10,b_8,"artist_credit","o"),child_jq(b_8,b_9,"id","o"),child_jq(b_0,b_10,"id","o"),child_jq(b_1,b_11,"id","o"),child_jq(b_7,b_12,"trackname","o"),child_jq(b_6,b_13,"format","o"),child_jq(b_2,b_14,"name","o"),eq_jq(b_3,b_11),eq_jq(b_9,b_10),val_jq(b_5,"en"),val_jq(b_4,"Country")->V(d_0),child_jq_V(d_0,b_10,"artist_id","o"),child_jq_V(d_0,b_12,"trackname","o"),child_jq_V(d_0,b_14,"releasename","o"),child_jq_V(d_0,b_13,"format","o");
+
+
+# View R
+root_jq_88 (r1),
+root_jq_89 (r2), 
+child_jq (r1, id1, "id", "o"),
+child_jq (r1, arname, "name", "o"),
+child_jq (r1, areainfo, "area", "o"),
+child_jq (areainfo, areaid, "id", "o"),
+child_jq (r2, id2, "id", "o"),
+child_jq (r2,aname, "areaname", "o"),
+eq_jq(areaid,id2)->R(s_0),collection_kq_R(s_0,z_0,"0","s"),collection_kq_R(z_0,d_0,id1,"m"),collection_kq_R(d_0,aname,"area_name","im"),collection_kq_R(d_0,arname,"artistname","im");

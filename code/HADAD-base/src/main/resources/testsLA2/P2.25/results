@@ -1,0 +1,8 @@
+RW0<r> :- add(idr1,idB,idr2),multi(idA,t,idr1),multi(idr2,idV1,r),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1"),tr(idV1,t);
+RW1<r> :- add(idB,idr1,idr2),multi(idA,t,idr1),multi(idr2,idV1,r),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1"),tr(idV1,t);
+RW2<r> :- add(idr1,idB,idr2),multi(idr2,idV1,r),size(idB,"1000000","100"),name(idB,"B"),name(idV1,"V1"),name(idr1,"V");
+RW3<r> :- add(idB,idr1,idr2),multi(idr2,idV1,r),size(idB,"1000000","100"),name(idB,"B"),name(idV1,"V1"),name(idr1,"V");
+RW4<r> :- add(SK_693,SK_694,r),multi(idA,t,idr1),multi(idr1,idV1,SK_693),multi(idB,idV1,SK_694),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1"),tr(idV1,t);
+RW5<r> :- add(SK_694,SK_693,r),multi(idA,t,idr1),multi(idr1,idV1,SK_693),multi(idB,idV1,SK_694),size(idA,"1000000","100"),size(idB,"1000000","100"),size(idV1,"100","1"),name(idA,"A"),name(idB,"B"),name(idV1,"V1"),tr(idV1,t);
+RW6<r> :- add(SK_693,SK_694,r),multi(idr1,idV1,SK_693),multi(idB,idV1,SK_694),size(idB,"1000000","100"),name(idB,"B"),name(idV1,"V1"),name(idr1,"V");
+RW7<r> :- add(SK_694,SK_693,r),multi(idr1,idV1,SK_693),multi(idB,idV1,SK_694),size(idB,"1000000","100"),name(idB,"B"),name(idV1,"V1"),name(idr1,"V");

@@ -1,0 +1,4 @@
+Q:  import numpy as np
+	C= genfromtxt("syn5c.csv", delimiter=",")
+	R= np.linalg.det(np.linalg.inv(C))
+	

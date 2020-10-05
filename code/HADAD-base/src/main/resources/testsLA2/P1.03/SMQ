@@ -1,0 +1,3 @@
+Q:  C= as.matrix ( read.table ( "syn5c.csv" , header = FALSE, sep = ","));
+	D= as.matrix ( read.table ( "syn5d.csv" , header = FALSE, sep = ","));
+	R= inv(C) %*% inv(D);

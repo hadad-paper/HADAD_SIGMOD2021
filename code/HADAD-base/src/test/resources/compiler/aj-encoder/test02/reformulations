@@ -1,0 +1,1 @@
+RW0<c1> :- child_aj_V(SK_0,SK_1,"street","o"),child_aj_V(SK_1,SK_2,a_1,"a"),eq_aj_V(SK_2,c1),V(SK_0);

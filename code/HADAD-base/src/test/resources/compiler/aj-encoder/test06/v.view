@@ -1,0 +1,13 @@
+V = 
+for d in dataset X, p in d.site.person, ssn in p.ssn
+	return {"id": ssn, 
+			"first": for f in p.name.first return f, 
+			"last": for l in p.name.last return l,
+			"addresses": for a in p.address  
+				return {"SDAddress": 
+							{"zip": for z in a.zip return z, 
+							 "name": for st in a.street return st,
+							 "number": for n in a.number return n}
+					   },
+			"hobbies": for h in p.hobbie return h
+			}

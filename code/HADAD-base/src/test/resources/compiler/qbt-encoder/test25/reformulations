@@ -1,0 +1,1 @@
+RW0<SID> :- V21_JSONT(SK_78),child_sj_VTEXT(SK_79,SID,"SUBJECT_ID","o"),child_pj_V21_JSONT(SK_78,AID,"HADM_ID","o"),VTEXT(SK_79),child_sj_VTEXT(SK_79,TEXT,"TEXT","o"),child_pj_V21_JSONT(SK_78,SID,"SUBJECT_ID","o"),val_pj(TEXT,"Graves disease"),child_sj_VTEXT(SK_79,AID,"HADM_ID","o"),V_PATIENTS(SID,DOB,GENDER);

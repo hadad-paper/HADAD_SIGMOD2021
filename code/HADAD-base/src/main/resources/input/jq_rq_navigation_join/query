@@ -1,0 +1,17 @@
+Q<SUBJECT_ID,CATEGORY>:-
+root_jq_88(AD),
+child_jq(AD,SUBJECT_ID,"SUBJECT_ID","o"),
+child_jq(AD,A,"ADMISSION","o"),
+child_jq(A,ADMITTIME,"ADMITTIME","o"),
+child_jq(A,AL,"LABEVENTS","o"),
+child_jq(AL,ITEMID, "ITEMID","o"),
+child_jq(AL,"Abnormal", "FLAG","o"),
+root_jq_90(N),
+child_jq(N,SUBJECT_ID,"SUBJECT_ID","o"),
+child_jq(N,NA,"ADMISSION","o"),
+child_jq(NA,NOTEEVENTS,"NOTEEVENTS","o"),
+child_jq(NOTEEVENTS,TEXT, "TEXT", "o"),
+eq_jq(TEXT,"like-Respiratory failure"),
+root_jq_89(D_L),
+child_jq(D_L, ITEMID, "ITEMID","o"),
+child_jq(D_L,CATEGORY, "CATEGORY","o");

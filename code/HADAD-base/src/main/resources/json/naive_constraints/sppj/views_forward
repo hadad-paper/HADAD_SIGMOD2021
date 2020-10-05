@@ -1,0 +1,4 @@
+child_sppj (p, c, t, d), copy_sppj_v (p, p1) -> child_sppj_v (p1, c1, t, d), copy_sppj_v (c, c1);
+copy_sppj_v (x,x1), eq_sppj (x, y) -> eq_sppj_v (x1, y);
+copy_sppj_v (x,x1), eq (x, y) -> eq_v (x1, y);
+#eq_sppj_v(x, y) -> eq_sppj_v(y, x);

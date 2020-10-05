@@ -1,0 +1,57 @@
+# Grex schema constraints
+eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+root_jq_88(x),root_jq_88(y)->x=y;
+eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+root_jq_90(x),root_jq_90(y)->x=y;
+
+# V view constraints
+#child_jq_V(p1,c1,t,d),copy_jq_V(p,p1)->child_jq(p,c,t,d),copy_jq_V(c,c1);
+#copy_jq_V(x,x1),eq_V(x1,y)->eq(x,y);
+#copy_jq_V(x,x1),eq_jq_V(x1,y)->eq_jq(x,y);
+#child_jq_V(p1,c1,t,d),copy_jq_V(p,p1)->child_jq(p,c,t,d),copy_jq_V(c,c1);
+#copy_jq_V(x,x1),eq_V(x1,y)->eq(x,y);
+#copy_jq_V(x,x1),eq_jq_V(x1,y)->eq_jq(x,y);
+
+# V view constraints
+child_jq_V(p1,c1,t,d),copy_jq_V(p,p1)->child_jq(p,c,t,d),copy_jq_V(c,c1);
+copy_jq_V(x,x1),eq_V(x1,y)->eq(x,y);
+copy_jq_V(x,x1),eq_jq_V(x1,y)->eq_jq(x,y);
+
+V11_JSONT(v_0),child_jq_V11_JSONT(v_0,SUBJECT_ID,"SUBJECT_ID","o"),child_jq_V11_JSONT(v_0,HADM_ID,"HADM_ID","o"),child_jq_V11_JSONT(v_0,LABEVENTS,"LABEVENTS","o"),child_jq_V11_JSONT(LABEVENTS,LABEL,"label","o"),child_jq_V11_JSONT(v_0,MICROBIOLOGYEVENTS,"MICROBIOLOGYEVENTS","o"),
+child_jq_V11_JSONT(MICROBIOLOGYEVENTS,AB_NAME,"ab_name","o"),child_jq_V11_JSONT(MICROBIOLOGYEVENTS,INTERPRETATION,"interpretation","o")->root_jq_88(AD),
+child_jq(AD,SUBJECT_ID,"SUBJECT_ID","o"),
+child_jq(AD,A,"ADMISSION","o"),
+child_jq(A,HADM_ID,"HADM_ID","o"),
+child_jq(A,LABEVENTS,"LABEVENTS","o"),
+child_jq(LABEVENTS,ITEMID,"ITEMID","o"),
+
+child_jq(A,MICROBIOLOGYEVENTS,"MICROBIOLOGYEVENTS","o"),
+child_jq(MICROBIOLOGYEVENTS,AB_NAME, "AB_NAME","o"),
+child_jq(MICROBIOLOGYEVENTS,INTERPRETATION, "INTERPRETATION","o"),
+
+root_jq_90(D_L), 
+child_jq(D_L, ITEMID, "ITEMID_l","o"), 
+child_jq(D_L, LABEL, "LABEL","o"),
+child_jq(D_L, CATEGORY, "CATEGORY","o"),
+child_jq(D_L, FLUID, "FLUID","o"),
+val_jq(FLUID,"Urine");
+
+
+
+Notes(n_0),
+child_jq_Notes(n_0,SUBJECT_ID,"subject_id","o"), 
+child_jq_Notes(n_0,TEXT,"text","o")->root_jq_88(AD),
+child_jq(AD,SUBJECT_ID,"SUBJECT_ID","o"),
+child_jq(AD,A,"ADMISSION","o"),
+child_jq(A,HADM_ID,"HADM_ID","o"),
+child_jq(A,NOTEEVENTS,"NOTEEVENTS","o"),
+child_jq(NOTEEVENTS,TEXT, "TEXT", "o");
+
+V_PATIENTS(SUBJECT_ID,DOB,GENDER)->root_jq_88(AD),
+child_jq(AD,SUBJECT_ID,"SUBJECT_ID","o"),
+child_jq(AD,DOB,"DOB","o"),
+child_jq(AD,GENDER,"GENDER","o");

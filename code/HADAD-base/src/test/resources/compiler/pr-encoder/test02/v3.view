@@ -1,0 +1,1 @@
+V3=SELECT R.a FROM r AS R, s AS S WHERE R.y=S.x

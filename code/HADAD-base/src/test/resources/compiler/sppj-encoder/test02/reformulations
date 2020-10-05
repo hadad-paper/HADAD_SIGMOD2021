@@ -1,0 +1,1 @@
+RW0<c1> :- child_sppj_V(SK_2,SK_3,SK_4,"a"),V(SK_1),child_sppj_V(SK_1,SK_2,"streets","o"),eq_sppj_V(SK_3,c1);

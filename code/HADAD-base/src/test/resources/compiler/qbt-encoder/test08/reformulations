@@ -1,0 +1,1 @@
+RW0<SID> :- val_pj(TEXT,"respiratory failure"),child_sj_VTEXT(SK_1,SID,"SUBJECT_ID","o"),V1_JSONT(SK_0),child_pj_V1_JSONT(SK_0,SID,"SUBJECT_ID","o"),child_pj_V1_JSONT(SK_0,AID,"HADM_ID","o"),child_sj_VTEXT(SK_1,TEXT,"TEXT","o"),VTEXT(SK_1),child_sj_VTEXT(SK_1,AID,"HADM_ID","o"),V_PATIENTS(SID,DOB,GENDER);

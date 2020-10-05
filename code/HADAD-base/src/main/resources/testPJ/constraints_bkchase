@@ -1,0 +1,24 @@
+
+# Grex schema constraints
+eq_pj(x,y)->eq_pj(y,x);
+eq_pj(x,y),eq_pj(y,z)->eq_pj(x,z);
+child_pj(u,x,v,w),child_pj(u,y,v,w)->x=y;
+root_pj_73362187(x),root_pj_73362187(y)->x=y;
+
+# V view constraints
+child_pj_V(p1,c1,t,d),copy_pj_V(p,p1)->child_pj(p,c,t,d),copy_pj_V(c,c1);
+copy_pj_V(x,x1),eq_V(x1,y)->eq(x,y);
+copy_pj_V(x,x1),eq_pj_V(x1,y)->eq_pj(x,y);
+
+# V_0 constraints for skolem functions
+V_0_sk_pj0(b_1_c,b_0,b_1),V_0_sk_pj0(b_1_c_p,b_0,b_1)->b_1_c=b_1_c_p;
+V_0_sk_pj0(b_1_c,b_0,b_1),V_0_sk_pj0(b_1_c,b_0_p,b_1_p)->b_0=b_0_p,b_1=b_1_p;
+
+# V_0 constraint connecting create to JSON constructed by view
+V(b_1_c)->V_0_create_pj(b_1_c);
+
+# V_0 constraint relating extract with create
+V_0_create_pj(b_1_c)->copy_pj_V(b_1,b_1_c),V_0_extr_pj(b_0,b_1),V_0_sk_pj0(b_1_c,b_0,b_1);
+
+# V_0 constraint for extract
+V_0_extr_pj(b_0,b_1)->root_pj_73362187(b_0),child_pj(b_0,b_1,"admission","o");

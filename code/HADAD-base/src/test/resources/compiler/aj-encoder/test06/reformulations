@@ -1,0 +1,1 @@
+RW0<ft1,lt1> :- child_aj_V(SK_1,SK_2,"addresses","o"),child_aj_V(SK_2,SK_6,"SDAddress","o"),child_aj_V(SK_1,SK_4,"first","o"),child_aj_V(SK_1,SK_5,"last","o"),V(SK_1),eq_aj_V(SK_11,ft1),eq_aj_V(SK_12,lt1),child_aj_V(SK_4,SK_11,a_1,"a"),child_aj_V(SK_5,SK_12,a_2,"a");

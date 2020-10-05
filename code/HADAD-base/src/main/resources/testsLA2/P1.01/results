@@ -1,0 +1,2 @@
+RW0<t> :- multi(idM,idN,idr1),size(idM,"50000","100"),size(idN,"100","50000"),name(idM,"M"),name(idN,"N"),tr(idr1,t);
+RW1<t> :- multi(SK_199,SK_198,t),size(idM,"50000","100"),size(idN,"100","50000"),name(idM,"M"),name(idN,"N"),tr(idM,SK_198),tr(idN,SK_199);

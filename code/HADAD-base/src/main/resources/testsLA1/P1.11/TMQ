@@ -1,0 +1,12 @@
+V:  import tensorflow as tf
+	AD= genfromtxt("syn3a.csv", delimiter=",")
+	BD= genfromtxt("syn3b.csv", delimiter=",")
+    G= tf.Graph()
+    init = tf.global_variables_initializer()
+    with G.as_default():
+    	A = tf.placeholder(float64, shape=AD.shape)
+    	B = tf.placeholder(float64, shape=BD.shape)
+    	R= tf.reduce_sum(tf.add(tf.transpose(A),tf.transpose(B)),axis=1)
+    	with tf.Session() as sess:
+    		sess.run(init)
+    		sess.run(pipe, feed_dict={A:AD,B:BD})

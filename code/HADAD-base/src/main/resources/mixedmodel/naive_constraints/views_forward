@@ -1,0 +1,9 @@
+#JQ Configurations
+child_jq(p,c,t,d),copy_jq_V(p,p1)->child_jq_V(p1,c1,t,d),copy_jq_V(c,c1);
+copy_jq_V(x,x1),eq_jq(x,y)->eq_jq_V(x1,y);
+#KQ Configurations
+collection_kq (p, c, k, t), copy_kq_V (p, p1) -> collection_kq_V (p1, c1, k, t), copy_kq_V (c, c1);
+copy_kq_V (x,x1), eq_kq (x, y) -> eq_kq_V (x1, y);
+#KQ Configurations
+#collection_kq (p, c, k, t), copy_kq_R (p, p1) -> collection_kq_R (p1, c1, k, t), copy_kq_R (c, c1);
+#copy_kq_R (x,x1), eq_kq (x, y) -> eq_kq_R (x1, y);

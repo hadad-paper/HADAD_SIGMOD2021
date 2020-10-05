@@ -1,0 +1,2 @@
+b_0=read("syn3a.csv", format="csv", header=FALSE, sep=",")
+RW1=(sum(b_0))

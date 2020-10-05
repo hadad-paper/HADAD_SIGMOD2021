@@ -1,0 +1,4 @@
+q<c1> :- 
+		file_tq_3556498(gc_0),
+		column_tq(gc_0,gc_1,"1"),
+		eq_tq(gc_1,c1);

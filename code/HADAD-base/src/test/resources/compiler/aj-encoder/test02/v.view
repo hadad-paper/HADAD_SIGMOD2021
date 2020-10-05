@@ -1,0 +1,1 @@
+V = for d in dataset X, s in d.site.person.address.street return {"street": for t in s.text return t }

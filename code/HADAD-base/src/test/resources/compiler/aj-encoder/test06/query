@@ -1,0 +1,12 @@
+q<ft1, lt1>  :- 
+	root_aj_88 (r),
+	child_aj (r, x1, "site", "o"),
+	child_aj (x1, p, "person", "o"),
+	child_aj (p, s, "ssn", "o"),
+	child_aj (p, a, "address", "o"),
+	child_aj (p, n1, "name", "o"),
+	child_aj (n1, f, "first", "o"),
+	eq_aj (f, ft1),
+	child_aj (p, n2, "name", "o"),
+	child_aj (n2, l, "last", "o"),
+	eq_aj (l, lt1);

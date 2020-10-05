@@ -1,0 +1,29 @@
+##TODOFIX#
+Q<SID>:-
+root_jq_88(AD),
+child_jq(AD,SID,"SUBJECT_ID","o"),
+child_jq(AD,DOB,"DOB","o"),
+child_jq(AD,GENDER,"GENDER","o"),
+child_jq(AD,A,"ADMISSION","o"),
+child_jq(A,AID,"HADM_ID","o"),
+child_jq(A,LABEVENTS,"LABEVENTS","o"),
+child_jq(LABEVENTS,ITEMID,"ITEMID","o"),
+child_jq(LABEVENTS,FLAG,"FLAG","o"),
+val_jq(FLAG,"abnormal"),
+child_jq(A,ICUSTAYS,"ICUSTAYS","o"),
+child_jq(ICUSTAYS,PRESCRIPTIONS,"PRESCRIPTIONS","o"),
+child_jq(PRESCRIPTIONS,DRUG,"DRUG","o"),
+child_jq(PRESCRIPTIONS,DRUGTYPE,"DRUGTYPE","o"),
+val_jq(DRUGTYPE,"MAIN"),
+
+child_jq(A,NOTEEVENTS,"NOTEEVENTS","o"),
+child_jq(NOTEEVENTS,TEXT, "TEXT", "o"),
+val_jq(TEXT,"Graves disease"),
+root_jq_90(D_L), 
+child_jq(D_L, ITEMID, "ITEMID_l","o"), 
+child_jq(D_L, LABEL, "LABEL","o"),
+child_jq(D_L, FLUID, "FLUID","o"),
+val_jq(FLUID,"Cerebrospinal Fluid (CSF)"),
+child_jq(D_L, CATEGORY, "CATEGORY","o");
+
+

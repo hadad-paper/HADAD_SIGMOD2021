@@ -1,0 +1,4 @@
+eq_jq (x, y) -> eq_jq (y, x);
+eq_jq(x,y), eq_jq(y,z) -> eq_jq(x,z);
+child_jq (u,x,v,w), child_jq (u,y,v,w) -> x = y;
+root_d(x), root_d(y) -> x = y;

@@ -1,0 +1,1 @@
+RW0<LABEL> :- V1_JSON(SK_17),child_pj_V1_JSON(SK_17,SUBJECT_ID,"SUBJECT_ID","o"),child_pj_V1_JSON(SK_17,CATEGORY,"CATEGORY","o"),child_sj_Notes(SK_18,HADM_ID,"HADM_ID","o"),child_pj_V1_JSON(SK_17,LABEL,"LABEL","o"),Notes(SK_18),V_PATIENTS(SUBJECT_ID,HADM_ID,DOB,GENDER),val_sj(TEXT,"respiratoryfailure"),child_sj_Notes(SK_18,TEXT,"TEXT","o");

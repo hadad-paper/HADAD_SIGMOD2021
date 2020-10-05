@@ -1,0 +1,1 @@
+RW0<c1> :- collection_rk_V(SK_0,f_1,"0","s"),eq_rk(f_1,c1),V(SK_0);

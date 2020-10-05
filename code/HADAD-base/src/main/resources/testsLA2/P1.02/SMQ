@@ -1,0 +1,3 @@
+Q:  A= as.matrix ( read.table ( "syn3a.csv" , header = FALSE, sep = ","));
+	B= as.matrix ( read.table ( "syn3b.csv" , header = FALSE, sep = ","));
+	D= t(A) + t(B);

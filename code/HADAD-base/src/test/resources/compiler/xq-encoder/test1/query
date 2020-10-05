@@ -1,0 +1,8 @@
+q<c1> :- 
+      root_xq_88 (r), 
+      child_xq (r, s), tag_xq (s, "site"), 
+      desc_xq (s,t), 
+      child_xq (t,p), tag_xq (p, "person"), 
+      desc_xq (p, u), 
+      child_xq (u, c), tag_xq (c, "city"),
+      eq_xq (c,c1);

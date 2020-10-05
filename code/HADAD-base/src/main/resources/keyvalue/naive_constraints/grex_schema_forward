@@ -1,0 +1,4 @@
+#eq_rk (x, y) -> eq_rk (y, x);
+collection_rk (p,c1,k,t), collection_rk (p,c2,k,t) -> c1 = c2;
+mainmap_rk_73120152(x), mainmap_rk_73120152(y) -> x = y;
+internal_map_rk(i,v1),internal_map_rk(i,v2) ->v1=v2;

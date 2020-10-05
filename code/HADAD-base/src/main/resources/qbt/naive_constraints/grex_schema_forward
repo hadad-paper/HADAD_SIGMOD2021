@@ -1,0 +1,36 @@
+# RQ Configurations
+constant(i,v1),constant(i,v2)->v1=v2;
+# AJ Configurations
+eq_aj(x,y)->eq_aj(y,x);
+#eq_aj(x,y), eq_aj(y,z) -> eq_aj(x,z);
+child_aj(u,x,v,w),child_aj(u,y,v,w)->x=y;
+val_aj(i,v1), val_aj(i,v2) -> v1 = v2;
+root_aj_1(x),root_aj_1(y)->x=y;
+root_aj_68(x),root_aj_68(y) -> x=y;
+root_aj_88(x),root_aj_88(y) -> x=y;
+#SPPJ Configuration
+eq_sppj(x,y)->eq_sppj(y,x);
+eq_sppj(x,y), eq_sppj(y,z) -> eq_sppj(x,z);
+child_sppj(u,x,v,w),child_sppj(u,y,v,w)->x=y;
+val_sppj(i,v1), val_sppj(i,v2) -> v1 = v2;
+root_aj_1(x),root_aj_1(y)->x=y;
+root_aj_68(x),root_aj_68(y) -> x=y;
+root_aj_88(x),root_aj_88(y) -> x=y;
+# RK Configurations
+val_rk(i,v1), val_rk(i,v2) -> v1 = v2;
+collection_rk (p,c1,k,t), collection_rk (p,c2,k,t) -> c1 = c2;
+mainmap_rk_73120152(x), mainmap_rk_73120152(y) -> x = y;
+mainmap_rk_aj_68(x),mainmap_rk_aj_68(y) -> x=y;
+internal_map_rk(i,v1),internal_map_rk(i,v2) ->v1=v2;
+#TQ Configurations
+#eq_tq (x, y) -> eq_tq (y, x);
+file_tq_3556498 (x), file_tq_3556498 (y) -> x=y;
+column_tq (p,c1,i), column_tq (p,c2,i) -> c1 = c2;
+#SJ Configurations
+eq_sj (x, y) -> eq_sj (y, x);
+eq_sj(x,y), eq_sj(y,z) -> eq_sj(x,z);
+child_sj (u,x,v,w), child_sj (u,y,v,w) -> x = y;
+child_pj (u,x,v,w), child_pj (u,y,v,w) -> x = y;
+val_sj(x,y),val_sj(x,y1)->y=y1;
+val_pj(x,y),val_pj(x,y1)->y=y1;
+root_d(x), root_d(y) -> x = y;

@@ -1,0 +1,1 @@
+ RW8<b_2> :- multi(b_1,b_0,SK_600),name(b_0,"syn1.csv"),name(b_1,"syn2.csv"),sum(SK_600,b_2);

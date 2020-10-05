@@ -1,0 +1,4 @@
+Q:  C<- as.matrix ( read.table ( "syn5c.csv" , header = FALSE, sep = ","));
+ 	D<- as.matrix ( read.table ( "syn5d.csv" , header = FALSE, sep = ","));
+ 	E<- as.matrix ( read.table ( "syn5e.csv" , header = FALSE, sep = ","));
+	R<- trace(t(C) %*% t(D) + E);

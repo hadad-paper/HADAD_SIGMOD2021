@@ -1,0 +1,1 @@
+V = FOR AJ:{ x in dataset X, artistid in x.id, artistname in x.name } RETURN AJ:{ {"artistname":artistname} }

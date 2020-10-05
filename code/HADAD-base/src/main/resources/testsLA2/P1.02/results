@@ -1,0 +1,4 @@
+RW0<t> :- add(t1,t2,t),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(idA,t1),tr(idB,t2);
+RW1<t> :- add(t2,t1,t),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(idA,t1),tr(idB,t2);
+RW2<t> :- add(idA,idB,SK_99),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(SK_99,t);
+RW3<t> :- add(idB,idA,SK_99),size(idA,"1000000","100"),size(idB,"1000000","100"),name(idA,"A"),name(idB,"B"),tr(SK_99,t);

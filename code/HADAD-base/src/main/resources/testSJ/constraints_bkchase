@@ -1,0 +1,10 @@
+
+# Grex schema constraints
+eq_sj(x,y)->eq_sj(y,x);
+eq_sj(x,y),eq_sj(y,z)->eq_sj(x,z);
+child_sj(u,x,v,w),child_sj(u,y,v,w)->x=y;
+val_sj(x,y),val_sj(x,y1)->y=y1;
+root_sj_3556498(x),root_sj_3556498(y)->x=y;
+
+# V constraint for Body Encoding
+child_sj_V(s_0,c_1,"a","o"),child_sj_V(s_0,c_2,"b","o"),child_sj_V(s_0,c_3,"c","o"),V(s_0)->root_sj_3556498(b_0),child_sj(b_0,c_1,"a","o"),child_sj(b_0,c_2,"b","o"),child_sj(b_0,c_3,"c","o");

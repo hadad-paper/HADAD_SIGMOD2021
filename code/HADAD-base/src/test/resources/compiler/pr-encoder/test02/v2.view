@@ -1,0 +1,1 @@
+V2=SELECT R.a,R.y FROM r AS R

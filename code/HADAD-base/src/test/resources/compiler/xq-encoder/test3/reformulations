@@ -1,0 +1,1 @@
+RW0<t1> :- tag_xq_V(SK_1,"streets"),tag_xq_V(SK_0,"street"),child_xq_V(SK_1,SK_0),eq_xq_V(SK_2,t1),V(SK_1),text_xq_V(SK_0,SK_2);

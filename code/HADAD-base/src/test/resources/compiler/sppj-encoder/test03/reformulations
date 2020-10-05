@@ -1,0 +1,1 @@
+RW0<t1> :- child_sppj_V(SK_5,SK_7,"cities","o"),eq_sppj_V(SK_8,t1),child_sppj_V(SK_7,SK_8,SK_9,"a"),V(SK_5);

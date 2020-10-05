@@ -1,0 +1,4 @@
+Q:  M= as.matrix ( read.table ( "syn1.csv" , header = FALSE, sep = ","));
+	N= as.matrix ( read.table ( "syn2.csv" , header = FALSE, sep = ","));
+	Z= as.matrix ( read.table ( "syn2z.csv" , header = FALSE, sep = ","));
+	R= ((M %*% N) %*% M);

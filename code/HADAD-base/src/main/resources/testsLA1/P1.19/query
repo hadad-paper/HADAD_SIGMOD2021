@@ -1,0 +1,6 @@
+Q<i>:-
+name(idM,"M"),
+size(idM,"10000","10000"),
+tr(idM,t),
+in(t,i);
+

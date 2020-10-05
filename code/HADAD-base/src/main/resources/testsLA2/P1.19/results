@@ -1,0 +1,2 @@
+RW0<i> :- in(t,i),size(idM,"10000","10000"),name(idM,"M"),tr(idM,t);
+RW1<i> :- in(idM,SK_99),size(idM,"10000","10000"),name(idM,"M"),tr(SK_99,i);

@@ -1,0 +1,12 @@
+Q<idr3>:-
+name(idD,"D"),
+size(idD,"10000","10000"),
+name(y,"y"),
+tr(idD,dT),
+multi(dT,idD,idr1),
+in(idr1,idr1I),
+multi(dT,y,idr2),
+multi(idr1I,idr2,idr3);
+
+
+

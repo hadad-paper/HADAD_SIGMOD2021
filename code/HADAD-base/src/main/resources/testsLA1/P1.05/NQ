@@ -1,0 +1,3 @@
+V:  import numpy as np
+	D= genfromtxt("syn5d.csv", delimiter=",")
+	R= np.linalg.inv(np.linalg.inv(D))

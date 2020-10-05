@@ -1,0 +1,4 @@
+child_aj (p, c, t, d), copy_aj_v (p, p1) -> child_aj_v (p1, c1, t, d), copy_aj_v (c, c1);
+copy_aj_v (x,x1), eq_aj (x, y) -> eq_aj_v (x1, y);
+copy_v (x,x1), eq (x, y) -> eq_v (x1, y);
+#eq_aj_v(x, y) -> eq_aj_v(y, x);

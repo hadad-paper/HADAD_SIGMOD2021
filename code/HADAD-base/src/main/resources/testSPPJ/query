@@ -1,0 +1,4 @@
+q<t1> :- root_pj_88 (r),
+     	 child_pj (r, p, "person", "o"),
+	  	 child_pj (p, c, "city", "o"),
+	  	 eq_pj (c, t1);

@@ -1,0 +1,1 @@
+V4=SELECT S.x,S.a FROM s AS S

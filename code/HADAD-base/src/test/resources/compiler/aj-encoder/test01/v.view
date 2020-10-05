@@ -1,0 +1,1 @@
+V = for d in dataset MIMIC, A in d.admission return A

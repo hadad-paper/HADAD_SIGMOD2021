@@ -1,0 +1,8 @@
+Q<t>:-
+name(idA,"A"),
+size(idA,"1000000","100"),
+name(idB,"B"),
+size(idB,"1000000","100"),
+tr(idA,t1),
+tr(idB,t2),
+add(t1,t2,t);

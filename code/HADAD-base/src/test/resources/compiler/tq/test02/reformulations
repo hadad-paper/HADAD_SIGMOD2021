@@ -1,0 +1,1 @@
+RW0<c1,c2> :- V(gc_1,gc_2),eq_tq(gc_1,c1),eq_tq(gc_2,c2);

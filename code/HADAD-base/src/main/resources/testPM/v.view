@@ -1,0 +1,2 @@
+V:  SELECT madlib.matrix_trans(M,D);
+	

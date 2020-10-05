@@ -1,0 +1,2 @@
+RW0<rt> :- add(idD,idC,r),in(r,i),trace(i,rt),size(idC,"10000","10000"),size(idD,"10000","10000"),name(idC,"C"),name(idD,"D");
+RW1<rt> :- add(idC,idD,r),in(r,i),trace(i,rt),size(idC,"10000","10000"),size(idD,"10000","10000"),name(idC,"C"),name(idD,"D");

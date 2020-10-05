@@ -1,0 +1,22 @@
+#Schema constraints
+#eq_jq(x,y)->eq_jq(y,x);
+eq_jq(x,y),eq_jq(y,z)->eq_jq(x,z);
+child_jq(u,x,v,w),child_jq(u,y,v,w)->x=y;
+root_jq_88(x),root_jq_88(y)->x=y;
+root_jq_89(x),root_jq_89(y)->x=y;
+root_jq_90(x),root_jq_90(y)->x=y;
+
+val_jq(x,v1),val_jq(x,v2)->v1=v2;
+
+# V view constraints
+#child_jq(p,c,t,d),copy_jq_V(p,p1)->child_jq_V(p1,c1,t,d),copy_jq_V(c,c1);
+#copy_jq_V(x,x1),eq_jq(x,y)->eq_jq_V(x1,y);
+
+# View V_Patients_MetaData
+root_jq_88(AD),
+child_jq(AD,SUBJECT_ID,"SUBJECT_ID","o"),
+child_jq(AD,A,"ADMISSION","o"),
+child_jq(A,ADMITTIME,"ADMITTIME","o"),
+child_jq(A,AL,"LABEVENTS","o"),
+child_jq(AL,ITEMID, "ITEMID","o"),
+child_jq(AL,FLAG, "FLAG","o")-> VPatientsMetaData(SUBJECT_ID,HADM_ID,ITEMID,ADMITTIME,FLAG);
