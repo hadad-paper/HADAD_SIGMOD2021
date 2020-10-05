@@ -9,7 +9,7 @@ We present HADAD, an extensible lightweight approach for optimizing hybrid compl
 * [Paper Extened Version ](#paper-extended-version)
 * [Datasets/Views](#datasets)
 * [Requirements and Code Build](#requirements-and-code-build)
-* [Running Piplelines](#directory-structure)
+* [Running Pipelines](#running-pipelines)
 * [Figures](#figures)
 
 ## Checking out HDADA
