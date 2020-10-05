@@ -1,3 +1,11 @@
+data/real-data/*.mtx
+data/real-data/OrigianlAmazonBooks.json.gz
+data/real-data/OrigianlNetFlix_compressed_combined_data_1.txt.zip
+data/real-data/OriginalNetFlix_compressed_combined_data_2.txt.zip
+data/real-data/OriginalNetFlix_compressed_combined_data_3.txt.zip
+data/real-data/OriginalNetFlix_compressed_combined_data_4.txt.zip
+data/real-data/NetFlixProcessed.csv
+data/real-data/AmazonProcessed.json
 figures/LAPipe/.DS_Store
 figures/LAPipe/MNC/.DS_Store
 figures/LAPipe/Naive/.DS_Store
