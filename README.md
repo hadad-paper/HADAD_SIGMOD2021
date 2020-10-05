@@ -34,10 +34,10 @@ $./generate-synthetic.sh
 ```
 ### Real-wrold
 The real-data can be found in this [link](https://drive.google.com/drive/folders/1imC5lMV8hA7csua91nj0efW19lK2GN9p?usp=sharing).
-The datasets should be palced under ``data/real-data`` folder.
+The datasets should be placed under ``data/real-data`` folder.
 
 ### Views
-```data/views```  : this directory generates the views. 
+```data/views``` : this directory generates the views. 
 ```bash
 # Requirement: python2.7 
 $ cd data/views
@@ -68,9 +68,22 @@ $ cd code/
 $ chmod +x build-skip-tests.sh 
 $./build-tests.sh 
 ```
-
+**Other used tools**: [Antlr4.7](https://www.antlr.org/)  and  [GoogleGuice](https://github.com/google/guice), 
 ##  Running Pipelines
-
+* ###  Requirement
+* Python2.7 - NumPy 1.16.6
+* TenforFlow 1.4.1 [Download and Install](https://www.tensorflow.org/install). For building the TensorFlow from source, follow the instructions [here](https://www.tensorflow.org/install/source).
+* SystemML 1.2.0 [Download and Install](http://www.apache.org/dyn/closer.lua/systemml/1.2.0/systemml-1.2.0-bin.tgz).  ``bin/systemml-1.2.0-bin/lib/`` directory contains ``systemml-1.2.0.jar``  that we used.
+* SparkMLlib 2.4.5 or 2.4.6 [Download and Install ](https://spark.apache.org/downloads.html). We compile the popular OpenBLAS library from source following the instructions [here](http://systemds.apache.org/docs/1.2.0/native-backend) and import  the optimized BLAS library at runtime by providing the location of the native library using Spark conf parameter ``Example: --conf spark.executorEnv.LD_LIBRARY_PATH=/opt/OpenBLAS/lib/libopenblas.so``. or ``export LD_PRELOAD=/opt/OpenBLAS/lib/libopenblas.so``
+* Breeze Library in Scala [Github repo](https://github.com/scalanlp/breeze)
+* ### Running pipelines exmple
+```bash
+# cd to system/tool directory
+$ cd LAPipeScripts/LAPipe/NumPy/
+$ cd PART1/
+$ chmod +x run.sh
+$ ./run.sh 
+```
 ##  Figures 
 For plotting the results,  the directory ``figures`` contains two folders ``LAPipe`` (to plot the results of LA-based pipelines experiments)  and ``LAViews`` ( to plot the results of LA-views based pipelines experiments). 
 *  Requiremnts 
