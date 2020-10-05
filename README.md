@@ -71,11 +71,15 @@ $./build-tests.sh
 **Other used tools**: [Antlr4.7](https://www.antlr.org/)  and  [GoogleGuice](https://github.com/google/guice), 
 ##  Running Pipelines
 * ###  Requirement
-* Python2.7 - NumPy 1.16.6
-* TenforFlow 1.4.1 [Download and Install](https://www.tensorflow.org/install). For building the TensorFlow from source, follow the instructions [here](https://www.tensorflow.org/install/source).
-* SystemML 1.2.0 [Download and Install](http://www.apache.org/dyn/closer.lua/systemml/1.2.0/systemml-1.2.0-bin.tgz).  ``bin/systemml-1.2.0-bin/lib/`` directory contains ``systemml-1.2.0.jar``  that we used.
-* SparkMLlib 2.4.5 or 2.4.6 [Download and Install ](https://spark.apache.org/downloads.html). We compile the popular OpenBLAS library from source following the instructions [here](http://systemds.apache.org/docs/1.2.0/native-backend) and import  the optimized BLAS library at runtime by providing the location of the native library using Spark conf parameter ``Example: --conf spark.executorEnv.LD_LIBRARY_PATH=/opt/OpenBLAS/lib/libopenblas.so``. or ``export LD_PRELOAD=/opt/OpenBLAS/lib/libopenblas.so``
-* Breeze Library in Scala [Github repo](https://github.com/scalanlp/breeze)
+	* Python2.7 - NumPy 1.16.6
+	* TenforFlow 1.4.1 [Download and Install](https://www.tensorflow.org/install). For building the TensorFlow from source, follow the instructions [here](https://www.tensorflow.org/install/source).
+	* SystemML 1.2.0 [Download and Install](http://www.apache.org/dyn/closer.lua/systemml/1.2.0/systemml-1.2.0-bin.tgz).  ``bin/systemml-1.2.0-bin/lib/`` directory contains ``systemml-1.2.0.jar``  that we used.
+	* SparkMLlib 2.4.5 or 2.4.6 [Download and Install ](https://spark.apache.org/downloads.html). We compile the popular OpenBLAS library from source following the instructions [here](http://systemds.apache.org/docs/1.2.0/native-backend) and import  the optimized BLAS library at runtime by providing the location of the native library using Spark conf parameter ``Example: --conf spark.executorEnv.LD_LIBRARY_PATH=/opt/OpenBLAS/lib/libopenblas.so``. or ``export LD_PRELOAD=/opt/OpenBLAS/lib/libopenblas.so``
+	* Breeze Library in Scala [Github repo](https://github.com/scalanlp/breeze)	* Python2.7 - NumPy 1.16.6
+	* TenforFlow 1.4.1 [Download and Install](https://www.tensorflow.org/install). For building the TensorFlow from source, follow the instructions [here](https://www.tensorflow.org/install/source).
+	* SystemML 1.2.0 [Download and Install](http://www.apache.org/dyn/closer.lua/systemml/1.2.0/systemml-1.2.0-bin.tgz).  ``bin/systemml-1.2.0-bin/lib/`` directory contains ``systemml-1.2.0.jar``  that we used.
+	* SparkMLlib 2.4.5 or 2.4.6 [Download and Install ](https://spark.apache.org/downloads.html). We compile the popular OpenBLAS library from source following the instructions [here](http://systemds.apache.org/docs/1.2.0/native-backend) and import  the optimized BLAS library at runtime by providing the location of the native library using Spark conf parameter ``Example: --conf spark.executorEnv.LD_LIBRARY_PATH=/opt/OpenBLAS/lib/libopenblas.so``. or ``export LD_PRELOAD=/opt/OpenBLAS/lib/libopenblas.so``
+	* Breeze Library in Scala [Github repo](https://github.com/scalanlp/breeze)
 * ### Running pipelines exmple
 ```bash
 # cd to system/tool directory
