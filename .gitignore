@@ -6,9 +6,4 @@ data/real-data/OriginalNetFlix_compressed_combined_data_3.txt.zip
 data/real-data/OriginalNetFlix_compressed_combined_data_4.txt.zip
 data/real-data/NetFlixProcessed.csv
 data/real-data/AmazonProcessed.json
-figures/LAPipe/.DS_Store
-figures/LAPipe/MNC/.DS_Store
-figures/LAPipe/Naive/.DS_Store
-figures/LAViews/.DS_Store
-figures/LAViews/Naive/.DS_Store
-figures/.DS_Store
+*.DS_Store
