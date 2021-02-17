@@ -79,7 +79,7 @@ $./build-tests.sh
 * ### Running pipelines example
 ```bash
 # cd to system/tool directory
-$ cd LAPipeScripts/LAPipe/NumPy/
+$ cd scripts/LAPipe/NumPy/
 $ cd PART1/
 $ chmod +x run.sh
 $ ./run.sh 
