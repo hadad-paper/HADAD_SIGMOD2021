@@ -11,6 +11,7 @@ optimization, leaving semantic query optimization opportunities
 unexplored. Additionally, they are not able to exploit precomputed
 (materialized) results to avoid recomputing (part of) a given mixed
 (LA and/or RA) computation.
+
 In this paper, we take a major step towards filling this gap by
 proposing HADAD, an extensible lightweight approach for optimizing hybrid complex analytics queries, based on a common
 abstraction that facilitates unified reasoning: a relational model endowed with integrity constraints, which can be used to express the
