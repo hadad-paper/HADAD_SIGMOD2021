@@ -1,10 +1,23 @@
 # HADADA
 <meta name="robots" content="noindex">
-Hybrid complex analytics workloads typically include (i) data management tasks (joins, filters, etc. ), easily expressed using relational algebra (RA)-based languages, and (ii) complex analytics tasks (regressions , matrix decompositions, etc.), mostly expressed in linear algebra (LA) expressions. Such workloads are common in a number of areas, including scientific computing, web analytics, business recommendation, natural language processing, speech recognition. Existing solutions for evaluating hybrid complex analytics queries – ranging from LA-oriented systems, to relational systems (extended to handle LA operations), to hybrid systems – fail to provide a unified optimization framework for such a hybrid setting. These systems either optimize data management and complex analytics tasks separately, or exploit RA properties only while leaving LA-specific
- optimization opportunities unexplored. Finally, they are not able to exploit precomputed (materialized) results to avoid computing again (part of) a given mixed (LA and RA) computation.
-
-We present HADAD, an extensible lightweight approach for optimizing hybrid complex analytics queries, based on a common abstraction that facilitates unified reasoning: a relational model endowed with integrity constraints, which can be used to express the properties of the two computation formalisms. Our approach enables exploration of LA properties and rewrites, as well as semantic query optimization. 
-
+Hybrid complex analytics workloads typically include (i) data management tasks (joins, selections, etc. ), easily expressed using relational algebra (RA)-based languages, and (ii) complex analytics
+tasks (regressions, matrix decompositions, etc.), mostly expressed
+in linear algebra (LA) expressions. Such workloads are common in
+many application areas, including scientific computing, web analytics, and business recommendation. Existing solutions for evaluating
+hybrid analytical tasks – ranging from LA-oriented systems, to relational systems (extended to handle LA operations), to hybrid
+systems – either optimize data management and complex tasks
+separately, exploit RA properties only while leaving LA-specific optimization opportunities unexploited, or focus heavily on physical
+optimization, leaving semantic query optimization opportunities
+unexplored. Additionally, they are not able to exploit precomputed
+(materialized) results to avoid recomputing (part of) a given mixed
+(LA and/or RA) computation.
+In this paper, we take a major step towards filling this gap by
+proposing HADAD, an extensible lightweight approach for optimizing hybrid complex analytics queries, based on a common
+abstraction that facilitates unified reasoning: a relational model endowed with integrity constraints, which can be used to express the
+properties of the two computation formalisms. Our solution can be
+naturally and portably applied on top of pure LA and hybrid RA-LA
+platforms without modifying their internals. An extensive empirical evaluation shows that HADAD yields significant performance
+gains on diverse workloads, ranging from LA-centered to hybrid.
 # Handy Links
 * [Paper Extened Version ](#paper-extended-version)
 * [Datasets/Views](#datasets)
