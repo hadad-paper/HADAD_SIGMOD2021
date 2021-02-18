@@ -27,3 +27,32 @@ cp matrix-100-1-1.0.csv syn7.csv
 cp matrix-50000-1-1.0.csv syn8.csv
 cp matrix-100000-1-1.0.csv syn9.csv
 cp matrix-100-100-1.0.csv syn10.csv
+
+python2.7 generate.py --nrow 35000 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 48612 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 35000 --ncol 48612 --sparsity 100%
+python2.7 generate.py --nrow 48612 --ncol 35000 --sparsity 100%
+python2.7 generate.py --nrow 82 --ncol 35000 --sparsity 100%
+python2.7 generate.py --nrow 28000 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 28000 --ncol 35000 --sparsity 100%
+python2.7 generate.py --nrow 82 --ncol 28000 --sparsity 100%
+python2.7 generate.py --nrow 35000 --ncol 28000 --sparsity 100%
+python2.7 generate.py --nrow 11000 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 11000 --ncol 35000 --sparsity 100%
+python2.7 generate.py --nrow 82 --ncol 11000 --sparsity 100%
+python2.7 generate.py --nrow 35000 --ncol 11000 --sparsity 100%
+
+
+python2.7 generate.py --nrow 1000 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 2380000 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 1000 --ncol 2380000 --sparsity 100%
+python2.7 generate.py --nrow 2380000 --ncol 1000 --sparsity 100%
+python2.7 generate.py --nrow 12 --ncol 1000 --sparsity 100%
+python2.7 generate.py --nrow 1380000 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 1380000 --ncol 1000 --sparsity 100%
+python2.7 generate.py --nrow 12 --ncol 1380000 --sparsity 100%
+python2.7 generate.py --nrow 1000 --ncol 1380000 --sparsity 100%
+python2.7 generate.py --nrow 538000 --ncol 1 --sparsity 100%
+python2.7 generate.py --nrow 538000 --ncol 1000 --sparsity 100%
+python2.7 generate.py --nrow 12 --ncol 538000 --sparsity 100%
+python2.7 generate.py --nrow 1000 --ncol 538000 --sparsity 100%
