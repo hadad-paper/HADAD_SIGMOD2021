@@ -36,7 +36,7 @@ You can find  the extended version of the paper **HADAD_EXTENDED.pdf**  with add
 cd extendedVersion/
 ```
 ## Datasets 
-We used a set of dense synthetic matrices and real-world sparse matrices. 
+We used a set of dense synthetic matrices and real-world sparse matrices 
 
 ### Synthetic
 ```data/synthetic```  : this directory generates dense synthetic datasets. 
